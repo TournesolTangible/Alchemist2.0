@@ -132,10 +132,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199065382}
+  - component: {fileID: 199065388}
   - component: {fileID: 199065385}
   - component: {fileID: 199065384}
   - component: {fileID: 199065383}
   - component: {fileID: 199065386}
+  - component: {fileID: 199065387}
   m_Layer: 5
   m_Name: Start_Btn
   m_TagString: Untagged
@@ -151,16 +153,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199065381}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3603.5999}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9998627}
   m_LocalScale: {x: 23.492668, y: 23.492668, z: 23.492668}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 689286195}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.00000023842, y: 254}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -7, y: -125}
   m_SizeDelta: {x: 5.87, y: 2.3099976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &199065383
@@ -259,6 +261,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.2
   freq: 1
+--- !u!114 &199065387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199065381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6292f83b4fa8ea42b97994977b40181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PS: {fileID: 7174509950033571251, guid: 2e2da622c7ac0304eaa45bb65f84ffdf, type: 3}
+--- !u!61 &199065388
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199065381}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6, y: 2}
+  m_EdgeRadius: 0
 --- !u!1 &331127368
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,9 +641,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1116842343}
   - component: {fileID: 1116842346}
+  - component: {fileID: 1116842349}
   - component: {fileID: 1116842345}
   - component: {fileID: 1116842344}
   - component: {fileID: 1116842347}
+  - component: {fileID: 1116842348}
   m_Layer: 5
   m_Name: Exit_Btn
   m_TagString: Untagged
@@ -618,7 +661,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1116842342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3603.5999}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9998627}
   m_LocalScale: {x: 23.492668, y: 23.492668, z: 23.492668}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -627,8 +670,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.935, y: -252}
-  m_SizeDelta: {x: 5.87, y: 2.31}
+  m_AnchoredPosition: {x: -4.065, y: -203.00003}
+  m_SizeDelta: {x: 5.87, y: 2.3099976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1116842344
 MonoBehaviour:
@@ -726,3 +769,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amp: 0.2
   freq: 1
+--- !u!114 &1116842348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116842342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6292f83b4fa8ea42b97994977b40181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PS: {fileID: 7174509950033571251, guid: 2e2da622c7ac0304eaa45bb65f84ffdf, type: 3}
+--- !u!61 &1116842349
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116842342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6, y: 2}
+  m_EdgeRadius: 0
