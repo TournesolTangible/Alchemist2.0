@@ -426,6 +426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715deb0ae4ae96c43b4d9a29c0c8faf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btn1: {fileID: 199065383}
+  btn2: {fileID: 1116842344}
+  moveSpeed: 400
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
