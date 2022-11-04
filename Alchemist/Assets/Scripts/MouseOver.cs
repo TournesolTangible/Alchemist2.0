@@ -12,7 +12,7 @@ public class MouseOver : MonoBehaviour
   }
 
   void OnMouseOver() {
-    // print("Mouse Over");
+    print("Mouse Over");
     if (!CPS) {
       CPS = Instantiate(PS, this.transform);
       CPS.Play();
@@ -20,7 +20,7 @@ public class MouseOver : MonoBehaviour
   }
 
   void OnMouseExit() {
-    // print("Mouse Left");
+    print("Mouse Left");
     if (CPS) {
       Destroy(CPS);
     }
