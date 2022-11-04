@@ -12,13 +12,13 @@ public class MoveAndDestroyLevelPart : MonoBehaviour
     }
 
     void Update() {
+        // moves platforms from right to left at a set speed
         transform.Translate(Vector2.left * Time.deltaTime * speed);
 
+        // destroys platforms off screen
         if(transform.position.x < screenBounds.x * -4){
             Destroy(this.gameObject);
         }
     }
-
-    
 }
 
