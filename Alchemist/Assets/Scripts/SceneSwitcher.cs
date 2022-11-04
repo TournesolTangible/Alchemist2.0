@@ -11,6 +11,8 @@ public class SceneSwitcher : MonoBehaviour
   [SerializeField] float moveSpeed;
   private bool fired;
 
+  public AudioSource bells;
+
   void Start() {
     fired = false;
   }
@@ -28,10 +30,18 @@ public class SceneSwitcher : MonoBehaviour
   //           transform.position += transform.forward * moveSpeed * Time.deltaTime;
   //       }
 
-  // 'Fires' the function of this button
-  public void Fire() {
+  // Starts the game after delay of ~1s
+  public void Fire1() {
     FlyAway();
-    Invoke("ChangeScene", 2.0f);
+    bells.Play();
+    Invoke("ChangeScene", 3.0f);
+  }
+
+  // Exits the game on press
+  public void Fire2() {
+    FlyAway();
+    bells.Play();
+    Invoke("CloseGame", 3.0f);
   }
 
   private void FlyAway() {
@@ -41,5 +51,10 @@ public class SceneSwitcher : MonoBehaviour
   // Changes scene to 'next in scene' or - gameplay
   public void ChangeScene() {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
+  }
+
+  // Exits the game
+  public void CloseGame() {
+    Application.Quit();
   }
 }
