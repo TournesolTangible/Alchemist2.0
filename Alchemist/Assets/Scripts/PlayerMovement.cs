@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        rigid_body_2d.velocity = new Vector2(horizontal * speed, rigid_body_2d.velocity.y);
+        rigid_body_2d.velocity = new Vector2(horizontal * speed - 4.5f, rigid_body_2d.velocity.y);
     }
 
     private bool IsGrounded() {
