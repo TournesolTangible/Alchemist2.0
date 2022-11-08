@@ -11,7 +11,8 @@ public class SceneSwitcher : MonoBehaviour
   [SerializeField] float moveSpeed;
   private bool fired;
 
-  public AudioSource bells;
+
+  public AudioSource Confirm;
 
   void Start() {
     fired = false;
@@ -33,15 +34,15 @@ public class SceneSwitcher : MonoBehaviour
   // Starts the game after delay of ~1s
   public void Fire1() {
     FlyAway();
-    bells.Play();
-    Invoke("ChangeScene", 3.0f);
+    Confirm.Play();
+    Invoke("ChangeScene", 1.0f);
   }
 
   // Exits the game on press
   public void Fire2() {
     FlyAway();
-    bells.Play();
-    Invoke("CloseGame", 3.0f);
+    Confirm.Play();
+    Invoke("CloseGame", 1.0f);
   }
 
   private void FlyAway() {
