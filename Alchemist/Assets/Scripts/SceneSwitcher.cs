@@ -11,10 +11,16 @@ public class SceneSwitcher : MonoBehaviour
   [SerializeField] float moveSpeed;
   private bool fired;
 
+  public AudioSource CHIPTUNA;
   public AudioSource Confirm;
 
   void Start() {
     fired = false;
+
+
+    // Uncomment this to play music on startup
+    //CHIPTUNA.Play();
+    
   }
 
   void Update() {
