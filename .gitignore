@@ -9,7 +9,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
-[Uu]ser[Ss]ettings/
+/[Uu]ser[Ss]ettings/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -62,4 +62,3 @@ crashlytics-build.properties
 Alchemist/UserSettings/Layouts/default-2021.dwlt
 Alchemist/Assets/Scenes/StartScreenScene.unity
 Alchemist/UserSettings/EditorUserSettings.asset
-Alchemist/UserSettings/Layouts/default-2021.dwlt
