@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class MouseOver : MonoBehaviour
 {
-  public ParticleSystem PS;
 
-  private ParticleSystem CPS;
+  public ParticleSystem PS;
+  private ParticleSystem CPS; // Current Particle System (active in scene, not instantiated until mouseOver() )
+
+  public AudioSource hoverSound;
 
   void Start() {
   }
@@ -16,6 +18,7 @@ public class MouseOver : MonoBehaviour
     if (!CPS) {
       CPS = Instantiate(PS, this.transform);
       CPS.Play();
+      hoverSound.Play();
     }
   }
 
