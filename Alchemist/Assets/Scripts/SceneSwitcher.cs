@@ -11,7 +11,6 @@ public class SceneSwitcher : MonoBehaviour
   [SerializeField] float moveSpeed;
   private bool fired;
 
-
   public AudioSource Confirm;
 
   void Start() {
