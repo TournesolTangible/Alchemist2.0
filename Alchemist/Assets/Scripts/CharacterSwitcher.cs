@@ -30,7 +30,7 @@ public class CharacterSwitcher : MonoBehaviour
         } else {
             Index -= 3;
         }
-        print(Index);
+        // print(Index);
         Current = Sprites[Index];
         Bilby.sprite = Current;
     }
@@ -42,7 +42,7 @@ public class CharacterSwitcher : MonoBehaviour
         } else {
             Index += 1;
         }
-        print(Index);
+        // print(Index);
         Current = Sprites[Index];
         Bilby.sprite = Current;
     }
