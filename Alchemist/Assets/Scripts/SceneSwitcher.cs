@@ -8,45 +8,33 @@ public class SceneSwitcher : MonoBehaviour
 {
   public Button btn1;
   public Button btn2;
-  [SerializeField] float moveSpeed;
-  private bool fired;
 
-  public AudioSource confirmSound;
+  public AudioSource CHIPTUNA;
+  public AudioSource Confirm;
 
 
   void Start() {
-    fired = false;
+
+
+    //TODO
+    // Uncomment this to play music on startup
+    // CHIPTUNA.Play();
+    //
   }
 
   void Update() {
-    // if (fired) {
-    //   btn1.transform.position += transform.right * moveSpeed * Time.deltaTime;
-    //   print(transform.right * moveSpeed * Time.time);
-    // }
   }
-
-
-  // if (GameManager.instance.player) { // null ref check
-  //           transform.LookAt(GameManager.instance.player.transform.position); // Look at the player
-  //           transform.position += transform.forward * moveSpeed * Time.deltaTime;
-  //       }
 
   // Starts the game after delay of ~1s
   public void Fire1() {
-    FlyAway();
-    confirmSound.Play();
-    Invoke("ChangeScene", 3.0f);
+    Confirm.Play();
+    Invoke("ChangeScene", 1.0f);
   }
 
   // Exits the game on press
   public void Fire2() {
-    FlyAway();
-    confirmSound.Play();
-    Invoke("CloseGame", 3.0f);
-  }
-
-  private void FlyAway() {
-    fired = true;
+    Confirm.Play();
+    Invoke("CloseGame", 1.0f);
   }
 
   // Changes scene to 'next in scene' or - gameplay
