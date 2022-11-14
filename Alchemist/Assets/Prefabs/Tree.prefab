@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 8492718654240190082}
   - component: {fileID: 8492718654240190093}
   - component: {fileID: 9107520608423197237}
+  - component: {fileID: 8484199556599117961}
   m_Layer: 6
   m_Name: Tree
   m_TagString: Untagged
@@ -197,6 +198,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acornPrefab: {fileID: 3125092196697337727, guid: 540d2adfcf4d93e49b3985a0ade88e70, type: 3}
+--- !u!114 &8484199556599117961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8492718654240190090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70ab4078831a061439ae36f59c0d57e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
 --- !u!1 &8492718655601171320
 GameObject:
   m_ObjectHideFlags: 0
