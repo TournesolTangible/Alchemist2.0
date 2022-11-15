@@ -483,6 +483,7 @@ MonoBehaviour:
   level_part_list:
   - {fileID: 6267267026542001970, guid: 38ce1577d55ec9d4dacfdc6d62b41aa0, type: 3}
   - {fileID: 3282127573140042235, guid: 18de4485ed087fc4e941b612d187548f, type: 3}
+  - {fileID: 7112284025290397566, guid: 5ec779fe3ce3f5a4aa685b572368ac6e, type: 3}
 --- !u!4 &1025828975
 Transform:
   m_ObjectHideFlags: 0
