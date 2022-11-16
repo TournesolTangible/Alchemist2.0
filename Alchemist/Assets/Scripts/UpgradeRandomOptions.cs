@@ -18,8 +18,8 @@ public class UpgradeRandomOptions : MonoBehaviour
     [SerializeField] private GameObject AtkSpeedButton;
     [SerializeField] private GameObject DblJumpButton;
     [SerializeField] private GameObject JumpHeightButton;
-    //[SerializeField] private GameObject StickButton;
-    //[SerializeField] private GameObject SwordButton;
+    [SerializeField] private GameObject StickButton;
+    [SerializeField] private GameObject SwordButton;
     [SerializeField] private GameObject ResistBatButton;
     [SerializeField] private GameObject ResistBirdButton;
     [SerializeField] private GameObject ResistCactusButton;
@@ -46,14 +46,16 @@ public class UpgradeRandomOptions : MonoBehaviour
         options.Add(PeaceButton);
         options.Add(ProtectionButton);
         options.Add(AlchemyButton); // needs counter
+        options.Add(FireballButton); // once unlocked, switch to upgrade
+        options.Add(StickButton);
 
         // Options below here should only be unlocked one at a time 
         // once the Alchemy stat increases. Once all potions are 
         // unlocked, destroy Alchemy button
 
-        options.Add(FireballButton); // once unlocked, destroy
         options.Add(AtkRangeButton);
         options.Add(AtkSpeedButton);
+        options.Add(SwordButton); // once unlocked, switch to upgrade
         options.Add(DblJumpButton); // once unlocked, destroy
         options.Add(JumpHeightButton); // needs cap
         options.Add(ResistBatButton);
@@ -80,13 +82,10 @@ public class UpgradeRandomOptions : MonoBehaviour
         GameObject thirdOption = Instantiate(options[num]) as GameObject;
         thirdOption.transform.SetParent(slotThree.transform, false);
         options.RemoveAt(num); 
-
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public void UpgradeAlchemy() {
+
         
     }
 }
