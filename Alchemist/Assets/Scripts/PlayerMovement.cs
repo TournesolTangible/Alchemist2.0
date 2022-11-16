@@ -44,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
 
         // flips player character
         Flip();
+
+        // update the transform
+        
+
+
     }
 
     private void FixedUpdate() {
