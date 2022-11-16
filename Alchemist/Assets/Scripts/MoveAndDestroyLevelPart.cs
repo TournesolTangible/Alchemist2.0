@@ -16,7 +16,7 @@ public class MoveAndDestroyLevelPart : MonoBehaviour
         transform.Translate(Vector2.left * Time.deltaTime * speed);
 
         // destroys platforms off screen
-        if(transform.position.x < screenBounds.x * -3){
+        if(transform.position.x < screenBounds.x * -5){
             Destroy(this.gameObject);
         }
     }
