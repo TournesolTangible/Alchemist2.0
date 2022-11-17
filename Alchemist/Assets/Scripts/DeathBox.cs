@@ -9,7 +9,9 @@ public class DeathBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-          Destroy(other.gameObject);
+          if (other is BoxCollider2D) {
+            Destroy(other.gameObject);
+          }
         }
     }
 
