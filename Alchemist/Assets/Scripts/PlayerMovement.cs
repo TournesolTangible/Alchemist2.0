@@ -13,11 +13,17 @@ public class PlayerMovement : MonoBehaviour
     private float coyote_time = 0.2f;
     private float coyote_time_counter;
 
+    public Animator animator;
+
     [SerializeField] private Rigidbody2D rigid_body_2d;
     [SerializeField] private Transform ground_check;
     [SerializeField] private LayerMask ground_layer;
 
     void Update() {
+        // set animator
+        animator.SetFloat("Speed", horizontal);
+        animator.SetBool("Grounded", IsGrounded());
+
         // movement
         horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -43,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // flips player character
-        Flip();
+        //Flip();
     }
 
     private void FixedUpdate() {
