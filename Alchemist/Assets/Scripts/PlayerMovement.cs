@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // flips player character
-        //Flip();
+        Flip();
     }
 
     private void FixedUpdate() {
