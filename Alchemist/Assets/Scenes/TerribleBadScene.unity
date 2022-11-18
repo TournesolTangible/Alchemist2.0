@@ -828,7 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 088673496f52eb6419ee5afa48ff234e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPosition: {fileID: 0}
+  attackPosition: {fileID: 776129815}
   attackSize: {x: 5, y: 10}
   maxObjectsHit: 5
   selectObjectsToHit:
@@ -878,6 +878,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776129805}
   m_CullTransparentMesh: 1
+--- !u!4 &776129815 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4784976517490283220, guid: a80fa615d9a8ed340ba7dc2c1e6846aa, type: 3}
+  m_PrefabInstance: {fileID: 257802803}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &780674218
 GameObject:
   m_ObjectHideFlags: 0
