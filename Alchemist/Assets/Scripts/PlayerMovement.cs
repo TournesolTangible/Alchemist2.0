@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Flip() {
-        if (is_facing_right && horizontal > 0f || !is_facing_right && horizontal < 0f) {
+        if (is_facing_right && horizontal < 0f || !is_facing_right && horizontal > 0f) {
             is_facing_right = !is_facing_right;
         }
     }
