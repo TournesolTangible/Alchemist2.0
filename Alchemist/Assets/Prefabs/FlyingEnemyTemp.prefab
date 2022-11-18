@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 8595567273731425911}
   - component: {fileID: 1562611641220669865}
   - component: {fileID: -7924386652429412749}
+  - component: {fileID: -4267142226040568854}
   m_Layer: 0
   m_Name: FlyingEnemyTemp
   m_TagString: Enemy
@@ -457,7 +458,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -512,6 +513,18 @@ MonoBehaviour:
   _speed: 200
   NextWaypointDistance: 1
   EnemyGFX: {fileID: 8028267867871279375}
+--- !u!114 &-4267142226040568854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028267868118568476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843cca9cb35e6594fbd69baef76514f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8028267869176850395
 GameObject:
   m_ObjectHideFlags: 0
