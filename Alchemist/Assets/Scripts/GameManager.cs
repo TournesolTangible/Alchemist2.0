@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
 
     public GameObject Player;
-
+    public ShopScreen ShopScreen;
 
     void Awake()
     {
@@ -23,15 +23,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public void RunShopScreen() {
+        ShopScreen.Setup();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    // to test the shop
+    void Update() {
+        if (Input.GetKey("o")) {
+            ShopScreen.Setup();
+        }
+        if (Input.GetKey("p")) {
+            ShopScreen.Exit();
+        }
     }
+
 }
