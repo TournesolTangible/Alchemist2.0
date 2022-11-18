@@ -30,11 +30,11 @@ public class BasicAttack : MonoBehaviour
         // what did we hit
         if (this.gameObject.GetComponent<PlayerMovement>().is_facing_right) {
             Debug.Log("Hitting Right");
-            objectsHit = Physics2D.BoxCastAll(attackPosition.position, attackSize, 0, new Vector2(1,0));
+            objectsHit = Physics2D.BoxCastAll(attackPosition.position, attackSize, 0, new Vector2(1,0), 5);
         }
         if (!this.gameObject.GetComponent<PlayerMovement>().is_facing_right) {
             Debug.Log("Hitting Left");
-            objectsHit = Physics2D.BoxCastAll(attackPosition.position, attackSize, 0, new Vector2(-1,0));
+            objectsHit = Physics2D.BoxCastAll(attackPosition.position, attackSize, 0, new Vector2(-1,0), 5);
         }
         
         // make sure we hit more than one gameObject
