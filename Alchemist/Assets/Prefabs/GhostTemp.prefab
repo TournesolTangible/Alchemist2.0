@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: -8493760542836552246}
   - component: {fileID: -6994258339610801253}
   - component: {fileID: 4004532387179101404}
+  - component: {fileID: 5042311540361233911}
   m_Layer: 0
   m_Name: GhostTemp
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,6 +131,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5042311540361233911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962463817343900619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 843cca9cb35e6594fbd69baef76514f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &962463817643587710
 GameObject:
   m_ObjectHideFlags: 0
