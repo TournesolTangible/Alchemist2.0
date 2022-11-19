@@ -8,16 +8,26 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal;
     private float speed = 12f;
     private float jumping_power = 40f;
-    private bool is_facing_right;
+    public bool is_facing_right;
 
     private float coyote_time = 0.2f;
     private float coyote_time_counter;
+
+    public Animator animator;
 
     [SerializeField] private Rigidbody2D rigid_body_2d;
     [SerializeField] private Transform ground_check;
     [SerializeField] private LayerMask ground_layer;
 
+    void Start() {
+        is_facing_right = true;
+    }
+
     void Update() {
+        // set animator
+        animator.SetFloat("Speed", horizontal);
+        animator.SetBool("Grounded", IsGrounded());
+
         // movement
         horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -55,11 +65,8 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Flip() {
-        if (is_facing_right && horizontal > 0f || !is_facing_right && horizontal < 0f) {
+        if (is_facing_right && horizontal < 0f || !is_facing_right && horizontal > 0f) {
             is_facing_right = !is_facing_right;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
         }
     }
 }

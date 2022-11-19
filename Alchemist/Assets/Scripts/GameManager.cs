@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public static GameManager Instance = null;
+
+    public GameObject Player;
+    public ShopScreen ShopScreen;
+
+    void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void RunShopScreen() {
+        ShopScreen.Setup();
     }
+
+    // to test the shop
+    void Update() {
+        if (Input.GetKey("o")) {
+            ShopScreen.Setup();
+        }
+        if (Input.GetKey("p")) {
+            ShopScreen.Exit();
+        }
+    }
+
 }
