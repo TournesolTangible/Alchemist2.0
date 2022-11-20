@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70eaf9a7f280c8f4589f7512453e4694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectable: {fileID: 3566902541569912193, guid: e73fbd4ca1c20fc46947b517396dbda5, type: 3}
+  collectable: {fileID: 6614784091010186111, guid: 564b7901e913d2e44a774c6357435811, type: 3}
 --- !u!58 &4814714678143607190
 CircleCollider2D:
   m_ObjectHideFlags: 0

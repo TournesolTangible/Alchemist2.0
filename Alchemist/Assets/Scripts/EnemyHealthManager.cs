@@ -16,7 +16,7 @@ public class EnemyHealthManager : MonoBehaviour
    void Update() {
     if (enemyCurrentHealth <= 0) {
         Destroy(this.gameObject);
-        Instantiate(collectable, transform.position, transform.rotation);
+        Instantiate(collectable, transform.position, new Quaternion(0,0,0,0));
     }
    }
 
