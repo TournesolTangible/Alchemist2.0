@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class UpgradeRandomOptions : MonoBehaviour
+public class CheckpointShop : MonoBehaviour
 {
 
-    // All upgrade buttons are prefabs
+    [SerializeField] private GameObject checkpointCanvas;
+
+   // All upgrade buttons are prefabs
     [SerializeField] private GameObject HealthButton;
     [SerializeField] private GameObject AlchemyButton;
     [SerializeField] private GameObject LuckButton;
@@ -35,8 +36,20 @@ public class UpgradeRandomOptions : MonoBehaviour
     public Canvas slotTwo;
     public Canvas slotThree;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OpenCheckpointShop() {
+
+        Time.timeScale = 0f;
+        checkpointCanvas.SetActive(true);
+    }
+
+    public void CloseCheckpointShop() {
+
+        Time.timeScale = 1.0f;
+        checkpointCanvas.SetActive(false);
+    }
+
+    
+    public void CreateRandomButtons() 
     {
         List<GameObject> options = new List<GameObject>();
 
