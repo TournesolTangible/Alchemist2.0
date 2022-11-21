@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckpointShop : MonoBehaviour
 {
@@ -32,20 +33,32 @@ public class CheckpointShop : MonoBehaviour
     [SerializeField] private GameObject ResistWolfButton;
 
     // slots for instantiating buttons
-    public Canvas slotOne;
-    public Canvas slotTwo;
-    public Canvas slotThree;
+    public GameObject slotOne;
+    public GameObject slotTwo;
+    public GameObject slotThree;
 
     public void OpenCheckpointShop() {
 
         Time.timeScale = 0f;
-        checkpointCanvas.SetActive(true);
+        if (!checkpointCanvas.activeSelf) { // if active, pressing C multiple times won't recycle the buttons
+            checkpointCanvas.SetActive(true);
+            slotOne.SetActive(true);
+            slotTwo.SetActive(true);
+            slotThree.SetActive(true);
+            CreateRandomButtons();
+        }
     }
 
     public void CloseCheckpointShop() {
 
         Time.timeScale = 1.0f;
         checkpointCanvas.SetActive(false);
+        Destroy(slotOne.transform.GetChild(0).gameObject);
+        slotOne.SetActive(false);
+        Destroy(slotTwo.transform.GetChild(0).gameObject);
+        slotTwo.SetActive(false);
+        Destroy(slotThree.transform.GetChild(0).gameObject);
+        slotThree.SetActive(false);
     }
 
     
