@@ -19,7 +19,11 @@ GameObject:
   - component: {fileID: 1087940046519084549}
   - component: {fileID: 1087940046519084565}
   - component: {fileID: 1087940046567616900}
+<<<<<<< Updated upstream
   - component: {fileID: -4931035246331191829}
+=======
+  - component: {fileID: -3933162393871903736}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -258,7 +262,11 @@ MonoBehaviour:
   selectObjectsToHit:
     serializedVersion: 2
     m_Bits: 1
+<<<<<<< Updated upstream
 --- !u!114 &-4931035246331191829
+=======
+--- !u!114 &-3933162393871903736
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
