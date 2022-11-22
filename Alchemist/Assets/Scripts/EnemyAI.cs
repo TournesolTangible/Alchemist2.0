@@ -24,6 +24,9 @@ public class EnemyAI : MonoBehaviour
     // Need references to the seeker and rigidbody components of the object
     Seeker Seeker;
     Rigidbody2D Rb;
+
+    // Needed for animation
+    [SerializeField] private Animator _animatior;
     
 
     // Start is called before the first frame update
@@ -66,6 +69,9 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        // set the animator to moving since the enemy is moving toward the player
+        _animatior.SetBool("Moving", true);
 
         _target = GameManager.Instance.Player.transform;
 
