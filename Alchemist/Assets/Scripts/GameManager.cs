@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject checkpointShop;
     public GameObject pauseMenu;
+
+    [SerializeField] private AudioSource _DeathRinger;
 
     [SerializeField] public int playerHealth = 3;
     [SerializeField] public int currentHealth = 3;
@@ -43,6 +46,25 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey("escape")) {
             pauseMenu.GetComponent<PauseMenu>().OpenPauseMenu();
         }
+
+        // if player unalive, switch to Main Scene after death animation
+        if (Player.GetComponent<PlayerStats>().ReturnHealth() == 0) {
+
+            if (Player.GetComponent<UnalivePlayer>().isAlive()) {
+                PlayDeathRinger();
+            }
+
+            Player.GetComponent<UnalivePlayer>().Died();
+
+            if ( Player.transform.localScale.x < 0.01) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1 );
+            }
+
+        }
     }
 
-}
+    public void PlayDeathRinger() {
+        _DeathRinger.Play();
+    }
+
+    }
