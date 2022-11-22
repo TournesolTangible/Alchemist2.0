@@ -265,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4931035246331191829, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: _ScaleMod
-      value: 0.0035
+      value: 0.00325
       objectReference: {fileID: 0}
     - target: {fileID: 1087940046519084565, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: health

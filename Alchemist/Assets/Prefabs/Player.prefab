@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c03683574ac94419623437a6081f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ScaleMod: 0.0035
+  _ScaleMod: 0.00325
   amp: 0.2
   freq: 50
 --- !u!1 &5584047369020899113
