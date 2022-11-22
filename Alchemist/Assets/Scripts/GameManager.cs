@@ -12,12 +12,15 @@ public class GameManager : MonoBehaviour
     public GameObject checkpointShop;
     public GameObject pauseMenu;
 
-    [SerializeField] public float playerHealth = 5.0f;
-    [SerializeField] public float playerStrength = 5.0f; // adjust
-    [SerializeField] public float playerLuck = 5.0f; // adjust
-    [SerializeField] public float playerPeace = 5.0f; // adjust
-    [SerializeField] public float playerProtection = 5.0f; // adjust
-    [SerializeField] public float playerAlchemy = 8.0f;
+    [SerializeField] public int playerHealth = 3;
+    [SerializeField] public int currentHealth = 3;
+    [SerializeField] public int playerStrength = 5; // adjust
+    [SerializeField] public int playerLuck = 5; // adjust
+    [SerializeField] public int playerPeace = 5; // adjust
+    [SerializeField] public int playerProtection = 5; // adjust
+    [SerializeField] public int playerAlchemy = 8;
+
+    [SerializeField] public int stickDamage = 5; // adjust
 
     void Awake()
     {
