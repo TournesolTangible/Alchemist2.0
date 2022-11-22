@@ -57,10 +57,6 @@ public class PlayerStats : MonoBehaviour
         }   
     }
 
-    public float ReturnHealth() {
-        return health;
-    }
-
     void ClampHealth()
     {
         health = Mathf.Clamp(health, 0, maxHealth);
