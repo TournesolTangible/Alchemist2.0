@@ -15,6 +15,7 @@ public class SceneSwitcher : MonoBehaviour
 
   void Start() {
 
+    Time.timeScale = 1;
 
     //TODO
     // Uncomment this to play music on startup
