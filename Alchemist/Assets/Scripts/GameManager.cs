@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,8 +22,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public int stickDamage = 5; // adjust
 
-    [SerializeField] private AudioSource _DeathRinger;
-
     void Awake()
     {
         if (Instance == null) {
@@ -36,13 +33,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start() {
-    }
-
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetKey(KeyCode.C)) {
             checkpointShop.GetComponent<CheckpointShop>().OpenCheckpointShop();
         }
@@ -50,25 +43,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey("escape")) {
             pauseMenu.GetComponent<PauseMenu>().OpenPauseMenu();
         }    
-
-        // if player unalive, switch to Main Scene after death animation
-        if (Player.GetComponent<PlayerStats>().ReturnHealth() == 0) {
-
-            if (Player.GetComponent<UnalivePlayer>().isAlive()) {
-                PlayDeathRinger();
-            }
-
-            Player.GetComponent<UnalivePlayer>().Died();
-
-            if ( Player.transform.localScale.x < 0.01) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1 );
-            }
-         
-        }
-    }
-
-    public void PlayDeathRinger() {
-        _DeathRinger.Play();
     }
 
 }
