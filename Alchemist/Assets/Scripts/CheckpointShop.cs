@@ -59,13 +59,15 @@ public class CheckpointShop : MonoBehaviour
     public void CloseCheckpointShop() {
 
         Time.timeScale = 1.0f;
-        checkpointCanvas.SetActive(false);
-        Destroy(slotOne.transform.GetChild(0).gameObject);
-        slotOne.SetActive(false);
-        Destroy(slotTwo.transform.GetChild(0).gameObject);
-        slotTwo.SetActive(false);
-        Destroy(slotThree.transform.GetChild(0).gameObject);
-        slotThree.SetActive(false);
+        if (checkpointCanvas.activeSelf) {
+            checkpointCanvas.SetActive(false);
+            Destroy(slotOne.transform.GetChild(0).gameObject);
+            slotOne.SetActive(false);
+            Destroy(slotTwo.transform.GetChild(0).gameObject);
+            slotTwo.SetActive(false);
+            Destroy(slotThree.transform.GetChild(0).gameObject);
+            slotThree.SetActive(false);
+        }
     }
     
     public void CreateRandomButtons() 
@@ -108,6 +110,8 @@ public class CheckpointShop : MonoBehaviour
             options.RemoveAt(0);
             alchemyValue -= 1;
         }
+
+        // TODO: Remove Health Upgrade after health points reaches 10
 
         var num = Random.Range(0, alchemyValue);
         GameObject firstOption = Instantiate(options[num]) as GameObject;
