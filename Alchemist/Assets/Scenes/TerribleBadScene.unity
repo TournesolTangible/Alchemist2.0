@@ -1387,7 +1387,7 @@ PrefabInstance:
     - target: {fileID: 1087940046519084549, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 981eb69e6ebb03f4b892dec846057aef, type: 2}
+      objectReference: {fileID: 9100000, guid: ee7b7298e6773174682797e0daf1f6fc, type: 2}
     - target: {fileID: 1087940046519084565, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: maxTotalHealth
       value: 10
@@ -1427,6 +1427,10 @@ PrefabInstance:
     - target: {fileID: 5584047368528112747, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5584047368528112747, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5584047368528112748, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: m_RootOrder
