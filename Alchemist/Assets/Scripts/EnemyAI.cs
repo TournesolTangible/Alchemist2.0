@@ -6,6 +6,9 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
 
+    // Needed for animations
+    //[SerializeField] private Animator _animator;
+
     // When we have game manager set up with player, this will hopefully just need to be changed to
     //  GameManager.instance.player.GetComponent<Player>()
     private Transform _target;
@@ -24,7 +27,10 @@ public class EnemyAI : MonoBehaviour
     // Need references to the seeker and rigidbody components of the object
     Seeker Seeker;
     Rigidbody2D Rb;
-    
+
+    // fliping sprite (enemy is always spawned facing left
+    private bool _facingRight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -66,6 +72,9 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        // the enemy at this point will always be moving so just set it to true
+        //_animator.SetBool("isMoving", true);
 
         _target = GameManager.Instance.Player.transform;
 
@@ -115,13 +124,25 @@ public class EnemyAI : MonoBehaviour
         //// Flip the sprite when facing the other direction ////
         /////////////////////////////////////////////////////////
         
-        if (Rb.velocity.x >= 0.01f)
+        if (Rb.velocity.x >= 0.01f && !_facingRight)
         {
-            EnemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            //transform.localScale = new Vector3(-1f, 1f, 1f);
+            Flip();
         }
-        else if (Rb.velocity.x <= -0.01f)
+        else if (Rb.velocity.x <= -0.01f && _facingRight)
         {
-            EnemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            //transform.localScale = new Vector3(1f, 1f, 1f);
+            Flip();
+        }
+
+
+        void Flip()
+        {
+            Vector3 currnetScale = gameObject.transform.localScale;
+            currnetScale.x *= -1;
+            gameObject.transform.localScale = currnetScale;
+
+            _facingRight = !_facingRight;
         }
 
     }

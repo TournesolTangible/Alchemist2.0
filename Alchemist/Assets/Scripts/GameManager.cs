@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
 
     public GameObject checkpointShop;
+    public GameObject displayPlayerStats;
+    public GameObject healthBar;
+    public GameObject healthBarController;
     public GameObject pauseMenu;
 
     [SerializeField] private AudioSource _DeathRinger;
@@ -41,6 +44,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.C)) {
             checkpointShop.GetComponent<CheckpointShop>().OpenCheckpointShop();
+        }
+
+        if (Input.GetKey(KeyCode.V)) {
+            checkpointShop.GetComponent<CheckpointShop>().CloseCheckpointShop();
         }
 
         if (Input.GetKey("escape")) {

@@ -17,10 +17,8 @@ public class SceneSwitcher : MonoBehaviour
 
     Time.timeScale = 1;
 
-    //TODO
-    // Uncomment this to play music on startup
-    // CHIPTUNA.Play();
-    //
+    CHIPTUNA.Play();
+    
   }
 
   void Update() {
