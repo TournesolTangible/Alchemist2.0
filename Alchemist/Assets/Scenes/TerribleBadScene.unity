@@ -1421,11 +1421,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: attackRangeX
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: attackRangeY
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: attackPosition
