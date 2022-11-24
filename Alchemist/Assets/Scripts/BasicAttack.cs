@@ -35,7 +35,7 @@ public class BasicAttack : MonoBehaviour
         if (!this.gameObject.GetComponent<PlayerMovement>().is_facing_right) {
             transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1,1,1)); // gotta do this because of how we animated
             enemiesToDamage = Physics2D.OverlapBoxAll(attackPosition.position, new Vector2(attackRangeX, attackRangeY), 0, layerToHit);
-            GameObject swipe = (GameObject) Instantiate(sprite, new Vector3(attackPosition.position.x, attackPosition.position.y, 1), Quaternion.identity);
+            GameObject swipe = (GameObject) Instantiate(sprite, new Vector3(attackPosition.position.x, attackPosition.position.y, 1), Quaternion.Euler(0,180,0));
             Destroy (swipe, 0.1f);
             transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1,1,1)); // and gotta switch back
         }
