@@ -3903,6 +3903,14 @@ MonoBehaviour:
   level_part_list:
   - {fileID: 6267267026542001970, guid: 38ce1577d55ec9d4dacfdc6d62b41aa0, type: 3}
   - {fileID: 3282127573140042235, guid: 18de4485ed087fc4e941b612d187548f, type: 3}
+  - {fileID: 7112284025290397566, guid: 5ec779fe3ce3f5a4aa685b572368ac6e, type: 3}
+  - {fileID: 5787883725015616307, guid: 57bb684c3b0e5bc4aaa49d603239dc92, type: 3}
+  - {fileID: 8278476954106372968, guid: 1892f37b44199ef4d8e354f4b69d38e9, type: 3}
+  - {fileID: 6462116531657189396, guid: ff0a0e4d5670d7a4fb44f06369dce3d4, type: 3}
+  - {fileID: 5787883725015616307, guid: ea73347c2d64e2241a89061b4c70a990, type: 3}
+  - {fileID: 5787883725015616307, guid: 76cdb1ab3e4dc2945a72a52cca2ff580, type: 3}
+  - {fileID: 5787883725015616307, guid: 1279528313ae6ca4eb81fbcbe57f39a9, type: 3}
+  - {fileID: 5787883725015616307, guid: 46cbc948ee75cda419a8206612d967b1, type: 3}
 --- !u!4 &1025828975
 Transform:
   m_ObjectHideFlags: 0
