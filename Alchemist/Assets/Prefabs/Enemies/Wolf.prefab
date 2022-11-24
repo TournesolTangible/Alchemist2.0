@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3348180627452851191}
   - component: {fileID: 3348180627452851193}
-  - component: {fileID: 3348180627452851190}
   m_Layer: 0
   m_Name: WolfBoxC
   m_TagString: Untagged
@@ -59,18 +58,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.7, y: 2.62}
   m_EdgeRadius: 0
---- !u!114 &3348180627452851190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3348180627452851188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff58040f541bd04f8b31ab2545a3cd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3348180628885385302
 GameObject:
   m_ObjectHideFlags: 0
