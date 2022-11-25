@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
 
     public GameObject Player;
+    private GameObject Spawn;
 
     public GameObject checkpointShop;
     public GameObject displayPlayerStats;
@@ -37,6 +38,14 @@ public class GameManager : MonoBehaviour
         else if (Instance != this){
             Destroy(gameObject);
         }
+
+    }
+
+    void Start() {
+        Spawn = GameObject.Find("Spawn");
+        GameObject.Destroy(Player);
+        Player = FindPlayerInstance();
+        SpawnPlayer();
     }
 
     // Update is called once per frame
@@ -64,6 +73,7 @@ public class GameManager : MonoBehaviour
             Player.GetComponent<UnalivePlayer>().Died();
 
             if ( Player.transform.localScale.x < 0.01) {
+                GameObject.Destroy(Player);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1 );
             }
 
@@ -74,4 +84,46 @@ public class GameManager : MonoBehaviour
         _DeathRinger.Play();
     }
 
+    private void SpawnPlayer() {
+        Player.transform.position = new Vector2(Spawn.transform.position.x, Spawn.transform.position.y);
+
     }
+
+    // Checks for each variant of the player, returns that clone type
+    private GameObject FindPlayerInstance() {
+        GameObject PlayerInstance = null;
+
+        PlayerInstance = GameObject.Find("tan_hat_player");
+
+        // If PlayerInstance null, checks for each other player instance type by name
+        if (PlayerInstance == null) {
+            PlayerInstance = GameObject.Find("tan_hat_player(Clone)");
+        }
+        if (PlayerInstance == null) {
+            PlayerInstance = GameObject.Find("dark_hat_player(Clone)");
+        }
+        if (PlayerInstance == null) {
+            PlayerInstance = GameObject.Find("pale_hat_player(Clone)");
+        }
+        if (PlayerInstance == null) {
+            PlayerInstance = GameObject.Find("tan_hood_player(Clone)");
+        }
+        if (PlayerInstance == null) {
+            PlayerInstance = GameObject.Find("dark_hood_player(Clone)");
+        }
+        if (PlayerInstance == null) {
+            PlayerInstance = GameObject.Find("pale_hood_player(Clone)");
+        }
+    
+        if (!(PlayerInstance == null)) {
+            // Sets Player in GameManager to found PlayerInstance
+            Player = PlayerInstance;
+        }
+        if (PlayerInstance == null) {
+            print("No Player Instance found, original Player returned");
+        }
+        return Player;
+
+    }
+
+}

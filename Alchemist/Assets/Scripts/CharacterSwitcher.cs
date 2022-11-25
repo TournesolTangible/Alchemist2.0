@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 public class CharacterSwitcher : MonoBehaviour
 {
-    // To hold the sprites to switch through
-    public Sprite[] Sprites;
+    // To hold the Player prefabs to switch through
+    public GameObject[] Players;
+    private GameObject Player;
+    private GameObject CurrentPlayer;
+    public GameObject Spawn;
 
-    // To hold the current Sprite
-    private Sprite Current;
     private int Index;
-
-    public Image Bilby;
 
     // Buttons for switching character
     public Button OutfitButton;
@@ -20,7 +19,12 @@ public class CharacterSwitcher : MonoBehaviour
 
     public void Start() {
         Index = 0;
-        Current = Sprites[Index];
+        Player = GameObject.Find("tan_hat_player");
+        CurrentPlayer = Player;
+    }
+
+    public void Update() {
+
     }
 
     // To switch Outfit
@@ -30,9 +34,15 @@ public class CharacterSwitcher : MonoBehaviour
         } else {
             Index -= 3;
         }
-        // print(Index);
-        Current = Sprites[Index];
-        Bilby.sprite = Current;
+        // Destroy old player obj
+        GameObject.Destroy(CurrentPlayer);
+
+        // Set new Player obj
+        Player = Players[Index];
+
+        // Instantiate new Player obj
+        CurrentPlayer = GameObject.Instantiate(Player);
+        CurrentPlayer.transform.position = new Vector2(Spawn.transform.position.x, Spawn.transform.position.y);
     }
 
     // To switch Tone
@@ -42,9 +52,19 @@ public class CharacterSwitcher : MonoBehaviour
         } else {
             Index += 1;
         }
-        // print(Index);
-        Current = Sprites[Index];
-        Bilby.sprite = Current;
+        // Destroy old player obj
+        GameObject.Destroy(CurrentPlayer);
+
+        // Set new Player obj
+        Player = Players[Index];
+
+        // Instantiate new Player obj
+        CurrentPlayer = GameObject.Instantiate(Player);
+        CurrentPlayer.transform.position = new Vector2(Spawn.transform.position.x, Spawn.transform.position.y);
+    }
+
+    public GameObject ReturnCurrentPlayer() {
+        return CurrentPlayer;
     }
 
 }
