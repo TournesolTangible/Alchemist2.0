@@ -3,9 +3,14 @@
  */
 
 using UnityEngine;
+using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
+
+    private bool isInvincible = false; // for invincibility
+    [SerializeField] private float invincibilityDurationInSec;
+
     public delegate void OnHealthChangedDelegate();
     public OnHealthChangedDelegate onHealthChangedCallback;
 
@@ -41,8 +46,13 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+
+        if(isInvincible) return; // do nothing if you are invincible
+
         health -= dmg;
         ClampHealth();
+
+        StartCoroutine(BecomeInvincible()); // become invincible
     }
 
     public void AddHealth()
@@ -68,4 +78,22 @@ public class PlayerStats : MonoBehaviour
         if (onHealthChangedCallback != null)
             onHealthChangedCallback.Invoke();
     }
+
+    // adding stuff for invulnerability on taking damage
+
+    private IEnumerator BecomeInvincible() {
+        isInvincible = true;
+
+        yield return new WaitForSeconds(invincibilityDurationInSec);
+
+        isInvincible = false;
+    }
+
+    void methodToTriggerInvincibility() {
+        if (!isInvincible) {
+            StartCoroutine(BecomeInvincible());
+        }
+    }
+
+
 }
