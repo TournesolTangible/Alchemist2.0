@@ -110,10 +110,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6250571437975807741}
-  - component: {fileID: 189325610028667192}
   - component: {fileID: 3837318736112917033}
   - component: {fileID: 663816878614967325}
   - component: {fileID: 1948252871275197197}
+  - component: {fileID: 1032010497457634707}
   m_Layer: 0
   m_Name: Sage
   m_TagString: Untagged
@@ -137,19 +137,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &189325610028667192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7820565389233857104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!114 &3837318736112917033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,3 +187,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.67
+--- !u!114 &1032010497457634707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7820565389233857104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20b373de3582494eb727c857c7c1cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -110,8 +110,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4485132534307619101}
-  - component: {fileID: 355368167838321686}
   - component: {fileID: -2387525916772403129}
+  - component: {fileID: 5266944373839866039}
   m_Layer: 0
   m_Name: AcornTemp
   m_TagString: Untagged
@@ -135,19 +135,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355368167838321686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3125092196697337727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!58 &-2387525916772403129
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +151,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.6
+--- !u!114 &5266944373839866039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125092196697337727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a19e160ce8d764191efe22526ca079, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

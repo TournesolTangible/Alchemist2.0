@@ -12,21 +12,43 @@ public class GameManager : MonoBehaviour
 
     public GameObject checkpointShop;
     public GameObject displayPlayerStats;
+    public GameObject displayCollectibles;
     public GameObject healthBar;
     public GameObject healthBarController;
     public GameObject pauseMenu;
 
     [SerializeField] private AudioSource _DeathRinger;
 
-    [SerializeField] public int playerHealth = 3;
-    [SerializeField] public int currentHealth = 3;
-    [SerializeField] public int playerStrength = 5; // adjust
-    [SerializeField] public int playerLuck = 5; // adjust
-    [SerializeField] public int playerPeace = 5; // adjust
-    [SerializeField] public int playerProtection = 5; // adjust
-    [SerializeField] public int playerAlchemy = 8;
+    // reference stats for player
+    public int playerHealth = 3;
+    public int currentHealth = 3;
+    public int playerStrength = 5; // adjust
+    public int playerLuck = 5; // adjust
+    public int playerPeace = 5; // adjust
+    public int playerProtection = 5; // adjust
+    public int playerAlchemy = 8;
+    public int stickDamage = 5; // adjust
 
-    [SerializeField] public int stickDamage = 5; // adjust
+    // reference stats for collectibles
+    public int acornAmt = 0;
+    public int batWingAmt = 0;
+    public int devilEyeAmt = 0;
+    public int emuEggAmt = 0;
+    public int fairyBellsAmt = 0;
+    public int featherAmt = 0;
+    public int foxTailAmt = 0;
+    public int goatHoofAmt = 0;
+    public int graveyardDustAmt = 0;
+    public int juniperBerryAmt = 0;
+    public int lavenderAmt = 0;
+    public int mushroomAmt = 0;
+    public int quartzAmt = 0;
+    public int sageAmt = 0;
+    public int snakeHeadAmt = 0;
+    public int spiderSilkAmt = 0;
+    public int swineSnoutAmt = 0;
+    public int vervainAmt = 0;
+    public int wolfFootAmt = 0;
 
     void Awake()
     {

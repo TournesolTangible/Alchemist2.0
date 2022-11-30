@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616249014860863303}
-  - component: {fileID: 6670877845357846658}
   - component: {fileID: 7742747288820345747}
   - component: {fileID: 6270557980882077095}
   - component: {fileID: 4988496383549457079}
+  - component: {fileID: 5279743900579698121}
   m_Layer: 0
   m_Name: FoxTail
   m_TagString: Untagged
@@ -36,19 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6670877845357846658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3655546740843009002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!114 &7742747288820345747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +86,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.67
+--- !u!114 &5279743900579698121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655546740843009002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d9f35c9603b0c4aae734b85d799d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6168905010999042226
 GameObject:
   m_ObjectHideFlags: 0

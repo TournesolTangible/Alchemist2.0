@@ -112,8 +112,8 @@ GameObject:
   - component: {fileID: 45048628152058680}
   - component: {fileID: 413865783005842711}
   - component: {fileID: 8798029711461985235}
-  - component: {fileID: 4062479612488934012}
   - component: {fileID: 7900381112794592414}
+  - component: {fileID: 3413697070832882697}
   m_Layer: 0
   m_Name: BatWing
   m_TagString: Untagged
@@ -171,19 +171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!114 &4062479612488934012
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8785761995854686854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!58 &7900381112794592414
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -200,3 +187,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.06}
   serializedVersion: 2
   m_Radius: 1.92
+--- !u!114 &3413697070832882697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8785761995854686854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342c71978793ac940a74b390df35f07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

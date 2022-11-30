@@ -38,6 +38,7 @@ public class CheckpointShop : MonoBehaviour
     public GameObject slotTwo;
     public GameObject slotThree;
     public GameObject playerStats;
+    public GameObject collectibleStats;
 
     private int alchemyValue;
     public GameObject GameManager;
@@ -53,6 +54,7 @@ public class CheckpointShop : MonoBehaviour
             slotThree.SetActive(true);
             CreateRandomButtons();
             playerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+            collectibleStats.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
         }
     }
 

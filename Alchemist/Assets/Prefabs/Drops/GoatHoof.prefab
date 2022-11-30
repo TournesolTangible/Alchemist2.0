@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7721226535781162003}
   - component: {fileID: 8285202786476918423}
   - component: {fileID: 5011249609793088158}
-  - component: {fileID: 1006494296395467309}
+  - component: {fileID: 5451260371376733003}
   m_Layer: 0
   m_Name: GoatHoof
   m_TagString: Untagged
@@ -86,7 +86,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1006494296395467309
+--- !u!114 &5451260371376733003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,10 +95,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6133376072572041861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
+  m_Script: {fileID: 11500000, guid: 8104a7700afd52b4b9d1302f79c8326e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!1 &8239988515958108008
 GameObject:
   m_ObjectHideFlags: 0

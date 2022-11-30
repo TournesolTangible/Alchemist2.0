@@ -112,8 +112,8 @@ GameObject:
   - component: {fileID: 8210388208421648848}
   - component: {fileID: 8210388208421648849}
   - component: {fileID: 8210388208421648862}
-  - component: {fileID: 7306962955740351856}
   - component: {fileID: 3807215767436432219}
+  - component: {fileID: 1280080152432893878}
   m_Layer: 0
   m_Name: FairyBells
   m_TagString: Untagged
@@ -171,19 +171,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7306962955740351856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8210388208421648863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!58 &3807215767436432219
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -200,3 +187,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.66
+--- !u!114 &1280080152432893878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8210388208421648863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c5a49332d7a1f41a488d9e6fb4dd67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

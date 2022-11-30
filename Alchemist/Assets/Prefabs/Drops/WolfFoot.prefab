@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7144753041279425097}
   - component: {fileID: 7144753041279425096}
   - component: {fileID: 5490184097525528482}
-  - component: {fileID: 8139888393949801059}
+  - component: {fileID: 527333836560636795}
   m_Layer: 0
   m_Name: WolfFoot
   m_TagString: Untagged
@@ -86,7 +86,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.03}
   serializedVersion: 2
   m_Radius: 1.64
---- !u!114 &8139888393949801059
+--- !u!114 &527333836560636795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,10 +95,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7144753041279425095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
+  m_Script: {fileID: 11500000, guid: a553d9d728b7ea84dbbf7898fb6a2dc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!1 &9054853012125566105
 GameObject:
   m_ObjectHideFlags: 0

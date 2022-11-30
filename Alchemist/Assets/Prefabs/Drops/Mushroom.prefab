@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 7793465537539854074}
   - component: {fileID: 7793465537539854073}
   - component: {fileID: 7793465537539854072}
-  - component: {fileID: 7861097491960444222}
   - component: {fileID: 1582808642085988639}
+  - component: {fileID: 6990229968738768527}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -154,19 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!114 &7861097491960444222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7793465537539854071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!58 &1582808642085988639
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -183,3 +170,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.42}
   serializedVersion: 2
   m_Radius: 0.72
+--- !u!114 &6990229968738768527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7793465537539854071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40690f03fff9794782c8d3dee94a19f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

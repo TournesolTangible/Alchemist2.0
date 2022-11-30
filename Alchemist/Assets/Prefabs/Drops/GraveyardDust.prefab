@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 6174537752565446105}
   - component: {fileID: 6174537752565446106}
   - component: {fileID: 6174537752565446107}
-  - component: {fileID: 436182820515872791}
   - component: {fileID: 2462959642561098742}
+  - component: {fileID: 3883963768114628667}
   m_Layer: 0
   m_Name: GraveyardDust
   m_TagString: Untagged
@@ -154,19 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
---- !u!114 &436182820515872791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6174537752565446108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gm: {fileID: 0}
 --- !u!58 &2462959642561098742
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -183,3 +170,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.3}
   serializedVersion: 2
   m_Radius: 0.44
+--- !u!114 &3883963768114628667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6174537752565446108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f6f758ce8972934283b2a39033f295f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
