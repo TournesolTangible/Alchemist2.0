@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BasicAttack : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class BasicAttack : MonoBehaviour
 
     private static GameObject _GameManager;
     private int _StrengthStat;
+
+    private bool mainScreen;
+    private bool cr_running;
 
     public Transform attackPosition;
     public LayerMask layerToHit;
@@ -25,8 +29,16 @@ public class BasicAttack : MonoBehaviour
     }
  
     void Start () {
-        // starts the auto attack routine (routine, delay on start, time to loop)
+
         InvokeRepeating("AttackBase", 0f, damageRate);
+        
+        // checks for main screen
+        // if (SceneManager.GetActiveScene().buildIndex == 0) {
+        //     mainScreen = true;
+        // } else {
+        //     mainScreen = false;
+        //     InvokeRepeating("AttackBase", 0f, damageRate);
+        // }
     }
 
     void Update() {
@@ -35,7 +47,7 @@ public class BasicAttack : MonoBehaviour
  
     void AttackBase () {
 
-        
+        cr_running = true;
 
         if (this.gameObject.GetComponent<PlayerMovement>().is_facing_right) {
             // what did we hit (position, size(x,y), angle, layer)
@@ -59,7 +71,6 @@ public class BasicAttack : MonoBehaviour
                 enemiesToDamage[i].transform.gameObject.GetComponent<EnemyHealthManager>().TakeDamage(damage + _StrengthStat);
             }
         }
-        
     }
 
     // wireframe for hitbox

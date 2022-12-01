@@ -3963,17 +3963,16 @@ MonoBehaviour:
   JumpHeightButton: {fileID: 731511955385920577, guid: a51843acd149be54892f96d8c906fa1f, type: 3}
   StickButton: {fileID: 3558901907761173177, guid: 3dd30f1bbb1149f49a29e030caf0f632, type: 3}
   SwordButton: {fileID: 1716054639706402565, guid: 5bb75b3f3c6f52f458dd520f24e9f56b, type: 3}
-  ResistFlyingButton: {fileID: 0}
+  ResistFlyingButton: {fileID: 5408540992315756386, guid: 3e916320360ce9347a70b0a5fc16df0b, type: 3}
   ResistFaeButton: {fileID: 1266135134756567068, guid: 68f2f39d2a5bbe841af85538fcc99dae, type: 3}
-  ResistCreepyButton: {fileID: 0}
-  ResistBeastButton: {fileID: 0}
+  ResistCreepyButton: {fileID: 5803546189647156712, guid: 719eb294cc67e984fa6643d4d612c76c, type: 3}
+  ResistBeastButton: {fileID: 5231445845105432871, guid: 37008517e1d49b7458aba7b8e2273a42, type: 3}
   slotOne: {fileID: 7913365711216447598}
   slotTwo: {fileID: 7913365711935380935}
   slotThree: {fileID: 7913365712717361325}
   playerStats: {fileID: 7913365711549347792}
   collectibleStats: {fileID: 0}
   GameManager: {fileID: 0}
-  _debug: {fileID: 0}
 --- !u!1 &7913365712556765697
 GameObject:
   m_ObjectHideFlags: 0

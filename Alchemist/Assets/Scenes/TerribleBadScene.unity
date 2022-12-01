@@ -734,7 +734,7 @@ MonoBehaviour:
   batWingCount: {fileID: 1362948079}
   devilEyeCount: {fileID: 150543710}
   fairyBellsCount: {fileID: 692618524}
-  featherCount: {fileID: 0}
+  featherCount: {fileID: 2114429080}
   foxTailCount: {fileID: 330715955}
   goatHoofCount: {fileID: 1721171020}
   graveyardDustCount: {fileID: 687294446}
@@ -2015,6 +2015,22 @@ PrefabInstance:
     - target: {fileID: 7913365712556765758, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1156
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913365712556765758, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5733
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913365712556765758, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5733
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913365712556765758, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5733
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913365712556765758, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00012207
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
