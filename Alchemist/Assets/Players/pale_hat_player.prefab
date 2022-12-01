@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_facing_right: 0
-  animator: {fileID: 0}
+  animator: {fileID: 2750954260155389313}
   rigid_body_2d: {fileID: 615799948621649688}
   ground_check: {fileID: 615799948972082271}
   ground_layer:

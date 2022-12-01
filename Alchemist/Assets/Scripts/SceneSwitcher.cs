@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class SceneSwitcher : MonoBehaviour
 {
+  public static GameObject PlayerInstance;
+  private GameObject CharacterSwitcher;
+
   public Button btn1;
   public Button btn2;
 
@@ -14,19 +17,23 @@ public class SceneSwitcher : MonoBehaviour
 
 
   void Start() {
-
     Time.timeScale = 1;
-
     CHIPTUNA.Play();
-    
+
   }
 
   void Update() {
+
   }
+
 
   // Starts the game after delay of ~1s
   public void Fire1() {
     Confirm.Play();
+
+    PlayerInstance = this.GetComponent<CharacterSwitcher>().ReturnCurrentPlayer();
+    DontDestroyOnLoad(PlayerInstance);
+
     Invoke("ChangeScene", 1.0f);
   }
 
