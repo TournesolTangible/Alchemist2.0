@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 12f;
     private float jumping_power = 40f;
     public bool is_facing_right;
+    private float _DriftLeft = 4.5f;
 
     private float coyote_time = 0.2f;
     private float coyote_time_counter;
@@ -54,10 +56,19 @@ public class PlayerMovement : MonoBehaviour
 
         // flips player character
         Flip();
+
+
+        // Checks scene to stop/start leftward drift
+        if (SceneManager.GetActiveScene().buildIndex == 0) {
+            _DriftLeft = 0f;
+        } else {
+            _DriftLeft = 4.5f;
+        }
+
     }
 
     private void FixedUpdate() {
-        rigid_body_2d.velocity = new Vector2(horizontal * speed - 4.5f, rigid_body_2d.velocity.y);
+        rigid_body_2d.velocity = new Vector2(horizontal * speed - _DriftLeft, rigid_body_2d.velocity.y);
     }
 
     private bool IsGrounded() {
