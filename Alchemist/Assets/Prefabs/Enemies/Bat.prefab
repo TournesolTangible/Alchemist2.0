@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d8f0c801426aa4abb735e89009e042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 200
+  _speed: 170
   NextWaypointDistance: 3
   EnemyGFX: {fileID: 1005165159367116489}
 --- !u!114 &1005165159367116485

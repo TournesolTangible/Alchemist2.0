@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d8f0c801426aa4abb735e89009e042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 200
+  _speed: 150
   NextWaypointDistance: 3
   EnemyGFX: {fileID: 410591734812214149}
 --- !u!114 &410591734812214145
@@ -138,7 +138,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.15}
   serializedVersion: 2
   m_Radius: 1.13
 --- !u!50 &410591734812214156

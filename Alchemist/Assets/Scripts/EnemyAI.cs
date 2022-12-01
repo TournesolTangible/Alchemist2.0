@@ -73,77 +73,81 @@ public class EnemyAI : MonoBehaviour
     void FixedUpdate()
     {
 
-        // the enemy at this point will always be moving so just set it to true
-        //_animator.SetBool("isMoving", true);
-
-        _target = GameManager.Instance.Player.transform;
-
-        // case for when we don't have a path
-        if (Path == null)
+        // Only create the path and move the enemy if the distance is close enough to the player and not outside of the game center
+        if (Mathf.Abs(this.transform.position.x - _target.transform.position.x) < 46 && this.transform.position.x > -24)
         {
-            return;
+
+            // the enemy at this point will always be moving so just set it to true
+            //_animator.SetBool("isMoving", true);
+
+            _target = GameManager.Instance.Player.transform;
+
+            // case for when we don't have a path
+            if (Path == null)
+            {
+                return;
+            }
+            ////////////////////////////
+            /// Checking Waypoints ////
+            ///////////////////////////
+
+            // if the current number of waypoints is greater than the path's number of waypoints
+            // we have reached the end of the path
+            if (CurrentWaypoint >= Path.vectorPath.Count)
+            {
+                ReachedEndOfPath = true;
+                return;
+            }
+            // else we haven't reached the end
+            else
+            {
+                ReachedEndOfPath = false;
+            }
+
+            ////////////////////////////
+            //// Movement of Enemy ////
+            ///////////////////////////
+
+            // Get the position of the current waypoint, subtract our current position and normalize it (length = 1.0)
+            Vector2 direction = ((Vector2)Path.vectorPath[CurrentWaypoint] - Rb.position).normalized;
+            // calculate and add the force to move the enemy toward that direction
+            Vector2 force = direction * _speed * Time.deltaTime;
+            Rb.AddForce(force);
+
+            // 
+            float distance = Vector2.Distance(Rb.position, Path.vectorPath[CurrentWaypoint]);
+
+            // if we have reached the end of the current waypoint, move toward the next waypoint
+            if (distance < NextWaypointDistance)
+            {
+                CurrentWaypoint++;
+            }
+
+
+            /////////////////////////////////////////////////////////
+            //// Flip the sprite when facing the other direction ////
+            /////////////////////////////////////////////////////////
+
+            if (Rb.velocity.x >= 0.01f && !_facingRight)
+            {
+                //transform.localScale = new Vector3(-1f, 1f, 1f);
+                Flip();
+            }
+            else if (Rb.velocity.x <= -0.01f && _facingRight)
+            {
+                //transform.localScale = new Vector3(1f, 1f, 1f);
+                Flip();
+            }
+
+
+            void Flip()
+            {
+                Vector3 currnetScale = gameObject.transform.localScale;
+                currnetScale.x *= -1;
+                gameObject.transform.localScale = currnetScale;
+
+                _facingRight = !_facingRight;
+            }
         }
-        ////////////////////////////
-        /// Checking Waypoints ////
-        ///////////////////////////
-
-        // if the current number of waypoints is greater than the path's number of waypoints
-        // we have reached the end of the path
-        if(CurrentWaypoint >= Path.vectorPath.Count)
-        {
-            ReachedEndOfPath = true;
-            return;
-        }
-        // else we haven't reached the end
-        else
-        {
-            ReachedEndOfPath = false;
-        }
-
-        ////////////////////////////
-        //// Movement of Enemy ////
-        ///////////////////////////
-
-        // Get the position of the current waypoint, subtract our current position and normalize it (length = 1.0)
-        Vector2 direction = ((Vector2)Path.vectorPath[CurrentWaypoint] - Rb.position).normalized;
-        // calculate and add the force to move the enemy toward that direction
-        Vector2 force = direction * _speed * Time.deltaTime;
-        Rb.AddForce(force);
-
-        // 
-        float distance = Vector2.Distance(Rb.position, Path.vectorPath[CurrentWaypoint]);
-
-        // if we have reached the end of the current waypoint, move toward the next waypoint
-        if (distance < NextWaypointDistance)
-        {
-            CurrentWaypoint++;
-        }
-
-
-        /////////////////////////////////////////////////////////
-        //// Flip the sprite when facing the other direction ////
-        /////////////////////////////////////////////////////////
-        
-        if (Rb.velocity.x >= 0.01f && !_facingRight)
-        {
-            //transform.localScale = new Vector3(-1f, 1f, 1f);
-            Flip();
-        }
-        else if (Rb.velocity.x <= -0.01f && _facingRight)
-        {
-            //transform.localScale = new Vector3(1f, 1f, 1f);
-            Flip();
-        }
-
-
-        void Flip()
-        {
-            Vector3 currnetScale = gameObject.transform.localScale;
-            currnetScale.x *= -1;
-            gameObject.transform.localScale = currnetScale;
-
-            _facingRight = !_facingRight;
-        }
-
     }
 }
