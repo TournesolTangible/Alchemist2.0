@@ -10,16 +10,27 @@ public class BasicAttack : MonoBehaviour
     public float attackRangeY;
     public float damageRate = 1.0f;
 
+    private static GameObject _GameManager;
+    private int _StrengthStat;
+
     public Transform attackPosition;
     public LayerMask layerToHit;
     private Collider2D[] enemiesToDamage;
 
     public GameObject sprite;
 
+    void Awake() {
+        _GameManager = GameObject.Find("GameManager");
+        _StrengthStat = _GameManager.GetComponent<GameManager>().playerStrength;
+    }
  
     void Start () {
         // starts the auto attack routine (routine, delay on start, time to loop)
         InvokeRepeating("AttackBase", 0f, damageRate);
+    }
+
+    void Update() {
+        _StrengthStat = _GameManager.GetComponent<GameManager>().playerStrength;
     }
  
     void AttackBase () {
@@ -44,7 +55,8 @@ public class BasicAttack : MonoBehaviour
             // damage enemies
             if (enemiesToDamage[i].transform.tag == "Enemy") {
                 Debug.Log("Hitting enemy");
-                enemiesToDamage[i].transform.gameObject.GetComponent<EnemyHealthManager>().TakeDamage(damage);
+                // ADDED: strength added to received damage
+                enemiesToDamage[i].transform.gameObject.GetComponent<EnemyHealthManager>().TakeDamage(damage + _StrengthStat);
             }
         }
         
