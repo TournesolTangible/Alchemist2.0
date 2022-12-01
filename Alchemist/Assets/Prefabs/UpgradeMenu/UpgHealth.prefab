@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthUpgrade: {fileID: 7165764154054537792}
+  graveyardDustText: {fileID: 3092288512774806077}
 --- !u!1 &7165764154883682694
 GameObject:
   m_ObjectHideFlags: 0

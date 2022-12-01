@@ -464,6 +464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alchemyUpgrade: {fileID: 2042729680608043784}
+  fairyBellsText: {fileID: 345802084744126031}
 --- !u!1 &7551624810889075192
 GameObject:
   m_ObjectHideFlags: 0

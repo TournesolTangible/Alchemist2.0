@@ -388,6 +388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   strengthUpgrade: {fileID: 7046099378606592470}
+  goatHoofText: {fileID: 8694778550932843691}
 --- !u!1 &7046099380111954352
 GameObject:
   m_ObjectHideFlags: 0

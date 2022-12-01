@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public int currentHealth = 3;
     public int playerStrength = 5; // adjust
     public int playerLuck = 5; // adjust
-    public int playerPeace = 5; // adjust
+    public int playerPeace = 0; 
     public int playerProtection = 5; // adjust
     public int playerAlchemy = 8;
     public int stickDamage = 5; // adjust

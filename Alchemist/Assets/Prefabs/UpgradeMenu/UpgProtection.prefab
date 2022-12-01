@@ -465,6 +465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   protectionUpgrade: {fileID: 8786199493104600779}
+  batWingText: {fileID: 1486466055359073153}
 --- !u!1 &8786199493410948725
 GameObject:
   m_ObjectHideFlags: 0
