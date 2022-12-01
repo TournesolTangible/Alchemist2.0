@@ -10,6 +10,8 @@ public class HealthOnClick : MonoBehaviour
 
     void Start() {
 
+        graveyardDustText.text = "x " + GameManager.Instance.graveyardDustCost.ToString();
+
         if (GameManager.Instance.graveyardDustAmt < GameManager.Instance.graveyardDustCost) {
             healthUpgrade.interactable = false;
         }

@@ -10,6 +10,8 @@ public class StrengthOnClick : MonoBehaviour
 
     void Start() {
 
+        goatHoofText.text = "x " + GameManager.Instance.goatHoofCost.ToString();
+
         if (GameManager.Instance.goatHoofAmt < GameManager.Instance.goatHoofCost) {
             strengthUpgrade.interactable = false;
         }

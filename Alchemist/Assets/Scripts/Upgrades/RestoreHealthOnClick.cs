@@ -10,6 +10,8 @@ public class RestoreHealthOnClick : MonoBehaviour
 
     void Start() {
 
+        sageText.text = "x " + GameManager.Instance.sageCost.ToString();
+
         if (GameManager.Instance.sageAmt < GameManager.Instance.sageCost) {
             healthRestoreUpgrade.interactable = false;
         }

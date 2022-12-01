@@ -10,6 +10,8 @@ public class PeaceOnClick : MonoBehaviour
 
     void Start() {
 
+        lavenderText.text = "x " + GameManager.Instance.lavenderCost.ToString();
+
         if (GameManager.Instance.lavenderAmt < GameManager.Instance.lavenderCost) {
             peaceUpgrade.interactable = false;
         }

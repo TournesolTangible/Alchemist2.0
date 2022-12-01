@@ -8,7 +8,9 @@ public class ProtectionOnClick : MonoBehaviour
     [SerializeField] private Button protectionUpgrade;
     [SerializeField] private Text batWingText;
 
-    void Update() {
+    void Start() {
+
+        batWingText.text = "x " + GameManager.Instance.batWingCost.ToString();
 
         if (GameManager.Instance.batWingAmt < GameManager.Instance.batWingCost) {
             protectionUpgrade.interactable = false;

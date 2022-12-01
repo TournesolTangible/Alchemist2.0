@@ -10,6 +10,8 @@ public class LuckOnClick : MonoBehaviour
 
     void Start() {
 
+        foxTailText.text = "x " + GameManager.Instance.foxTailCost.ToString();
+
         if (GameManager.Instance.foxTailAmt < GameManager.Instance.foxTailCost) {
             luckUpgrade.interactable = false;
         }
