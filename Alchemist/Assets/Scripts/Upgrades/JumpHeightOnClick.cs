@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JumpHeightOnClick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private Button jumpHeightUpgrade;
+    [SerializeField] private Text spiderSilkText;
+
+    void Start() {
+
+        spiderSilkText.text = "x " + GameManager.Instance.spiderSilkCost.ToString();
+
+        if (GameManager.Instance.spiderSilkAmt < GameManager.Instance.spiderSilkCost) {
+            jumpHeightUpgrade.interactable = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public void UpgradeJumpHeight() {
+
+        // TODO: increase height of player jump by small increment
         
+        GameManager.Instance.spiderSilkAmt -= GameManager.Instance.spiderSilkCost;
+        GameManager.Instance.spiderSilkCost += 3;
+        spiderSilkText.text = "x " + GameManager.Instance.spiderSilkCost.ToString();
+        jumpHeightUpgrade.interactable = false;
     }
 }

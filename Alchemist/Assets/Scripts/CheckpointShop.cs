@@ -82,16 +82,16 @@ public class CheckpointShop : MonoBehaviour
         // Options below here only unlocked one at a time 
         // once the Alchemy stat increases
 
+        options.Add(FireballButton); // once unlocked, switch to upgrade
         options.Add(AtkRangeButton);
         options.Add(AtkSpeedButton);
-        options.Add(FireballButton); // once unlocked, switch to upgrade
-        options.Add(SwordButton); // once unlocked, switch to upgrade
         options.Add(DblJumpButton); // once unlocked, destroy
         options.Add(JumpHeightButton); // needs cap
         options.Add(ResistFlyingButton);
         options.Add(ResistFaeButton);
         options.Add(ResistCreepyButton);
         options.Add(ResistBeastButton);
+        options.Add(SwordButton); // once unlocked, switch to upgrade
 
         alchemyValue = GameManager.GetComponent<GameManager>().playerAlchemy;
 

@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RangeUpOnClick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+     [SerializeField] private Button rangeUpgrade;
+    [SerializeField] private Text featherText;
+
+    void Start() {
+
+        featherText.text = "x " + GameManager.Instance.featherCost.ToString();
+
+        if (GameManager.Instance.featherAmt < GameManager.Instance.featherCost) {
+            rangeUpgrade.interactable = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpgradeAtkRange() {
+
+        // TODO: increase range of fireball attack
+
+        GameManager.Instance.featherAmt -= GameManager.Instance.featherCost;
+        GameManager.Instance.featherCost += 3;
+        featherText.text = "x " + GameManager.Instance.featherCost.ToString();
+        rangeUpgrade.interactable = false;
     }
 }

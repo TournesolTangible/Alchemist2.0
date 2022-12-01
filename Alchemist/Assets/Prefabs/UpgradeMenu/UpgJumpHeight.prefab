@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 731511955380672902}
   - component: {fileID: 731511955380672901}
   - component: {fileID: 731511955380672900}
+  - component: {fileID: 2444813037605232845}
   m_Layer: 5
   m_Name: UpgradeButton
   m_TagString: Untagged
@@ -437,7 +438,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 731511955380672901}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2444813037605232845}
+        m_TargetAssemblyTypeName: JumpHeightOnClick, Assembly-CSharp
+        m_MethodName: UpgradeJumpHeight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2444813037605232845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 731511955380672906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2110d7dd7fabf4c44bb925c0f1d7b380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeightUpgrade: {fileID: 731511955380672900}
+  spiderSilkText: {fileID: 3518448536150701829}
 --- !u!1 &731511955385920577
 GameObject:
   m_ObjectHideFlags: 0

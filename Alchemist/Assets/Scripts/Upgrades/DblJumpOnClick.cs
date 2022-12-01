@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DblJumpOnClick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private Button dblJumpUpgrade;
+    [SerializeField] private Text swineSnoutText;
+
+    void Start() {
+
+        swineSnoutText.text = "x " + GameManager.Instance.swineSnoutCost.ToString();
+
+        if (GameManager.Instance.swineSnoutAmt < GameManager.Instance.swineSnoutCost) {
+            dblJumpUpgrade.interactable = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    public void UpgradeDblJump() {
+
+        // TODO: affect double jump + change effect after 2nd press?
         
+        GameManager.Instance.swineSnoutAmt -= GameManager.Instance.swineSnoutCost;
+        GameManager.Instance.swineSnoutCost += 3;
+        swineSnoutText.text = "x " + GameManager.Instance.swineSnoutCost.ToString();
+        dblJumpUpgrade.interactable = false;
     }
 }

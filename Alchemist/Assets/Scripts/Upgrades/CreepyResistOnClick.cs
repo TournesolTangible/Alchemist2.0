@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CreepyResistOnClick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private Button creepyResistUpgrade;
+    [SerializeField] private Text mushroomText;
+
+    void Start() {
+
+        mushroomText.text = "x " + GameManager.Instance.mushroomCost.ToString();
+
+        if (GameManager.Instance.mushroomAmt < GameManager.Instance.mushroomCost) {
+            creepyResistUpgrade.interactable = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpgradeCreepyResist() {
+
+        // TODO: reduce damage from spider/snake/mush
+
+        GameManager.Instance.mushroomAmt -= GameManager.Instance.mushroomCost;
+        GameManager.Instance.mushroomCost += 3;
+        mushroomText.text = "x " + GameManager.Instance.mushroomCost.ToString();
+        creepyResistUpgrade.interactable = false;
     }
 }

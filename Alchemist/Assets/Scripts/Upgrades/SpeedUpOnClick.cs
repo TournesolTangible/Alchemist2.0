@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpeedUpOnClick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private Button speedUpgrade;
+    [SerializeField] private Text wolfFootText;
+
+    void Start() {
+
+        wolfFootText.text = "x " + GameManager.Instance.wolfFootCost.ToString();
+
+        if (GameManager.Instance.wolfFootAmt < GameManager.Instance.wolfFootCost) {
+            speedUpgrade.interactable = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpgradeSpeed() {
+
+       // TODO: increase speed of fireball attack
+
+        GameManager.Instance.wolfFootAmt -= GameManager.Instance.wolfFootCost;
+        GameManager.Instance.wolfFootCost += 3;
+        wolfFootText.text = "x " + GameManager.Instance.wolfFootCost.ToString();
+        speedUpgrade.interactable = false;
     }
 }

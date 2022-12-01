@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeastResistOnClick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private Button beastResistUpgrade;
+    [SerializeField] private Text juniperBerryText;
+
+    void Start() {
+
+        juniperBerryText.text = "x " + GameManager.Instance.juniperBerryCost.ToString();
+
+        if (GameManager.Instance.juniperBerryAmt < GameManager.Instance.juniperBerryCost) {
+            beastResistUpgrade.interactable = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void UpgradeBeastResist() {
+
+        // TODO: reduce damage of wolf/fox/boar 
+
+        GameManager.Instance.juniperBerryAmt -= GameManager.Instance.juniperBerryCost;
+        GameManager.Instance.juniperBerryCost += 3;
+        juniperBerryText.text = "x " + GameManager.Instance.juniperBerryCost.ToString();
+        beastResistUpgrade.interactable = false;
     }
 }

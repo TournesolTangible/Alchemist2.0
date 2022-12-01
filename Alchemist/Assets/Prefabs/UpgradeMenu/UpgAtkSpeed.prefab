@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 3602421579750532160}
   - component: {fileID: 1534517069056056829}
   - component: {fileID: 2385749015413758737}
+  - component: {fileID: 7680804030112236686}
   m_Layer: 5
   m_Name: UpgradeButton
   m_TagString: Untagged
@@ -517,7 +518,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534517069056056829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7680804030112236686}
+        m_TargetAssemblyTypeName: SpeedUpOnClick, Assembly-CSharp
+        m_MethodName: UpgradeSpeed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7680804030112236686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6428541399395393985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f247145580ff16d43b34b847537fcfe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedUpgrade: {fileID: 2385749015413758737}
+  wolfFootText: {fileID: 6797120443725226143}
 --- !u!1 &8667852687740403694
 GameObject:
   m_ObjectHideFlags: 0
