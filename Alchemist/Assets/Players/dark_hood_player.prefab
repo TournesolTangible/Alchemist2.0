@@ -291,7 +291,7 @@ MonoBehaviour:
   attackPosition: {fileID: 5584047368528112748}
   layerToHit:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   sprite: {fileID: 0}
 --- !u!114 &-3933162393871903736
 MonoBehaviour:

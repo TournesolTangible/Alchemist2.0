@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour
         GameObject.Destroy(Player);
         Player = FindPlayerInstance();
         SpawnPlayer();
+
+        print(Camera.main.transform.position.z);
     }
 
     // Update is called once per frame
