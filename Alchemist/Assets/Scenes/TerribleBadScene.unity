@@ -835,7 +835,7 @@ MonoBehaviour:
   currentHealth: 3
   playerStrength: 5
   playerLuck: 5
-  playerPeace: 5
+  playerPeace: 0
   playerProtection: 5
   playerAlchemy: 8
   stickDamage: 5
@@ -1017,6 +1017,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1002281889 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5664571746548740394, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
+  m_PrefabInstance: {fileID: 1724440521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1025828973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,7 +1686,7 @@ PrefabInstance:
     - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: attackPosition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1002281889}
     - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: layerToHit.m_Bits
       value: 1
@@ -2107,6 +2112,10 @@ PrefabInstance:
     - target: {fileID: 9195723715535847037, guid: 9cdaa5f34fb431c408f2922314d56b04, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195723715535847037, guid: 9cdaa5f34fb431c408f2922314d56b04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cdaa5f34fb431c408f2922314d56b04, type: 3}

@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public int playerHealth = 3;
     public int currentHealth = 3;
     public int playerStrength = 5; // adjust
-    public int playerLuck = 5; // adjust
+    public int playerLuck = 0;
     public int playerPeace = 0; 
     public int playerProtection = 5; // adjust
     public int playerAlchemy = 8;
@@ -135,8 +135,9 @@ public class GameManager : MonoBehaviour
                 GameObject.Destroy(Player);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1 );
             }
-
         }
+
+        healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
     }
 
     public void PlayDeathRinger() {
