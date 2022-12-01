@@ -440,8 +440,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Increase resistance to Demon, Mush, Pixie, Satyr +5%
+    m_LineSpacing: 1.3
+  m_Text: Increase resistance to Demon, Pixie, Satyr +5%
 --- !u!1 &6773750354878883855
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,4 +521,4 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fae
+  m_Text: Faefolk

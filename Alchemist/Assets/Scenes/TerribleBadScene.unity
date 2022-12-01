@@ -1860,7 +1860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7913365712547377507, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7913365712547377564, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
       propertyPath: GameManager
@@ -1870,6 +1870,18 @@ PrefabInstance:
       propertyPath: collectibleStats
       value: 
       objectReference: {fileID: 618934994}
+    - target: {fileID: 7913365712547377564, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: ResistBeastButton
+      value: 
+      objectReference: {fileID: 5231445845105432871, guid: 37008517e1d49b7458aba7b8e2273a42, type: 3}
+    - target: {fileID: 7913365712547377564, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: ResistCreepyButton
+      value: 
+      objectReference: {fileID: 5803546189647156712, guid: 719eb294cc67e984fa6643d4d612c76c, type: 3}
+    - target: {fileID: 7913365712547377564, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: ResistFlyingButton
+      value: 
+      objectReference: {fileID: 5408540992315756386, guid: 3e916320360ce9347a70b0a5fc16df0b, type: 3}
     - target: {fileID: 7913365712547377567, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
       propertyPath: m_Pivot.x
       value: 0

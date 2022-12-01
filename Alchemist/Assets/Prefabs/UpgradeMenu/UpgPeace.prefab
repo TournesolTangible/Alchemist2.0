@@ -548,7 +548,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: Decrease enemies and increase items +1
+  m_Text: "Reduce cost of all \nupgrades  -1"
 --- !u!1 &9182747507044249804
 GameObject:
   m_ObjectHideFlags: 0

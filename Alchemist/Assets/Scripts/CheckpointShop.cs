@@ -23,15 +23,10 @@ public class CheckpointShop : MonoBehaviour
     [SerializeField] private GameObject JumpHeightButton;
     [SerializeField] private GameObject StickButton;
     [SerializeField] private GameObject SwordButton;
-    [SerializeField] private GameObject ResistBatButton;
-    [SerializeField] private GameObject ResistBirdButton;
-    [SerializeField] private GameObject ResistCactusButton;
+    [SerializeField] private GameObject ResistFlyingButton;
     [SerializeField] private GameObject ResistFaeButton;
-    [SerializeField] private GameObject ResistGhostButton;
-    [SerializeField] private GameObject ResistKangaButton;
-    [SerializeField] private GameObject ResistRatButton;
-    [SerializeField] private GameObject ResistSpiderButton;
-    [SerializeField] private GameObject ResistWolfButton;
+    [SerializeField] private GameObject ResistCreepyButton;
+    [SerializeField] private GameObject ResistBeastButton;
 
     // slots for instantiating buttons
     public GameObject slotOne;
@@ -42,7 +37,6 @@ public class CheckpointShop : MonoBehaviour
 
     private int alchemyValue;
     public GameObject GameManager;
-    public Text _debug; // REMOVE AFTER ALPHA
 
     public void OpenCheckpointShop() {
 
@@ -76,7 +70,7 @@ public class CheckpointShop : MonoBehaviour
     {
         List<GameObject> options = new List<GameObject>();
         
-        options.Add(AlchemyButton); // needs counter
+        options.Add(AlchemyButton); 
         options.Add(HealthButton);
         options.Add(LuckButton);
         options.Add(StrengthButton);
@@ -85,7 +79,7 @@ public class CheckpointShop : MonoBehaviour
         options.Add(StickButton);
         options.Add(HealthRestoreButton);
 
-        // Options below here should only be unlocked one at a time 
+        // Options below here only unlocked one at a time 
         // once the Alchemy stat increases
 
         options.Add(AtkRangeButton);
@@ -94,21 +88,15 @@ public class CheckpointShop : MonoBehaviour
         options.Add(SwordButton); // once unlocked, switch to upgrade
         options.Add(DblJumpButton); // once unlocked, destroy
         options.Add(JumpHeightButton); // needs cap
-        options.Add(ResistBatButton);
-        options.Add(ResistBirdButton);
-        options.Add(ResistCactusButton);
+        options.Add(ResistFlyingButton);
         options.Add(ResistFaeButton);
-        options.Add(ResistGhostButton);
-        options.Add(ResistKangaButton);
-        options.Add(ResistRatButton);
-        options.Add(ResistSpiderButton);
-        options.Add(ResistWolfButton);
+        options.Add(ResistCreepyButton);
+        options.Add(ResistBeastButton);
 
         alchemyValue = GameManager.GetComponent<GameManager>().playerAlchemy;
-        _debug.text = "<ALPHA> Alchemy value: " + alchemyValue.ToString(); // REMOVE AFTER ALPHA
 
         // once all potions are unlocked, destroy Alchemy button
-        if (alchemyValue == 23) {
+        if (alchemyValue == 18) {
             options.RemoveAt(0);
             alchemyValue -= 1;
         }
