@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6614784091010186110}
   - component: {fileID: 6614784091010186108}
   - component: {fileID: 7908335799498087567}
-  - component: {fileID: -3247926772952291534}
+  - component: {fileID: 1063788429480165336}
   m_Layer: 0
   m_Name: Feather
   m_TagString: Collectable
@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70ab4078831a061439ae36f59c0d57e9, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 4
 --- !u!58 &7908335799498087567
 CircleCollider2D:
@@ -170,7 +170,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.67
---- !u!114 &-3247926772952291534
+--- !u!114 &1063788429480165336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,7 +179,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6614784091010186111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5899a9e64e6424ebda1e4e61980586, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
-  gm: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 2bd66f443d757974197579fbabc213f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
