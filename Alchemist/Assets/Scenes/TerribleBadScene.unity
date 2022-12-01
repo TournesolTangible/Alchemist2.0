@@ -1617,6 +1617,10 @@ PrefabInstance:
       propertyPath: maxTotalHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1087940046519084565, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
+      propertyPath: invincibilityDurationInSec
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: damage
       value: 3
@@ -1625,6 +1629,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 8216152740598672136, guid: c2772ab5f4b630843bcf27586544b01e, type: 3}
+    - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
+      propertyPath: damageRate
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1087940046567616900, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: facingRight
       value: 0

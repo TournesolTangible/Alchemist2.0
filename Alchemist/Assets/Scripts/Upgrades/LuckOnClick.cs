@@ -7,11 +7,10 @@ public class LuckOnClick : MonoBehaviour
 {
     [SerializeField] private Button luckUpgrade;
     [SerializeField] private Text foxTailText;
-    private int foxTailCost = 1;
 
     void Start() {
 
-        if (GameManager.Instance.foxTailAmt < foxTailCost) {
+        if (GameManager.Instance.foxTailAmt < GameManager.Instance.foxTailCost) {
             luckUpgrade.interactable = false;
         }
     }
@@ -19,9 +18,9 @@ public class LuckOnClick : MonoBehaviour
     public void UpgradeLuck() {
 
         GameManager.Instance.playerLuck += 2;
-        GameManager.Instance.foxTailAmt -= foxTailCost;
-        foxTailCost += 3;
-        foxTailText.text = "x " + foxTailCost.ToString();
+        GameManager.Instance.foxTailAmt -= GameManager.Instance.foxTailCost;
+        GameManager.Instance.foxTailCost += 3;
+        foxTailText.text = "x " + GameManager.Instance.foxTailCost.ToString();
         luckUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
     }

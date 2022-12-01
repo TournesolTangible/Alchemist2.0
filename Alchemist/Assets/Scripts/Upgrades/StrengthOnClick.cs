@@ -7,11 +7,10 @@ public class StrengthOnClick : MonoBehaviour
 {
     [SerializeField] private Button strengthUpgrade;
     [SerializeField] private Text goatHoofText;
-    private int goatHoofCost = 1;
 
     void Start() {
 
-        if (GameManager.Instance.goatHoofAmt < goatHoofCost) {
+        if (GameManager.Instance.goatHoofAmt < GameManager.Instance.goatHoofCost) {
             strengthUpgrade.interactable = false;
         }
     }
@@ -19,9 +18,9 @@ public class StrengthOnClick : MonoBehaviour
     public void UpgradeStrength() {
 
         GameManager.Instance.playerStrength += 1;
-        GameManager.Instance.goatHoofAmt -= goatHoofCost;
-        goatHoofCost += 3;
-        goatHoofText.text = "x " + goatHoofCost.ToString();
+        GameManager.Instance.goatHoofAmt -= GameManager.Instance.goatHoofCost;
+        GameManager.Instance.goatHoofCost += 3;
+        goatHoofText.text = "x " + GameManager.Instance.goatHoofCost.ToString();
         strengthUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
     }

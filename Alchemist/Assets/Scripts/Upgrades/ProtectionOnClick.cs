@@ -7,11 +7,10 @@ public class ProtectionOnClick : MonoBehaviour
 {
     [SerializeField] private Button protectionUpgrade;
     [SerializeField] private Text batWingText;
-    private int batWingCost = 1;
 
     void Update() {
 
-        if (GameManager.Instance.batWingAmt < batWingCost) {
+        if (GameManager.Instance.batWingAmt < GameManager.Instance.batWingCost) {
             protectionUpgrade.interactable = false;
         }
     }
@@ -19,9 +18,9 @@ public class ProtectionOnClick : MonoBehaviour
     public void UpgradeProtection() {
 
         GameManager.Instance.playerProtection += 1;
-        GameManager.Instance.batWingAmt -= batWingCost;
-        batWingCost += 3;
-        batWingText.text = "x " + batWingCost.ToString();
+        GameManager.Instance.batWingAmt -= GameManager.Instance.batWingCost;
+        GameManager.Instance.batWingCost += 3;
+        batWingText.text = "x " + GameManager.Instance.batWingCost.ToString();
         protectionUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
     }

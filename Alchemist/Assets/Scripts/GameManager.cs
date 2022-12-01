@@ -31,23 +31,48 @@ public class GameManager : MonoBehaviour
 
     // reference stats for collectibles
     public int acornAmt = 0;
+
     public int batWingAmt = 0;
+    public int batWingCost = 1;
+
     public int devilEyeAmt = 0;
+
     public int emuEggAmt = 0;
+
     public int fairyBellsAmt = 0;
+    public int fairyBellsCost = 1;
+
     public int featherAmt = 0;
+
     public int foxTailAmt = 0;
+    public int foxTailCost = 1;
+
     public int goatHoofAmt = 0;
+    public int goatHoofCost = 1;
+
     public int graveyardDustAmt = 0;
+    public int graveyardDustCost = 1;
+
     public int juniperBerryAmt = 0;
+
     public int lavenderAmt = 0;
+    public int lavenderCost = 1;
+
     public int mushroomAmt = 0;
+
     public int quartzAmt = 0;
+
     public int sageAmt = 0;
+    public int sageCost = 1;
+
     public int snakeHeadAmt = 0;
+
     public int spiderSilkAmt = 0;
+
     public int swineSnoutAmt = 0;
+
     public int vervainAmt = 0;
+
     public int wolfFootAmt = 0;
 
     void Awake()

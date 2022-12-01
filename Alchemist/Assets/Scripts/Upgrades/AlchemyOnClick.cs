@@ -7,11 +7,10 @@ public class AlchemyOnClick : MonoBehaviour
 {
     [SerializeField] private Button alchemyUpgrade;
     [SerializeField] private Text fairyBellsText;
-    private int fairyBellsCost = 1;
 
     void Start() {
 
-        if (GameManager.Instance.fairyBellsAmt < fairyBellsCost) {
+        if (GameManager.Instance.fairyBellsAmt < GameManager.Instance.fairyBellsCost) {
             alchemyUpgrade.interactable = false;
         }
     }
@@ -19,9 +18,9 @@ public class AlchemyOnClick : MonoBehaviour
     public void UpgradeAlchemy() {
 
         GameManager.Instance.playerAlchemy += 1;
-        GameManager.Instance.fairyBellsAmt -= fairyBellsCost;
-        fairyBellsCost += 3;
-        fairyBellsText.text = "x " + fairyBellsCost.ToString();
+        GameManager.Instance.fairyBellsAmt -= GameManager.Instance.fairyBellsCost;
+        GameManager.Instance.fairyBellsCost += 3;
+        fairyBellsText.text = "x " + GameManager.Instance.fairyBellsCost.ToString();
         alchemyUpgrade.interactable = false;
     }
 }
