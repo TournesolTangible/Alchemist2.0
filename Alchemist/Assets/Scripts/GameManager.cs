@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance = null;
 
     public GameObject Player;
+    [SerializeField] private GameObject _PlayerPrefabDefault;
     private GameObject Spawn;
 
     public GameObject checkpointShop;
@@ -178,7 +179,7 @@ public class GameManager : MonoBehaviour
             Player = PlayerInstance;
         }
         if (PlayerInstance == null) {
-            print("No Player Instance found, original Player returned");
+            Player = GameObject.Instantiate(_PlayerPrefabDefault);
         }
         return Player;
 
