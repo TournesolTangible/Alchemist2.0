@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d8f0c801426aa4abb735e89009e042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 200
+  _speed: 140
   NextWaypointDistance: 3
   EnemyGFX: {fileID: 3954329187931495292}
 --- !u!114 &3954329189659930987
@@ -1181,9 +1181,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.24}
+  m_Offset: {x: 0, y: 0.51}
   serializedVersion: 2
-  m_Radius: 1.16
+  m_Radius: 0.76
 --- !u!50 &3954329189659930990
 Rigidbody2D:
   serializedVersion: 4
@@ -1199,7 +1199,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.6
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
