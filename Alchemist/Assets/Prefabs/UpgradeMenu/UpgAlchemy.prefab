@@ -465,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alchemyUpgrade: {fileID: 2042729680608043784}
   fairyBellsText: {fileID: 345802084744126031}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &7551624810889075192
 GameObject:
   m_ObjectHideFlags: 0

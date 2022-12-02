@@ -7,6 +7,7 @@ public class StickOnClick : MonoBehaviour
 {
     [SerializeField] private Button stickUpgrade;
     [SerializeField] private Text acornText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -25,5 +26,6 @@ public class StickOnClick : MonoBehaviour
         GameManager.Instance.acornCost += 3;
         acornText.text = "x " + GameManager.Instance.acornCost.ToString();
         stickUpgrade.interactable = false;
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

@@ -7,6 +7,7 @@ public class LuckOnClick : MonoBehaviour
 {
     [SerializeField] private Button luckUpgrade;
     [SerializeField] private Text foxTailText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -25,5 +26,6 @@ public class LuckOnClick : MonoBehaviour
         foxTailText.text = "x " + GameManager.Instance.foxTailCost.ToString();
         luckUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

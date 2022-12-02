@@ -465,6 +465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballUpgrade: {fileID: 641267231681602345}
   vervainText: {fileID: 2791624212777779809}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &8070944811375922034
 GameObject:
   m_ObjectHideFlags: 0

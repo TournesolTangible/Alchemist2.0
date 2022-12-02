@@ -7,6 +7,7 @@ public class CheckpointShop : MonoBehaviour
 {
 
     [SerializeField] private GameObject checkpointCanvas;
+    public GameObject countdownCanvas;
 
    // All upgrade buttons are prefabs
     [SerializeField] private GameObject HealthButton;
@@ -63,6 +64,7 @@ public class CheckpointShop : MonoBehaviour
             slotTwo.SetActive(false);
             Destroy(slotThree.transform.GetChild(0).gameObject);
             slotThree.SetActive(false);
+            countdownCanvas.GetComponent<CheckpointTimer>().ResetCountdown();
         }
     }
     

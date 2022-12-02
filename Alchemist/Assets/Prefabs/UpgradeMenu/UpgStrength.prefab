@@ -389,6 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strengthUpgrade: {fileID: 7046099378606592470}
   goatHoofText: {fileID: 8694778550932843691}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &7046099380111954352
 GameObject:
   m_ObjectHideFlags: 0

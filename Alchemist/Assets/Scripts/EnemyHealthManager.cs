@@ -41,6 +41,7 @@ public class EnemyHealthManager : MonoBehaviour
    // take damage
    public void TakeDamage(float damage) {
     enemyCurrentHealth -= damage;
+    GameManager.GetComponent<GameManager>().countdownCanvas.GetComponent<CheckpointTimer>().ReduceCountdown();
    }
 
 }

@@ -7,6 +7,7 @@ public class BeastResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button beastResistUpgrade;
     [SerializeField] private Text juniperBerryText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -25,5 +26,6 @@ public class BeastResistOnClick : MonoBehaviour
         GameManager.Instance.juniperBerryCost += 3;
         juniperBerryText.text = "x " + GameManager.Instance.juniperBerryCost.ToString();
         beastResistUpgrade.interactable = false;
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faeResistUpgrade: {fileID: 1266135134050840002}
   quartzText: {fileID: 7549165097266055030}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &1266135134725216386
 GameObject:
   m_ObjectHideFlags: 0

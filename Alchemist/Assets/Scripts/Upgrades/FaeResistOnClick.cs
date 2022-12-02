@@ -7,6 +7,7 @@ public class FaeResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button faeResistUpgrade;
     [SerializeField] private Text quartzText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -25,5 +26,6 @@ public class FaeResistOnClick : MonoBehaviour
         GameManager.Instance.quartzCost += 3;
         quartzText.text = "x " + GameManager.Instance.quartzCost.ToString();
         faeResistUpgrade.interactable = false;
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

@@ -550,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stickUpgrade: {fileID: 3558901908185582056}
   acornText: {fileID: 2319287758608198392}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &3922221643370538591
 GameObject:
   m_ObjectHideFlags: 0

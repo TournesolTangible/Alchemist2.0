@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   peaceUpgrade: {fileID: 6039361017676057320}
   lavenderText: {fileID: 2889879059943421259}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &2998094085318272399
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: "Reduce cost of all \nupgrades  -2"
+  m_Text: Reduce spawn rate of enemies
 --- !u!1 &9182747507044249804
 GameObject:
   m_ObjectHideFlags: 0

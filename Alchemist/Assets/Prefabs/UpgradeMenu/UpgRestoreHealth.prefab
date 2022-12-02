@@ -550,6 +550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthRestoreUpgrade: {fileID: 3459775527574093613}
   sageText: {fileID: 5559294061140513629}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &8886694777920951449
 GameObject:
   m_ObjectHideFlags: 0

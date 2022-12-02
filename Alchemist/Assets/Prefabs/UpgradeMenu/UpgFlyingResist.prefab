@@ -305,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyResistUpgrade: {fileID: 5408540991326766051}
   snakeHeadText: {fileID: 8282468146947130019}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &5408540991344934543
 GameObject:
   m_ObjectHideFlags: 0

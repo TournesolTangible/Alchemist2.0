@@ -470,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swordUpgrade: {fileID: 1716054640208886975}
   devilEyeText: {fileID: 9165185553052448893}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &5000938335073487908
 GameObject:
   m_ObjectHideFlags: 0

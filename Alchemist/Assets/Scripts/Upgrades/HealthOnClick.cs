@@ -7,6 +7,7 @@ public class HealthOnClick : MonoBehaviour
 {
     [SerializeField] private Button healthUpgrade;
     [SerializeField] private Text graveyardDustText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -27,5 +28,6 @@ public class HealthOnClick : MonoBehaviour
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().AddHealth();
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

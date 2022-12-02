@@ -547,6 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creepyResistUpgrade: {fileID: 5803546189852296925}
   mushroomText: {fileID: 7909453734965978264}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &5803546189975460079
 GameObject:
   m_ObjectHideFlags: 0

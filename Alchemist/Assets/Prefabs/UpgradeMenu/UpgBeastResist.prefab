@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beastResistUpgrade: {fileID: 5231445843901268719}
   juniperBerryText: {fileID: 1546660602624293895}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &5231445844615526184
 GameObject:
   m_ObjectHideFlags: 0

@@ -3428,7 +3428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return To Game
+  m_Text: '[C] Return To Game'
 --- !u!1 &7913365712486886973
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,7 +3846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7913365712547377567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3949,6 +3949,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointCanvas: {fileID: 7913365712547377507}
+  countdownCanvas: {fileID: 0}
   HealthButton: {fileID: 7165764153225576101, guid: 23883372f42426646a2ab47d6bfc95ee, type: 3}
   AlchemyButton: {fileID: 8933639736709451788, guid: 16849b58212682145a4e99cf79b57d81, type: 3}
   LuckButton: {fileID: 3612216033387108684, guid: d3248ad68ffc9f847a8db416ded67fd0, type: 3}

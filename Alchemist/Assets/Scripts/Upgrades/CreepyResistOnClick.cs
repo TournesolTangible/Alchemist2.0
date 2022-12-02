@@ -7,6 +7,7 @@ public class CreepyResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button creepyResistUpgrade;
     [SerializeField] private Text mushroomText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -25,5 +26,6 @@ public class CreepyResistOnClick : MonoBehaviour
         GameManager.Instance.mushroomCost += 3;
         mushroomText.text = "x " + GameManager.Instance.mushroomCost.ToString();
         creepyResistUpgrade.interactable = false;
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

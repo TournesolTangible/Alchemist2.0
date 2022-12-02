@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dblJumpUpgrade: {fileID: 6587441029402638253}
   swineSnoutText: {fileID: 3607414299901628565}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &1962197571959759933
 GameObject:
   m_ObjectHideFlags: 0

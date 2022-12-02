@@ -7,6 +7,7 @@ public class SwordOnClick : MonoBehaviour
 {
     [SerializeField] private Button swordUpgrade;
     [SerializeField] private Text devilEyeText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -26,5 +27,6 @@ public class SwordOnClick : MonoBehaviour
         GameManager.Instance.devilEyeCost += 3;
         devilEyeText.text = "x " + GameManager.Instance.devilEyeCost.ToString();
         swordUpgrade.interactable = false;
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

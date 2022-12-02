@@ -7,6 +7,7 @@ public class ProtectionOnClick : MonoBehaviour
 {
     [SerializeField] private Button protectionUpgrade;
     [SerializeField] private Text batWingText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -25,5 +26,6 @@ public class ProtectionOnClick : MonoBehaviour
         batWingText.text = "x " + GameManager.Instance.batWingCost.ToString();
         protectionUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

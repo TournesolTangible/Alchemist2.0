@@ -18,73 +18,74 @@ public class GameManager : MonoBehaviour
     public GameObject healthBar;
     public GameObject healthBarController;
     public GameObject pauseMenu;
+    public GameObject countdownCanvas;
 
     [SerializeField] private AudioSource _DeathRinger;
 
     // reference stats for player
-    public int playerHealth = 3;
-    public int currentHealth = 3;
-    public int playerStrength = 5; // adjust
-    public int playerLuck = 0;
-    public int playerPeace = 0; 
-    public int playerProtection = 5; // adjust
-    public int playerAlchemy = 8;
-    public int stickDamage = 5; // adjust
+    [HideInInspector] public int playerHealth = 3;
+    [HideInInspector] public int currentHealth = 3;
+    [HideInInspector] public int playerStrength = 5; // adjust
+    [HideInInspector] public int playerLuck = 0;
+    [HideInInspector] public int playerPeace = 0; 
+    [HideInInspector] public int playerProtection = 5; // adjust
+    [HideInInspector] public int playerAlchemy = 8;
+    [HideInInspector] public int stickDamage = 5; // adjust
 
     // reference stats for collectibles
-    public int acornAmt = 0;
-    public int acornCost = 1;
+    [HideInInspector] public int acornAmt = 0;
+    [HideInInspector] public int acornCost = 1;
 
-    public int batWingAmt = 0;
-    public int batWingCost = 1;
+    [HideInInspector] public int batWingAmt = 0;
+    [HideInInspector] public int batWingCost = 1;
 
-    public int devilEyeAmt = 0;
-    public int devilEyeCost = 1;
+    [HideInInspector] public int devilEyeAmt = 0;
+    [HideInInspector] public int devilEyeCost = 1;
 
-    public int fairyBellsAmt = 0;
-    public int fairyBellsCost = 1;
+    [HideInInspector] public int fairyBellsAmt = 0;
+    [HideInInspector] public int fairyBellsCost = 1;
 
-    public int featherAmt = 0;
-    public int featherCost = 1;
+    [HideInInspector] public int featherAmt = 0;
+    [HideInInspector] public int featherCost = 1;
 
-    public int foxTailAmt = 0;
-    public int foxTailCost = 1;
+    [HideInInspector] public int foxTailAmt = 0;
+    [HideInInspector] public int foxTailCost = 1;
 
-    public int goatHoofAmt = 0;
-    public int goatHoofCost = 1;
+    [HideInInspector] public int goatHoofAmt = 0;
+    [HideInInspector] public int goatHoofCost = 1;
 
-    public int graveyardDustAmt = 0;
-    public int graveyardDustCost = 1;
+    [HideInInspector] public int graveyardDustAmt = 0;
+    [HideInInspector] public int graveyardDustCost = 1;
 
-    public int juniperBerryAmt = 0;
-    public int juniperBerryCost = 1;
+    [HideInInspector] public int juniperBerryAmt = 0;
+    [HideInInspector] public int juniperBerryCost = 1;
 
-    public int lavenderAmt = 0;
-    public int lavenderCost = 1;
+    [HideInInspector] public int lavenderAmt = 0;
+    [HideInInspector] public int lavenderCost = 1;
 
-    public int mushroomAmt = 0;
-    public int mushroomCost = 1;
+    [HideInInspector] public int mushroomAmt = 0;
+    [HideInInspector] public int mushroomCost = 1;
 
-    public int quartzAmt = 0;
-    public int quartzCost = 1;
+    [HideInInspector] public int quartzAmt = 0;
+    [HideInInspector] public int quartzCost = 1;
 
-    public int sageAmt = 0;
-    public int sageCost = 1;
+    [HideInInspector] public int sageAmt = 0;
+    [HideInInspector] public int sageCost = 1;
 
-    public int snakeHeadAmt = 0;
-    public int snakeHeadCost = 1;
+    [HideInInspector] public int snakeHeadAmt = 0;
+    [HideInInspector] public int snakeHeadCost = 1;
 
-    public int spiderSilkAmt = 0;
-    public int spiderSilkCost = 1;
+    [HideInInspector] public int spiderSilkAmt = 0;
+    [HideInInspector] public int spiderSilkCost = 1;
 
-    public int swineSnoutAmt = 0;
-    public int swineSnoutCost = 1;
+    [HideInInspector] public int swineSnoutAmt = 0;
+    [HideInInspector] public int swineSnoutCost = 1;
 
-    public int vervainAmt = 0;
-    public int vervainCost = 1;
+    [HideInInspector] public int vervainAmt = 0;
+    [HideInInspector] public int vervainCost = 1;
 
-    public int wolfFootAmt = 0;
-    public int wolfFootCost = 1;
+    [HideInInspector] public int wolfFootAmt = 0;
+    [HideInInspector] public int wolfFootCost = 1;
 
     void Awake()
     {
@@ -111,10 +112,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.C)) {
-            checkpointShop.GetComponent<CheckpointShop>().OpenCheckpointShop();
-        }
-
-        if (Input.GetKey(KeyCode.V)) {
             checkpointShop.GetComponent<CheckpointShop>().CloseCheckpointShop();
         }
 

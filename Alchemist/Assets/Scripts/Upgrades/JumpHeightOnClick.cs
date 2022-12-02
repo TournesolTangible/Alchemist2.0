@@ -7,6 +7,7 @@ public class JumpHeightOnClick : MonoBehaviour
 {
     [SerializeField] private Button jumpHeightUpgrade;
     [SerializeField] private Text spiderSilkText;
+    public GameObject countdownCanvas;
 
     void Start() {
 

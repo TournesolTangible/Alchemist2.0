@@ -545,6 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedUpgrade: {fileID: 2385749015413758737}
   wolfFootText: {fileID: 6797120443725226143}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
 --- !u!1 &8667852687740403694
 GameObject:
   m_ObjectHideFlags: 0

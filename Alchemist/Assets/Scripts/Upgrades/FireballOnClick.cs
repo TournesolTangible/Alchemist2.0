@@ -7,6 +7,7 @@ public class FireballOnClick : MonoBehaviour
 {
     [SerializeField] private Button fireballUpgrade;
     [SerializeField] private Text vervainText;
+    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -25,5 +26,6 @@ public class FireballOnClick : MonoBehaviour
         GameManager.Instance.vervainCost += 3;
         vervainText.text = "x " + GameManager.Instance.vervainCost.ToString();
         fireballUpgrade.interactable = false;
+        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }
