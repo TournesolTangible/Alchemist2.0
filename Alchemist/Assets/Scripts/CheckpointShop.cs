@@ -77,13 +77,13 @@ public class CheckpointShop : MonoBehaviour
         options.Add(LuckButton);
         options.Add(StrengthButton);
         options.Add(PeaceButton);
-        options.Add(ProtectionButton);
-        options.Add(StickButton);
         options.Add(HealthRestoreButton);
 
         // Options below here only unlocked one at a time 
         // once the Alchemy stat increases
 
+        options.Add(ProtectionButton);
+        options.Add(StickButton);
         options.Add(FireballButton); // once unlocked, switch to upgrade
         options.Add(AtkRangeButton);
         options.Add(AtkSpeedButton);

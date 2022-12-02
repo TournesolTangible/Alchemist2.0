@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int playerLuck = 0;
     [HideInInspector] public int playerPeace = 0; 
     [HideInInspector] public int playerProtection = 5; // adjust
-    [HideInInspector] public int playerAlchemy = 8;
+    [HideInInspector] public int playerAlchemy = 6;
     [HideInInspector] public int stickDamage = 5; // adjust
 
     // reference stats for collectibles
@@ -48,19 +48,19 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int featherAmt = 0;
     [HideInInspector] public int featherCost = 1;
 
-    [HideInInspector] public int foxTailAmt = 0;
+    [HideInInspector] public int foxTailAmt = 1;
     [HideInInspector] public int foxTailCost = 1;
 
-    [HideInInspector] public int goatHoofAmt = 0;
+    [HideInInspector] public int goatHoofAmt = 1;
     [HideInInspector] public int goatHoofCost = 1;
 
-    [HideInInspector] public int graveyardDustAmt = 0;
+    [HideInInspector] public int graveyardDustAmt = 1;
     [HideInInspector] public int graveyardDustCost = 1;
 
     [HideInInspector] public int juniperBerryAmt = 0;
     [HideInInspector] public int juniperBerryCost = 1;
 
-    [HideInInspector] public int lavenderAmt = 0;
+    [HideInInspector] public int lavenderAmt = 1;
     [HideInInspector] public int lavenderCost = 1;
 
     [HideInInspector] public int mushroomAmt = 0;
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int quartzAmt = 0;
     [HideInInspector] public int quartzCost = 1;
 
-    [HideInInspector] public int sageAmt = 0;
+    [HideInInspector] public int sageAmt = 5;
     [HideInInspector] public int sageCost = 1;
 
     [HideInInspector] public int snakeHeadAmt = 0;
