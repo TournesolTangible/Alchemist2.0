@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 80870390499140691}
   - component: {fileID: 7060771906949324041}
-  - component: {fileID: 8518234851970633209}
+  - component: {fileID: -277365523134839632}
+  - component: {fileID: 2270059258714522241}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -49,8 +50,29 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.6
---- !u!114 &8518234851970633209
+  m_Radius: 1.67
+--- !u!50 &-277365523134839632
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477081431368075825}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &2270059258714522241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,9 +81,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1477081431368075825}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a19e160ce8d764191efe22526ca079, type: 3}
+  m_Script: {fileID: 11500000, guid: 70ab4078831a061439ae36f59c0d57e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 4
 --- !u!1 &3828849998120095832
 GameObject:
   m_ObjectHideFlags: 0

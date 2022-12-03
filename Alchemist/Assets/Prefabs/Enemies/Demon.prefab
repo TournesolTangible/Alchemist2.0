@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectable: {fileID: 8491974778035242381, guid: 8ba0dd0a95944e543a8bda111022f430, type: 3}
+  heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!50 &8628906238734356000
 Rigidbody2D:
   serializedVersion: 4

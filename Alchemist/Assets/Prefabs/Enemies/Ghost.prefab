@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectable: {fileID: 6174537752565446108, guid: 94b08eda9a90ecc4f8927d51db152943, type: 3}
+  heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!114 &267785323548800286
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -220,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectable: {fileID: 7144753041279425095, guid: 21cf48a7d9196914a87a4fa0b46fd7e3, type: 3}
+  heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!212 &4672276197088502243
 SpriteRenderer:
   m_ObjectHideFlags: 0

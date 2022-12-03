@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectable: {fileID: 3125092196697337727, guid: 540d2adfcf4d93e49b3985a0ade88e70, type: 3}
+  heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!58 &5841639698567040212
 CircleCollider2D:
   m_ObjectHideFlags: 0

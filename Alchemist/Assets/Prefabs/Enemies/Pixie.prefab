@@ -162,6 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectable: {fileID: 8210388208421648863, guid: bad6b3e48f17f054fadcca4c06094f10, type: 3}
+  heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!212 &2562394471376467341
 SpriteRenderer:
   m_ObjectHideFlags: 0

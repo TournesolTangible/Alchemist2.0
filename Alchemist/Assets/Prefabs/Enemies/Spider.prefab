@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectable: {fileID: 4950964829764274251, guid: 98f9c95180b215a449ee0fef3dad0bfa, type: 3}
+  heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!50 &3936216099471034151
 Rigidbody2D:
   serializedVersion: 4
