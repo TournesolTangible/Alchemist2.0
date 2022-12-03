@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: -2387525916772403129}
   - component: {fileID: 5266944373839866039}
   m_Layer: 0
-  m_Name: AcornTemp
+  m_Name: Acorn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
