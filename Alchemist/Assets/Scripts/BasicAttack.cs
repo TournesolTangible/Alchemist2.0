@@ -48,7 +48,6 @@ public class BasicAttack : MonoBehaviour
             CancelInvoke();
         } else if (!isOnMainScreen() && !IsInvoking("AttackBase")) {
             // else, start attacks
-            print("Inside else if");
             InvokeRepeating("AttackBase", 0f, damageRate);
         }
     }
