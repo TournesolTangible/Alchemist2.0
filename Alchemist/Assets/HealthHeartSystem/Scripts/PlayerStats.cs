@@ -28,11 +28,11 @@ public class PlayerStats : MonoBehaviour
     #endregion
 
     [SerializeField]
-    private float health;
+    private float health = 3.0f;
     [SerializeField]
-    private float maxHealth;
+    private float maxHealth = 3.0f;
     [SerializeField]
-    private float maxTotalHealth;
+    private float maxTotalHealth = 10.0f;
 
     public float Health { get { return health; } }
     public float MaxHealth { get { return maxHealth; } }
@@ -57,10 +57,15 @@ public class PlayerStats : MonoBehaviour
 
     public void AddHealth()
     {
+        print("AddHealth called");
+        print("maxHealth = " + maxHealth.ToString());
+        print("maxTotalHealth = " + maxTotalHealth.ToString());
         if (maxHealth < maxTotalHealth)
         {
+            print("Comparison passed");
             maxHealth += 1;
             health = maxHealth;
+            print("maxHealth = " + maxHealth.ToString());
 
             if (onHealthChangedCallback != null)
                 onHealthChangedCallback.Invoke();

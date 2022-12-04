@@ -272,7 +272,7 @@ MonoBehaviour:
   invincibilityDurationInSec: 2
   health: 3
   maxHealth: 3
-  maxTotalHealth: 3
+  maxTotalHealth: 10
 --- !u!114 &1087940046567616900
 MonoBehaviour:
   m_ObjectHideFlags: 0
