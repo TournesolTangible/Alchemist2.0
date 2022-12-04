@@ -45,6 +45,7 @@ public class SpawnEnemy : MonoBehaviour
 
         for ( int i = 0; i < numberOfEnemies; i++ ) { // spawn an enemy for (random - peace) counts
             Instantiate(enemies[Random.Range(0, enemies.Count)], transform.position, transform.rotation);
+            transform.position = new Vector2(transform.position.x + i*3, transform.position.y - i*3);
         }
         
     }

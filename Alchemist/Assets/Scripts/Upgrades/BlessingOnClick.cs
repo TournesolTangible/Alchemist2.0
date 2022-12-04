@@ -43,7 +43,7 @@ public class BlessingOnClick : MonoBehaviour
         GameManager.Instance.devilEyeAmt -= GameManager.Instance.devilEyeCost;
         GameManager.Instance.devilEyeCost += 2;
         devilEyeText.text = "x " + GameManager.Instance.devilEyeCost.ToString();
-        blessingDesc.text = "Instantly receive " + GameManager.Instance.devilEyeCost.ToString() + "of\nevery other collectible";
+        blessingDesc.text = "Instantly receive " + GameManager.Instance.devilEyeCost.ToString() + " of\nevery other collectible";
         blessingUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

@@ -21,6 +21,9 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitToMainMenu() {
 
+        // Delete the player character before switching scenes
+        GameObject.Destroy(GameObject.Find("GameManager").GetComponent<GameManager>().Player);
+
         SceneManager.LoadScene("StartScreenScene");
     }
 }
