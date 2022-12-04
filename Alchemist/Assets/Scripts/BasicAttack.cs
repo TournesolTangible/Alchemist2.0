@@ -15,7 +15,7 @@ public class BasicAttack : MonoBehaviour
     private int _StrengthStat;
 
     private bool mainScreen;
-    private bool cr_running;
+    private bool CR_Running;
 
     public Transform attackPosition;
     public LayerMask layerToHit;
@@ -24,30 +24,35 @@ public class BasicAttack : MonoBehaviour
     public GameObject sprite;
 
     void Awake() {
-        _GameManager = GameObject.Find("GameManager");
-        _StrengthStat = _GameManager.GetComponent<GameManager>().playerStrength;
+        if (GameObject.Find("GameManager")) {
+            _GameManager = GameObject.Find("GameManager");
+            _StrengthStat = _GameManager.GetComponent<GameManager>().playerStrength;
+        } else {
+            // GameManager does not exist, do nothing //
+        }
     }
  
     void Start () {
 
-        InvokeRepeating("AttackBase", 0f, damageRate);
-        
-        // checks for main screen
-        // if (SceneManager.GetActiveScene().buildIndex == 0) {
-        //     mainScreen = true;
-        // } else {
-        //     mainScreen = false;
-        //     InvokeRepeating("AttackBase", 0f, damageRate);
-        // }
+        if (isOnMainScreen()) {
+            // do nothing, skip > else <
+        } else {
+            InvokeRepeating("AttackBase", 0f, damageRate);
+        }
     }
 
-    void Update() {
-        _StrengthStat = _GameManager.GetComponent<GameManager>().playerStrength;
+    void Update() {       
+
+        if (isOnMainScreen()) {
+            // cancel attacks if on main screen
+            CancelInvoke();
+        } else if (!isOnMainScreen() && !IsInvoking("AttackBase")) {
+            // else, start attacks
+            InvokeRepeating("AttackBase", 0f, damageRate);
+        }
     }
  
     void AttackBase () {
-
-        cr_running = true;
 
         if (this.gameObject.GetComponent<PlayerMovement>().is_facing_right) {
             // what did we hit (position, size(x,y), angle, layer)
@@ -68,7 +73,7 @@ public class BasicAttack : MonoBehaviour
             if (enemiesToDamage[i].transform.tag == "Enemy") {
                 Debug.Log("Hitting enemy");
                 // ADDED: strength added to received damage
-                enemiesToDamage[i].transform.gameObject.GetComponent<EnemyHealthManager>().TakeDamage(damage + _StrengthStat);
+                enemiesToDamage[i].transform.gameObject.GetComponent<EnemyHealthManager>().TakeDamage(damage + _GameManager.GetComponent<GameManager>().playerStrength);
             }
         }
     }
@@ -77,6 +82,12 @@ public class BasicAttack : MonoBehaviour
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackPosition.position, new Vector3(attackRangeX, attackRangeY, 1));
+    }
+
+
+    // checks for main screen
+    private bool isOnMainScreen() {
+        return (SceneManager.GetActiveScene().buildIndex == 0);
     }
     
 }

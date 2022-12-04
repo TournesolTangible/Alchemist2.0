@@ -105,7 +105,6 @@ public class GameManager : MonoBehaviour
         Player = FindPlayerInstance();
         SpawnPlayer();
 
-        print(Camera.main.transform.position.z);
     }
 
     // Update is called once per frame
@@ -174,6 +173,7 @@ public class GameManager : MonoBehaviour
     
         if (!(PlayerInstance == null)) {
             // Sets Player in GameManager to found PlayerInstance
+            GameObject.Destroy(Player);
             Player = PlayerInstance;
         }
         if (PlayerInstance == null) {
