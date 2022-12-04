@@ -20,12 +20,13 @@ public class LuckOnClick : MonoBehaviour
 
     public void UpgradeLuck() {
 
-        GameManager.Instance.playerLuck += 2;
+        GameManager.Instance.playerLuck += 1;
         GameManager.Instance.foxTailAmt -= GameManager.Instance.foxTailCost;
         GameManager.Instance.foxTailCost += 3;
         foxTailText.text = "x " + GameManager.Instance.foxTailCost.ToString();
         luckUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

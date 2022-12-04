@@ -1,5 +1,242 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &351083781764364151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3137313919677987091}
+  - component: {fileID: 4434977252968198169}
+  - component: {fileID: 154745657783920365}
+  m_Layer: 5
+  m_Name: Divider (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3137313919677987091
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351083781764364151}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7913365712245832245}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -163}
+  m_SizeDelta: {x: 140, y: 10}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4434977252968198169
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351083781764364151}
+  m_CullTransparentMesh: 1
+--- !u!114 &154745657783920365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351083781764364151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b7d245916891cca47a0144e12a82e086, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4382774676098269713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 558600068623900472}
+  - component: {fileID: 3197364028186092788}
+  - component: {fileID: 3330847806094272846}
+  m_Layer: 5
+  m_Name: PlayerAlchemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &558600068623900472
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382774676098269713}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2672509917008481641}
+  m_Father: {fileID: 7913365712245832245}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -150}
+  m_SizeDelta: {x: 140, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &3197364028186092788
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382774676098269713}
+  m_CullTransparentMesh: 1
+--- !u!114 &3330847806094272846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4382774676098269713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.18039216, g: 0.14509805, b: 0.14509805, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Alchemy: '
+--- !u!1 &5559651957593741291
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2672509917008481641}
+  - component: {fileID: 6225100623071859808}
+  - component: {fileID: 8145001394165240912}
+  m_Layer: 5
+  m_Name: AlchemyAmt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2672509917008481641
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559651957593741291}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 558600068623900472}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 30, y: 0}
+  m_SizeDelta: {x: 30, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6225100623071859808
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559651957593741291}
+  m_CullTransparentMesh: 1
+--- !u!114 &8145001394165240912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5559651957593741291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 0
 --- !u!1 &7913365711216447598
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +987,7 @@ MonoBehaviour:
   strengthCount: {fileID: 7913365711833585037}
   peaceCount: {fileID: 7913365712501331083}
   protectionCount: {fileID: 7913365712739996638}
+  alchemyCount: {fileID: 8145001394165240912}
   GameManager: {fileID: 0}
 --- !u!1 &7913365711586735551
 GameObject:
@@ -1892,7 +2130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -125}
+  m_AnchoredPosition: {x: 0, y: -123}
   m_SizeDelta: {x: 140, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7913365711921734421
@@ -2378,6 +2616,7 @@ GameObject:
   - component: {fileID: 7913365712088779346}
   - component: {fileID: 7913365712088779344}
   - component: {fileID: 7913365712088779347}
+  - component: {fileID: 7933193385542676419}
   m_Layer: 5
   m_Name: CollectibleStats
   m_TagString: Untagged
@@ -2462,6 +2701,37 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7933193385542676419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913365712088779349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5af3b1c722001ad4c894e51e16e68935, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acornCount: {fileID: 7913365711230394977}
+  batWingCount: {fileID: 7913365712486886971}
+  devilEyeCount: {fileID: 7913365713102427510}
+  fairyBellsCount: {fileID: 7913365712009057145}
+  featherCount: {fileID: 7913365712376709325}
+  foxTailCount: {fileID: 7913365711933255038}
+  goatHoofCount: {fileID: 7913365711381118276}
+  graveyardDustCount: {fileID: 7913365711587814634}
+  juniperBerryCount: {fileID: 7913365713187092736}
+  lavenderCount: {fileID: 7913365712503829372}
+  mushroomCount: {fileID: 7913365713267228858}
+  quartzCount: {fileID: 7913365713195303413}
+  sageCount: {fileID: 7913365712417227904}
+  snakeHeadCount: {fileID: 7913365712717482576}
+  spiderSilkCount: {fileID: 7913365712810163314}
+  swineSnoutCount: {fileID: 7913365711642165185}
+  vervainCount: {fileID: 7913365711586735549}
+  wolfFootCount: {fileID: 7913365712003783509}
+  GameManager: {fileID: 0}
 --- !u!1 &7913365712111644517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,6 +3297,8 @@ RectTransform:
   - {fileID: 7913365712137967549}
   - {fileID: 7913365712111644514}
   - {fileID: 7913365711921734423}
+  - {fileID: 558600068623900472}
+  - {fileID: 3137313919677987091}
   m_Father: {fileID: 7913365711549347793}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3949,7 +4221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointCanvas: {fileID: 7913365712547377507}
-  countdownCanvas: {fileID: 0}
+  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
   HealthButton: {fileID: 7165764153225576101, guid: 23883372f42426646a2ab47d6bfc95ee, type: 3}
   AlchemyButton: {fileID: 8933639736709451788, guid: 16849b58212682145a4e99cf79b57d81, type: 3}
   LuckButton: {fileID: 3612216033387108684, guid: d3248ad68ffc9f847a8db416ded67fd0, type: 3}
@@ -3963,7 +4235,7 @@ MonoBehaviour:
   DblJumpButton: {fileID: 8151243543668603808, guid: a9ad794c912e4a44bb26199afd569fb4, type: 3}
   JumpHeightButton: {fileID: 731511955385920577, guid: a51843acd149be54892f96d8c906fa1f, type: 3}
   StickButton: {fileID: 3558901907761173177, guid: 3dd30f1bbb1149f49a29e030caf0f632, type: 3}
-  SwordButton: {fileID: 1716054639706402565, guid: 5bb75b3f3c6f52f458dd520f24e9f56b, type: 3}
+  BlessingButton: {fileID: 1716054639706402565, guid: 5bb75b3f3c6f52f458dd520f24e9f56b, type: 3}
   ResistFlyingButton: {fileID: 5408540992315756386, guid: 3e916320360ce9347a70b0a5fc16df0b, type: 3}
   ResistFaeButton: {fileID: 1266135134756567068, guid: 68f2f39d2a5bbe841af85538fcc99dae, type: 3}
   ResistCreepyButton: {fileID: 5803546189647156712, guid: 719eb294cc67e984fa6643d4d612c76c, type: 3}
@@ -3972,7 +4244,7 @@ MonoBehaviour:
   slotTwo: {fileID: 7913365711935380935}
   slotThree: {fileID: 7913365712717361325}
   playerStats: {fileID: 7913365711549347792}
-  collectibleStats: {fileID: 0}
+  collectibleStats: {fileID: 7913365712088779349}
   GameManager: {fileID: 0}
 --- !u!1 &7913365712556765697
 GameObject:
@@ -4010,7 +4282,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1101, y: 519}
+  m_SizeDelta: {x: 1156, y: 515}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7913365712556765756
 CanvasRenderer:

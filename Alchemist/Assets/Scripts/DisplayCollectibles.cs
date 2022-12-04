@@ -8,7 +8,6 @@ public class DisplayCollectibles : MonoBehaviour
     private int acornValue;
     private int batWingValue;
     private int devilEyeValue;
-    //private int emuEggValue;
     private int fairyBellsValue;
     private int featherValue;
     private int foxTailValue;
@@ -28,7 +27,6 @@ public class DisplayCollectibles : MonoBehaviour
     [SerializeField] private Text acornCount;
     [SerializeField] private Text batWingCount;
     [SerializeField] private Text devilEyeCount;
-    //[SerializeField] private Text emuEggCount;
     [SerializeField] private Text fairyBellsCount;
     [SerializeField] private Text featherCount;
     [SerializeField] private Text foxTailCount;
@@ -52,7 +50,6 @@ public class DisplayCollectibles : MonoBehaviour
         acornValue = GameManager.GetComponent<GameManager>().acornAmt;
         batWingValue = GameManager.GetComponent<GameManager>().batWingAmt;
         devilEyeValue = GameManager.GetComponent<GameManager>().devilEyeAmt;
-        //emuEggValue = GameManager.GetComponent<GameManager>().emuEggAmt;
         fairyBellsValue = GameManager.GetComponent<GameManager>().fairyBellsAmt;
         featherValue = GameManager.GetComponent<GameManager>().featherAmt;
         foxTailValue = GameManager.GetComponent<GameManager>().foxTailAmt;
@@ -72,7 +69,6 @@ public class DisplayCollectibles : MonoBehaviour
         acornCount.text = "x " + acornValue.ToString();
         batWingCount.text = "x " + batWingValue.ToString();
         devilEyeCount.text = "x " + devilEyeValue.ToString();
-        //emuEggCount.text = "x " + emuEggValue.ToString();
         fairyBellsCount.text = "x " + fairyBellsValue.ToString();
         featherCount.text = "x " + featherValue.ToString();
         foxTailCount.text = "x " + foxTailValue.ToString();

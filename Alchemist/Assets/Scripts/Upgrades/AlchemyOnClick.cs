@@ -22,9 +22,11 @@ public class AlchemyOnClick : MonoBehaviour
 
         GameManager.Instance.playerAlchemy += 1;
         GameManager.Instance.fairyBellsAmt -= GameManager.Instance.fairyBellsCost;
-        GameManager.Instance.fairyBellsCost += 3;
+        GameManager.Instance.fairyBellsCost += 2;
         fairyBellsText.text = "x " + GameManager.Instance.fairyBellsCost.ToString();
         alchemyUpgrade.interactable = false;
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

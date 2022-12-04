@@ -12,6 +12,7 @@ public class CheckpointTimer : MonoBehaviour
 
     void Start() {
 
+        counter = 5;
         enemyCountdown.text = "Defeat " + counter.ToString() + " enemies!";
     }
     

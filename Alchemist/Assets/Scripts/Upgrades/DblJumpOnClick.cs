@@ -27,5 +27,6 @@ public class DblJumpOnClick : MonoBehaviour
         swineSnoutText.text = "x " + GameManager.Instance.swineSnoutCost.ToString();
         dblJumpUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

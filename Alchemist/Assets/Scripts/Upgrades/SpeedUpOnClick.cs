@@ -27,5 +27,6 @@ public class SpeedUpOnClick : MonoBehaviour
         wolfFootText.text = "x " + GameManager.Instance.wolfFootCost.ToString();
         speedUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

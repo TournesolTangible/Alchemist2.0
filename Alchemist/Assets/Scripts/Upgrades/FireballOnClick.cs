@@ -27,5 +27,6 @@ public class FireballOnClick : MonoBehaviour
         vervainText.text = "x " + GameManager.Instance.vervainCost.ToString();
         fireballUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

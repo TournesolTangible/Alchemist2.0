@@ -26,6 +26,7 @@ public class PeaceOnClick : MonoBehaviour
         lavenderText.text = "x " + GameManager.Instance.lavenderCost.ToString();
         peaceUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

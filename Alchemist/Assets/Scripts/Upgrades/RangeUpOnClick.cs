@@ -27,5 +27,6 @@ public class RangeUpOnClick : MonoBehaviour
         featherText.text = "x " + GameManager.Instance.featherCost.ToString();
         rangeUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

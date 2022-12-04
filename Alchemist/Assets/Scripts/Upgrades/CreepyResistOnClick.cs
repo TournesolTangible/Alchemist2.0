@@ -27,5 +27,6 @@ public class CreepyResistOnClick : MonoBehaviour
         mushroomText.text = "x " + GameManager.Instance.mushroomCost.ToString();
         creepyResistUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

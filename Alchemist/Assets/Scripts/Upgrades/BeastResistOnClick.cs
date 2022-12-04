@@ -27,5 +27,6 @@ public class BeastResistOnClick : MonoBehaviour
         juniperBerryText.text = "x " + GameManager.Instance.juniperBerryCost.ToString();
         beastResistUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

@@ -22,12 +22,12 @@ public class HealthOnClick : MonoBehaviour
 
         GameManager.Instance.playerHealth += 1;
         GameManager.Instance.graveyardDustAmt -= GameManager.Instance.graveyardDustCost;
-        GameManager.Instance.graveyardDustCost += 3;
+        GameManager.Instance.graveyardDustCost += 2;
         graveyardDustText.text = "x " + GameManager.Instance.graveyardDustCost.ToString();
-        healthUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+        healthUpgrade.interactable = false;
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().AddHealth();
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();    
     }
 }

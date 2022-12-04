@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1716054638737808500}
   - component: {fileID: 1716054638737808503}
   m_Layer: 5
-  m_Name: SwordText
+  m_Name: BlessingText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SWORD
+  m_Text: BLESSING
 --- !u!1 &1716054639229490556
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 1716054639229490531}
   - component: {fileID: 1716054639229490530}
   m_Layer: 5
-  m_Name: SwordDesc
+  m_Name: BlessingDesc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.3
-  m_Text: Player swings Sword continuously
+  m_Text: "Instantly receive 1 of \nevery other collectible"
 --- !u!1 &1716054639431989275
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,8 +251,9 @@ GameObject:
   - component: {fileID: 1716054639706402570}
   - component: {fileID: 1716054639706402568}
   - component: {fileID: 1716054639706402571}
+  - component: {fileID: 643193615810123122}
   m_Layer: 5
-  m_Name: UpgSword
+  m_Name: UpgBlessing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,6 +322,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &643193615810123122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716054639706402565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3c93166238dc58468a36d6f071dbfff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blessingUpgrade: {fileID: 1716054640208886975}
+  blessingDesc: {fileID: 1716054639229490530}
+  devilEyeText: {fileID: 9165185553052448893}
+  countdownCanvas: {fileID: 0}
 --- !u!1 &1716054640208886969
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +350,7 @@ GameObject:
   - component: {fileID: 1716054640208886973}
   - component: {fileID: 1716054640208886972}
   - component: {fileID: 1716054640208886975}
-  - component: {fileID: 5221330176927885032}
+  - component: {fileID: 5909233360175606442}
   m_Layer: 5
   m_Name: UpgradeButton
   m_TagString: Untagged
@@ -443,20 +460,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1716054640208886972}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5221330176927885032}
-        m_TargetAssemblyTypeName: SwordOnClick, Assembly-CSharp
-        m_MethodName: UpgradeSword
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5221330176927885032
+      m_Calls: []
+--- !u!114 &5909233360175606442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -465,12 +470,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1716054640208886969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6172b7f583ae27942bb808656e24f4fc, type: 3}
+  m_Script: {fileID: 11500000, guid: e3c93166238dc58468a36d6f071dbfff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swordUpgrade: {fileID: 1716054640208886975}
+  blessingUpgrade: {fileID: 1716054640208886975}
+  blessingDesc: {fileID: 1716054639229490530}
   devilEyeText: {fileID: 9165185553052448893}
-  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
+  countdownCanvas: {fileID: 0}
 --- !u!1 &5000938335073487908
 GameObject:
   m_ObjectHideFlags: 0

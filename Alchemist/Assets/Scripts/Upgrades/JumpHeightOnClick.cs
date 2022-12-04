@@ -26,5 +26,6 @@ public class JumpHeightOnClick : MonoBehaviour
         GameManager.Instance.spiderSilkCost += 3;
         spiderSilkText.text = "x " + GameManager.Instance.spiderSilkCost.ToString();
         jumpHeightUpgrade.interactable = false;
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

@@ -27,5 +27,6 @@ public class FaeResistOnClick : MonoBehaviour
         quartzText.text = "x " + GameManager.Instance.quartzCost.ToString();
         faeResistUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

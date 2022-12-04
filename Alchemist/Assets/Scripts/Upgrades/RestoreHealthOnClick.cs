@@ -7,7 +7,6 @@ public class RestoreHealthOnClick : MonoBehaviour
 {
     [SerializeField] private Button healthRestoreUpgrade;
     [SerializeField] private Text sageText;
-    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -23,12 +22,13 @@ public class RestoreHealthOnClick : MonoBehaviour
         int maxHealth = GameManager.Instance.playerHealth;
         GameManager.Instance.currentHealth = maxHealth;
         GameManager.Instance.sageAmt -= GameManager.Instance.sageCost;
-        GameManager.Instance.sageCost += 3;
+        GameManager.Instance.sageCost += 2;
         sageText.text = "x " + GameManager.Instance.sageCost.ToString();
         healthRestoreUpgrade.interactable = false;
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().Heal((float)maxHealth);
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
         
     }
 }

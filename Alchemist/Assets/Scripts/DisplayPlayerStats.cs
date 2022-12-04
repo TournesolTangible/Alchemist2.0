@@ -10,12 +10,14 @@ public class DisplayPlayerStats : MonoBehaviour
     private int strengthValue;
     private int peaceValue;
     private int protectionValue;
+    private int alchemyValue;
 
     [SerializeField] private Text healthCount;
     [SerializeField] private Text luckCount;
     [SerializeField] private Text strengthCount;
     [SerializeField] private Text peaceCount;
     [SerializeField] private Text protectionCount;
+    [SerializeField] private Text alchemyCount;
 
     public GameObject GameManager;
 
@@ -26,11 +28,13 @@ public class DisplayPlayerStats : MonoBehaviour
         strengthValue = GameManager.GetComponent<GameManager>().playerStrength;
         peaceValue = GameManager.GetComponent<GameManager>().playerPeace;
         protectionValue = GameManager.GetComponent<GameManager>().playerProtection;
+        alchemyValue = GameManager.GetComponent<GameManager>().playerAlchemy;
 
         healthCount.text = healthValue.ToString();
         luckCount.text = luckValue.ToString();
         strengthCount.text = strengthValue.ToString();
         peaceCount.text = peaceValue.ToString();
         protectionCount.text = protectionValue.ToString();
+        alchemyCount.text = alchemyValue.ToString();
     }
 }

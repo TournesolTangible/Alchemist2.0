@@ -27,5 +27,6 @@ public class StickOnClick : MonoBehaviour
         acornText.text = "x " + GameManager.Instance.acornCost.ToString();
         stickUpgrade.interactable = false;
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

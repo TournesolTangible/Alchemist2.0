@@ -26,6 +26,7 @@ public class StrengthOnClick : MonoBehaviour
         goatHoofText.text = "x " + GameManager.Instance.goatHoofCost.ToString();
         strengthUpgrade.interactable = false;
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
         countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }
