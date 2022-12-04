@@ -24,9 +24,10 @@ public class RestoreHealthOnClick : MonoBehaviour
         GameManager.Instance.sageAmt -= GameManager.Instance.sageCost;
         GameManager.Instance.sageCost += 2;
         sageText.text = "x " + GameManager.Instance.sageCost.ToString();
-        healthRestoreUpgrade.interactable = false;
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().Heal((float)maxHealth);
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
+        healthRestoreUpgrade.interactable = false;
+
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
         

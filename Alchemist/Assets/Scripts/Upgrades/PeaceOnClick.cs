@@ -7,8 +7,7 @@ public class PeaceOnClick : MonoBehaviour
 {
     [SerializeField] private Button peaceUpgrade;
     [SerializeField] private Text lavenderText;
-    public GameObject countdownCanvas;
-
+ 
     void Start() {
 
         lavenderText.text = "x " + GameManager.Instance.lavenderCost.ToString();
@@ -25,8 +24,9 @@ public class PeaceOnClick : MonoBehaviour
         GameManager.Instance.lavenderCost += 3;
         lavenderText.text = "x " + GameManager.Instance.lavenderCost.ToString();
         peaceUpgrade.interactable = false;
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

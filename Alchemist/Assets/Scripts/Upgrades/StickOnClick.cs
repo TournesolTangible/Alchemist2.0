@@ -7,7 +7,6 @@ public class StickOnClick : MonoBehaviour
 {
     [SerializeField] private Button stickUpgrade;
     [SerializeField] private Text acornText;
-    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -20,13 +19,14 @@ public class StickOnClick : MonoBehaviour
 
     public void UpgradeStick() {
 
-        // TODO: increase frequency of stick attack
+        GameManager.Instance.Player.GetComponent<BasicAttack>().damageRate -= 0.05f;
 
         GameManager.Instance.acornAmt -= GameManager.Instance.acornCost;
         GameManager.Instance.acornCost += 3;
         acornText.text = "x " + GameManager.Instance.acornCost.ToString();
         stickUpgrade.interactable = false;
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

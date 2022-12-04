@@ -7,7 +7,10 @@ public class FaeResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button faeResistUpgrade;
     [SerializeField] private Text quartzText;
-    public GameObject countdownCanvas;
+
+    public GameObject satyr;
+    public GameObject pixie;
+    public GameObject demon;
 
     void Start() {
 
@@ -20,13 +23,16 @@ public class FaeResistOnClick : MonoBehaviour
 
     public void UpgradeFaeResist() {
 
-        // TODO: decrease damage from satyr, pixie, demon
+        satyr.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        pixie.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        demon.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
         
         GameManager.Instance.quartzAmt -= GameManager.Instance.quartzCost;
         GameManager.Instance.quartzCost += 3;
         quartzText.text = "x " + GameManager.Instance.quartzCost.ToString();
         faeResistUpgrade.interactable = false;
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

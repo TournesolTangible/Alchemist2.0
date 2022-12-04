@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
 {
 
     private bool isInvincible = false; // for invincibility
-    [SerializeField] private float invincibilityDurationInSec;
+    [SerializeField] public float invincibilityDurationInSec = 2.0f;
 
     public delegate void OnHealthChangedDelegate();
     public OnHealthChangedDelegate onHealthChangedCallback;
@@ -57,15 +57,10 @@ public class PlayerStats : MonoBehaviour
 
     public void AddHealth()
     {
-        print("AddHealth called");
-        print("maxHealth = " + maxHealth.ToString());
-        print("maxTotalHealth = " + maxTotalHealth.ToString());
         if (maxHealth < maxTotalHealth)
         {
-            print("Comparison passed");
             maxHealth += 1;
             health = maxHealth;
-            print("maxHealth = " + maxHealth.ToString());
 
             if (onHealthChangedCallback != null)
                 onHealthChangedCallback.Invoke();

@@ -7,7 +7,6 @@ public class SpeedUpOnClick : MonoBehaviour
 {
     [SerializeField] private Button speedUpgrade;
     [SerializeField] private Text wolfFootText;
-    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -26,7 +25,8 @@ public class SpeedUpOnClick : MonoBehaviour
         GameManager.Instance.wolfFootCost += 3;
         wolfFootText.text = "x " + GameManager.Instance.wolfFootCost.ToString();
         speedUpgrade.interactable = false;
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

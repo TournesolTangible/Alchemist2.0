@@ -7,7 +7,6 @@ public class HealthOnClick : MonoBehaviour
 {
     [SerializeField] private Button healthUpgrade;
     [SerializeField] private Text graveyardDustText;
-    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -24,10 +23,12 @@ public class HealthOnClick : MonoBehaviour
         GameManager.Instance.graveyardDustAmt -= GameManager.Instance.graveyardDustCost;
         GameManager.Instance.graveyardDustCost += 2;
         graveyardDustText.text = "x " + GameManager.Instance.graveyardDustCost.ToString();
-        GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
-        healthUpgrade.interactable = false;
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().AddHealth();
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
-        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();    
+        healthUpgrade.interactable = false;
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown(); 
+        GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();   
     }
 }

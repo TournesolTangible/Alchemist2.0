@@ -7,7 +7,6 @@ public class StrengthOnClick : MonoBehaviour
 {
     [SerializeField] private Button strengthUpgrade;
     [SerializeField] private Text goatHoofText;
-    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -20,13 +19,16 @@ public class StrengthOnClick : MonoBehaviour
 
     public void UpgradeStrength() {
 
+        GameManager.Instance.Player.GetComponent<BasicAttack>().damage += 1;
+
         GameManager.Instance.playerStrength += 1;
         GameManager.Instance.goatHoofAmt -= GameManager.Instance.goatHoofCost;
         GameManager.Instance.goatHoofCost += 3;
         goatHoofText.text = "x " + GameManager.Instance.goatHoofCost.ToString();
         strengthUpgrade.interactable = false;
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayPlayerStats.GetComponent<DisplayPlayerStats>().ShowPlayerStats();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
     }
 }

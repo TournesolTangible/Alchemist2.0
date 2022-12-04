@@ -7,7 +7,10 @@ public class CreepyResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button creepyResistUpgrade;
     [SerializeField] private Text mushroomText;
-    public GameObject countdownCanvas;
+
+    public GameObject spider;
+    public GameObject snake;
+    public GameObject mush;
 
     void Start() {
 
@@ -20,13 +23,16 @@ public class CreepyResistOnClick : MonoBehaviour
 
     public void UpgradeCreepyResist() {
 
-        // TODO: reduce damage from spider/snake/mush
+        spider.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        snake.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        mush.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
 
         GameManager.Instance.mushroomAmt -= GameManager.Instance.mushroomCost;
         GameManager.Instance.mushroomCost += 3;
         mushroomText.text = "x " + GameManager.Instance.mushroomCost.ToString();
         creepyResistUpgrade.interactable = false;
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

@@ -305,7 +305,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyResistUpgrade: {fileID: 5408540991326766051}
   snakeHeadText: {fileID: 8282468146947130019}
-  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
+  owl: {fileID: 4814714678143607184, guid: 130ab8f3d190a4742aa6fb614247438b, type: 3}
+  ghost: {fileID: 962463817343900619, guid: 7286f969d9a7a9d40bb4a0cbd5091a9c, type: 3}
+  bat: {fileID: 1005165159367116481, guid: 48040133a102d1a45b208584b349ec6d, type: 3}
 --- !u!1 &5408540991344934543
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,6 +639,7 @@ GameObject:
   - component: {fileID: 5408540992315756385}
   - component: {fileID: 5408540992315756391}
   - component: {fileID: 5408540992315756384}
+  - component: {fileID: 1788779420620409851}
   m_Layer: 5
   m_Name: UpgFlyingResist
   m_TagString: Untagged
@@ -708,3 +711,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1788779420620409851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5408540992315756386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f494c82ca722d142b968ff5329683bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyResistUpgrade: {fileID: 5408540991326766051}
+  snakeHeadText: {fileID: 8282468146947130019}
+  owl: {fileID: 4814714678143607184, guid: 130ab8f3d190a4742aa6fb614247438b, type: 3}
+  ghost: {fileID: 962463817343900619, guid: 7286f969d9a7a9d40bb4a0cbd5091a9c, type: 3}
+  bat: {fileID: 1005165159367116481, guid: 48040133a102d1a45b208584b349ec6d, type: 3}

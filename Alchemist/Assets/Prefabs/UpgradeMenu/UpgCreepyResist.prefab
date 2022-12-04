@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 5803546189647156715}
   - component: {fileID: 5803546189647156717}
   - component: {fileID: 5803546189647156714}
+  - component: {fileID: 2502331823544270934}
   m_Layer: 5
   m_Name: UpgCreepyResist
   m_TagString: Untagged
@@ -318,6 +319,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2502331823544270934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803546189647156712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c4d4670b5b44a64e85fed4e07aab2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creepyResistUpgrade: {fileID: 5803546189852296925}
+  mushroomText: {fileID: 7909453734965978264}
+  spider: {fileID: 3936216099471034145, guid: 1205f6768f5c2d24bac339ada596477d, type: 3}
+  snake: {fileID: 410591734812214157, guid: 0ac902b8ae4893b479dfbff14434a30e, type: 3}
+  mush: {fileID: 3954329189659930991, guid: a935ea4d59746fd41bf28cd91c1e40b9, type: 3}
 --- !u!1 &5803546189668190328
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +565,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creepyResistUpgrade: {fileID: 5803546189852296925}
   mushroomText: {fileID: 7909453734965978264}
-  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
+  spider: {fileID: 0}
+  snake: {fileID: 0}
+  mush: {fileID: 0}
 --- !u!1 &5803546189975460079
 GameObject:
   m_ObjectHideFlags: 0

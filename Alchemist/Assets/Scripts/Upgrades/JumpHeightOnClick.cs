@@ -7,7 +7,6 @@ public class JumpHeightOnClick : MonoBehaviour
 {
     [SerializeField] private Button jumpHeightUpgrade;
     [SerializeField] private Text spiderSilkText;
-    public GameObject countdownCanvas;
 
     void Start() {
 
@@ -20,12 +19,14 @@ public class JumpHeightOnClick : MonoBehaviour
 
     public void UpgradeJumpHeight() {
 
-        // TODO: increase height of player jump by small increment
+        GameManager.Instance.Player.GetComponent<PlayerMovement>().jumping_power += 2;
         
         GameManager.Instance.spiderSilkAmt -= GameManager.Instance.spiderSilkCost;
         GameManager.Instance.spiderSilkCost += 3;
         spiderSilkText.text = "x " + GameManager.Instance.spiderSilkCost.ToString();
         jumpHeightUpgrade.interactable = false;
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

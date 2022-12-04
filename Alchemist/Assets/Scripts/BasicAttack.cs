@@ -9,7 +9,7 @@ public class BasicAttack : MonoBehaviour
     public float damage = 1.0f;
     public float attackRangeX;
     public float attackRangeY;
-    public float damageRate = 1.0f;
+    public float damageRate = 0.8f;
 
     private static GameObject _GameManager;
     private int _StrengthStat;

@@ -229,7 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beastResistUpgrade: {fileID: 5231445843901268719}
   juniperBerryText: {fileID: 1546660602624293895}
-  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
+  boar: {fileID: 5414117401560130462, guid: 0245052156ec86c42980ebb24ad03f6a, type: 3}
+  fox: {fileID: 1965138061556580041, guid: 0f453920b9d8d4844888e6cd1b985953, type: 3}
+  wolf: {fileID: 3348180628885385302, guid: 8af2269789915c441ad0fe56734555c5, type: 3}
 --- !u!1 &5231445844615526184
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +483,7 @@ GameObject:
   - component: {fileID: 5231445845105432870}
   - component: {fileID: 5231445845105432872}
   - component: {fileID: 5231445845105432873}
+  - component: {fileID: -5641596272861842006}
   m_Layer: 5
   m_Name: UpgBeastResist
   m_TagString: Untagged
@@ -552,6 +555,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-5641596272861842006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5231445845105432871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ac5e12141026c41a662446d294ce82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beastResistUpgrade: {fileID: 5231445843901268719}
+  juniperBerryText: {fileID: 1546660602624293895}
+  boar: {fileID: 5414117401560130462, guid: 0245052156ec86c42980ebb24ad03f6a, type: 3}
+  fox: {fileID: 1965138061556580041, guid: 0f453920b9d8d4844888e6cd1b985953, type: 3}
+  wolf: {fileID: 3348180628885385302, guid: 8af2269789915c441ad0fe56734555c5, type: 3}
 --- !u!1 &6601962314060425114
 GameObject:
   m_ObjectHideFlags: 0

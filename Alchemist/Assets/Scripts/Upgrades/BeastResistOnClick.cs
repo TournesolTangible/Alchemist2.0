@@ -7,7 +7,10 @@ public class BeastResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button beastResistUpgrade;
     [SerializeField] private Text juniperBerryText;
-    public GameObject countdownCanvas;
+
+    public GameObject boar;
+    public GameObject fox;
+    public GameObject wolf;
 
     void Start() {
 
@@ -20,13 +23,16 @@ public class BeastResistOnClick : MonoBehaviour
 
     public void UpgradeBeastResist() {
 
-        // TODO: reduce damage of wolf/fox/boar 
+        boar.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        fox.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        wolf.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
 
         GameManager.Instance.juniperBerryAmt -= GameManager.Instance.juniperBerryCost;
         GameManager.Instance.juniperBerryCost += 3;
         juniperBerryText.text = "x " + GameManager.Instance.juniperBerryCost.ToString();
         beastResistUpgrade.interactable = false;
-        countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+
+        GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }

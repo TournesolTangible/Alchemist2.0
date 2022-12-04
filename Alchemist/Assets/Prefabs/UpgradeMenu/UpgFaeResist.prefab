@@ -229,7 +229,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   faeResistUpgrade: {fileID: 1266135134050840002}
   quartzText: {fileID: 7549165097266055030}
-  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
+  satyr: {fileID: 5506730200537449960, guid: 07abb1574038a004dabb2db722cd0792, type: 3}
+  pixie: {fileID: 8028267868118568476, guid: 357034b097f788f4b895f3221498ceb8, type: 3}
+  demon: {fileID: 707930294279533416, guid: b0038df6dbeccf5499b3d6e72d07914d, type: 3}
 --- !u!1 &1266135134725216386
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +323,7 @@ GameObject:
   - component: {fileID: 1266135134756567067}
   - component: {fileID: 1266135134756567065}
   - component: {fileID: 1266135134756567066}
+  - component: {fileID: 8681739715847418062}
   m_Layer: 5
   m_Name: UpgFaeResist
   m_TagString: Untagged
@@ -392,6 +395,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8681739715847418062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266135134756567068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c803a436aefbd484bb2ee1914e501e1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  faeResistUpgrade: {fileID: 1266135134050840002}
+  quartzText: {fileID: 7549165097266055030}
+  satyr: {fileID: 5506730200537449960, guid: 07abb1574038a004dabb2db722cd0792, type: 3}
+  pixie: {fileID: 8028267868118568476, guid: 357034b097f788f4b895f3221498ceb8, type: 3}
+  demon: {fileID: 707930294279533416, guid: b0038df6dbeccf5499b3d6e72d07914d, type: 3}
 --- !u!1 &1266135135095505356
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 12f;
-    private float jumping_power = 40f;
+    public float jumping_power = 40f;
     public bool is_facing_right;
     private float _DriftLeft = 4.5f;
 

@@ -8,6 +8,10 @@ public class FlyResistOnClick : MonoBehaviour
     [SerializeField] private Button flyResistUpgrade;
     [SerializeField] private Text snakeHeadText;
 
+    public GameObject owl;
+    public GameObject ghost;
+    public GameObject bat;
+
     void Start() {
 
         snakeHeadText.text = "x " + GameManager.Instance.snakeHeadCost.ToString();
@@ -19,12 +23,16 @@ public class FlyResistOnClick : MonoBehaviour
 
     public void UpgradeFlyResist() {
 
-        // TODO: reduce damage from owl, ghost, bat
+        owl.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        ghost.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
+        bat.GetComponent<HurtPlayer>().damageAmt -= 0.1f;
         
         GameManager.Instance.snakeHeadAmt -= GameManager.Instance.snakeHeadCost;
         GameManager.Instance.snakeHeadCost += 3;
         snakeHeadText.text = "x " + GameManager.Instance.snakeHeadCost.ToString();
         flyResistUpgrade.interactable = false;
+
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
+        GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();
     }
 }
