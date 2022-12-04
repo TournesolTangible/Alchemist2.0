@@ -237,7 +237,7 @@ MonoBehaviour:
   damage: 3
   attackRangeX: 4
   attackRangeY: 3
-  damageRate: 1
+  damageRate: 0.7
   attackPosition: {fileID: 1401602489157009600}
   layerToHit:
     serializedVersion: 2

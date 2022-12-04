@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collection : MonoBehaviour {
-
+public class HeartAdd : MonoBehaviour
+{
     private float speed = 7;
 
     public void OnTriggerStay2D(Collider2D collider) {
 
         if (collider.CompareTag("Player")) {
 
-            // if hits boxCollider destroy object (will need to add where to send collection here as well)
             if (collider is BoxCollider2D) {
                 
+                GameManager.Instance.healthBar.GetComponent<HealthBarHud>().Heal(1.0f);
+                GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
                 Destroy(this.gameObject);
             }
 
@@ -24,9 +25,6 @@ public class Collection : MonoBehaviour {
                 transform.position = Vector2.MoveTowards(transform.position, collider.transform.position, step); 
 
             }
-            
-            
         }
-
     }
 }

@@ -1051,41 +1051,41 @@ MonoBehaviour:
   playerProtection: 5
   playerAlchemy: 8
   stickDamage: 5
-  acornAmt: 0
+  acornAmt: 1
   acornCost: 1
-  batWingAmt: 0
+  batWingAmt: 1
   batWingCost: 1
-  devilEyeAmt: 0
+  devilEyeAmt: 1
   devilEyeCost: 1
-  fairyBellsAmt: 0
+  fairyBellsAmt: 1
   fairyBellsCost: 1
-  featherAmt: 0
+  featherAmt: 1
   featherCost: 1
-  foxTailAmt: 0
+  foxTailAmt: 1
   foxTailCost: 1
-  goatHoofAmt: 0
+  goatHoofAmt: 1
   goatHoofCost: 1
-  graveyardDustAmt: 0
+  graveyardDustAmt: 1
   graveyardDustCost: 1
-  juniperBerryAmt: 0
+  juniperBerryAmt: 1
   juniperBerryCost: 1
-  lavenderAmt: 0
+  lavenderAmt: 1
   lavenderCost: 1
-  mushroomAmt: 0
+  mushroomAmt: 1
   mushroomCost: 1
-  quartzAmt: 0
+  quartzAmt: 1
   quartzCost: 1
-  sageAmt: 0
+  sageAmt: 5
   sageCost: 1
-  snakeHeadAmt: 0
+  snakeHeadAmt: 1
   snakeHeadCost: 1
-  spiderSilkAmt: 0
+  spiderSilkAmt: 1
   spiderSilkCost: 1
-  swineSnoutAmt: 0
+  swineSnoutAmt: 1
   swineSnoutCost: 1
-  vervainAmt: 0
+  vervainAmt: 1
   vervainCost: 1
-  wolfFootAmt: 0
+  wolfFootAmt: 1
   wolfFootCost: 1
 --- !u!4 &780674220
 Transform:

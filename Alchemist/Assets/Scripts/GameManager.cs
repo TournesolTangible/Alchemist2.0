@@ -33,19 +33,19 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int stickDamage = 5; // adjust
 
     // reference stats for collectibles
-    [HideInInspector] public int acornAmt = 0;
+    [HideInInspector] public int acornAmt = 1;
     [HideInInspector] public int acornCost = 1;
 
-    [HideInInspector] public int batWingAmt = 0;
+    [HideInInspector] public int batWingAmt = 1;
     [HideInInspector] public int batWingCost = 1;
 
-    [HideInInspector] public int devilEyeAmt = 0;
+    [HideInInspector] public int devilEyeAmt = 1;
     [HideInInspector] public int devilEyeCost = 1;
 
-    [HideInInspector] public int fairyBellsAmt = 0;
+    [HideInInspector] public int fairyBellsAmt = 1;
     [HideInInspector] public int fairyBellsCost = 1;
 
-    [HideInInspector] public int featherAmt = 0;
+    [HideInInspector] public int featherAmt = 1;
     [HideInInspector] public int featherCost = 1;
 
     [HideInInspector] public int foxTailAmt = 1;
@@ -57,34 +57,34 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public int graveyardDustAmt = 1;
     [HideInInspector] public int graveyardDustCost = 1;
 
-    [HideInInspector] public int juniperBerryAmt = 0;
+    [HideInInspector] public int juniperBerryAmt = 1;
     [HideInInspector] public int juniperBerryCost = 1;
 
     [HideInInspector] public int lavenderAmt = 1;
     [HideInInspector] public int lavenderCost = 1;
 
-    [HideInInspector] public int mushroomAmt = 0;
+    [HideInInspector] public int mushroomAmt = 1;
     [HideInInspector] public int mushroomCost = 1;
 
-    [HideInInspector] public int quartzAmt = 0;
+    [HideInInspector] public int quartzAmt = 1;
     [HideInInspector] public int quartzCost = 1;
 
     [HideInInspector] public int sageAmt = 5;
     [HideInInspector] public int sageCost = 1;
 
-    [HideInInspector] public int snakeHeadAmt = 0;
+    [HideInInspector] public int snakeHeadAmt = 1;
     [HideInInspector] public int snakeHeadCost = 1;
 
-    [HideInInspector] public int spiderSilkAmt = 0;
+    [HideInInspector] public int spiderSilkAmt = 1;
     [HideInInspector] public int spiderSilkCost = 1;
 
-    [HideInInspector] public int swineSnoutAmt = 0;
+    [HideInInspector] public int swineSnoutAmt = 1;
     [HideInInspector] public int swineSnoutCost = 1;
 
-    [HideInInspector] public int vervainAmt = 0;
+    [HideInInspector] public int vervainAmt = 1;
     [HideInInspector] public int vervainCost = 1;
 
-    [HideInInspector] public int wolfFootAmt = 0;
+    [HideInInspector] public int wolfFootAmt = 1;
     [HideInInspector] public int wolfFootCost = 1;
 
     void Awake()
