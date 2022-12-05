@@ -1914,6 +1914,10 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5584047368528112750, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6234734217362635701, guid: 55be850f5da85f442ae426ff1e61e71b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.4
