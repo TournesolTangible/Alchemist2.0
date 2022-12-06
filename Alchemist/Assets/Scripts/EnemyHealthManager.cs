@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHealthManager : MonoBehaviour
 {
-   private float enemyMaxHealth = 3.0f;
+   [SerializeField] private float enemyMaxHealth = 3.0f;
    private float enemyCurrentHealth;
 
    [SerializeField] private GameObject collectable;

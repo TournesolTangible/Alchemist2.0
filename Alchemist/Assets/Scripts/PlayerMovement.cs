@@ -59,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         // Checks scene to stop/start leftward drift
-        if (SceneManager.GetActiveScene().buildIndex == 0) {
+        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 2) {
             _DriftLeft = 0f;
         } else {
             _DriftLeft = 4.5f;

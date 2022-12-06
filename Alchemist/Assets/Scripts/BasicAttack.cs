@@ -43,7 +43,7 @@ public class BasicAttack : MonoBehaviour
 
     void Update() {       
 
-        if (isOnMainScreen()) {
+        if (isOnMainScreen() || isOnTestScreen()) {
             // cancel attacks if on main screen
             CancelInvoke();
         } else if (!isOnMainScreen() && !IsInvoking("AttackBase")) {
@@ -88,6 +88,11 @@ public class BasicAttack : MonoBehaviour
     // checks for main screen
     private bool isOnMainScreen() {
         return (SceneManager.GetActiveScene().buildIndex == 0);
+    }
+
+    // checks for test screen
+    private bool isOnTestScreen() {
+        return (SceneManager.GetActiveScene().buildIndex == 2);
     }
     
 }

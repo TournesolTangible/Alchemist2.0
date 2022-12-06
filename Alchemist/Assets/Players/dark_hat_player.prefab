@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 332500522654467649}
   - component: {fileID: 332500522602271184}
   - component: {fileID: 4823070873014875228}
+  - component: {fileID: 3843481814549754271}
   m_Layer: 0
   m_Name: dark_hat_player
   m_TagString: Player
@@ -229,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b316c1ddf4e1c4cb3958b38e93ed54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumping_power: 40
   is_facing_right: 0
   animator: {fileID: 332500522654467665}
   rigid_body_2d: {fileID: 5114648528694545465}
@@ -340,3 +342,19 @@ MonoBehaviour:
   _ScaleMod: 0.00325
   amp: 0.2
   freq: 20
+--- !u!114 &3843481814549754271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5114648528694545471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f556830897e75a45b87830dd11906e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FireballPrefab: {fileID: 2547672137107465699, guid: 3643e5a0ab65fb9478d9aedc9bb5a71c, type: 3}
+  _FireballForce: 10
+  _FireballRate: 2
+  _FireballTimer: 4

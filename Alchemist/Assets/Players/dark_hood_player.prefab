@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 1087940046519084565}
   - component: {fileID: 1087940046567616900}
   - component: {fileID: -3933162393871903736}
+  - component: {fileID: 3475924328349189321}
   m_Layer: 0
   m_Name: dark_hood_player
   m_TagString: Player
@@ -198,6 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b316c1ddf4e1c4cb3958b38e93ed54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumping_power: 40
   is_facing_right: 0
   animator: {fileID: 1087940046519084549}
   rigid_body_2d: {fileID: 5584047368528112749}
@@ -309,6 +311,22 @@ MonoBehaviour:
   _ScaleMod: 0.00325
   amp: 0.2
   freq: 20
+--- !u!114 &3475924328349189321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5584047368528112747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f556830897e75a45b87830dd11906e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FireballPrefab: {fileID: 2547672137107465699, guid: 3643e5a0ab65fb9478d9aedc9bb5a71c, type: 3}
+  _FireballForce: 10
+  _FireballRate: 2
+  _FireballTimer: 4
 --- !u!1 &5584047369020899113
 GameObject:
   m_ObjectHideFlags: 0
