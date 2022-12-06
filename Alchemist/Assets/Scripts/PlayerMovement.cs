@@ -21,6 +21,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform ground_check;
     [SerializeField] private LayerMask ground_layer;
 
+    [SerializeField] private AudioSource _StepSound;
+    [SerializeField] private float _StepTimer;
+    [SerializeField] private float _StepRate;
+
+    [SerializeField] private AudioSource _JumpSound;
+
     void Start() {
         is_facing_right = true;
     }
@@ -57,9 +63,21 @@ public class PlayerMovement : MonoBehaviour
         // flips player character
         Flip();
 
+        // play stepping sounds while keys pressed
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && IsGrounded()) {
+            if (Time.time > _StepTimer) {
+            _StepSound.Play();
+            _StepTimer = Time.time + _StepRate;
+            }
+        }
+
+        // play jumping sound when 'space' pressed
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            _JumpSound.Play();
+        }
 
         // Checks scene to stop/start leftward drift
-        if (SceneManager.GetActiveScene().buildIndex == 0) {
+        if (!(SceneManager.GetActiveScene().buildIndex == 1)) {
             _DriftLeft = 0f;
         } else {
             _DriftLeft = 4.5f;
