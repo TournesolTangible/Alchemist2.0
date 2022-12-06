@@ -22,6 +22,10 @@ public class FireballOnClick : MonoBehaviour
 
         // TODO: activate fireball, then change to upgrade damage
 
+        // ACTIVATES FIREBALL
+        GameManager.Instance.GetComponent<Player>().GetComponent<ShootFireballs>().Upgrade();
+        // 
+
         GameManager.Instance.vervainAmt -= GameManager.Instance.vervainCost;
         GameManager.Instance.vervainCost += 3;
         vervainText.text = "x " + GameManager.Instance.vervainCost.ToString();

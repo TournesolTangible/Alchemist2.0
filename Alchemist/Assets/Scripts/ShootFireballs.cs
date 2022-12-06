@@ -46,7 +46,7 @@ public class ShootFireballs : MonoBehaviour
         }
     }
 
-    void Upgrade() {
+    public void Upgrade() {
         upgraded = true;
     }
 
