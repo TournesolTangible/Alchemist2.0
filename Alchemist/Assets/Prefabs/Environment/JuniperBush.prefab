@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70eaf9a7f280c8f4589f7512453e4694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMaxHealth: 3
   collectable: {fileID: 8399579295260826691, guid: 8cd2b4797b7437945af5a464d4ecaaa0, type: 3}
   heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!58 &4036389438759841501
