@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 1582687002022446792}
   - component: {fileID: 1582687002104009049}
   - component: {fileID: 6018338935540495573}
+  - component: {fileID: 4170366428389247931}
   m_Layer: 0
   m_Name: pale_hood_player
   m_TagString: Player
@@ -444,6 +445,22 @@ MonoBehaviour:
   _ScaleMod: 0.00325
   amp: 0.2
   freq: 20
+--- !u!114 &4170366428389247931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6309951800616062134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f556830897e75a45b87830dd11906e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _FireballPrefab: {fileID: 2547672137107465699, guid: 3643e5a0ab65fb9478d9aedc9bb5a71c, type: 3}
+  _FireballForce: 10
+  _FireballRate: 2
+  _FireballTimer: 4
 --- !u!1 &6309951800806858740
 GameObject:
   m_ObjectHideFlags: 0
