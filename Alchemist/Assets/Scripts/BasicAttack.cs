@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class BasicAttack : MonoBehaviour
 {
 
+    [SerializeField] private AudioSource _AttackSFX;
+
     public float damage = 1.0f;
     public float attackRangeX;
     public float attackRangeY;
@@ -53,6 +55,8 @@ public class BasicAttack : MonoBehaviour
     }
  
     void AttackBase () {
+
+        _AttackSFX.Play();
 
         if (this.gameObject.GetComponent<PlayerMovement>().is_facing_right) {
             // what did we hit (position, size(x,y), angle, layer)

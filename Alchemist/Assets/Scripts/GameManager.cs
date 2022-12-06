@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject countdownCanvas;
 
+    [SerializeField] private AudioSource _GameplayMusic;
     [SerializeField] private AudioSource _DeathRinger;
 
     // reference stats for player
@@ -104,6 +105,8 @@ public class GameManager : MonoBehaviour
         GameObject.Destroy(Player);
         Player = FindPlayerInstance();
         SpawnPlayer();
+
+        _GameplayMusic.Play();
 
     }
 
