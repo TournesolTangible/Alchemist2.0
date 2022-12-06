@@ -8,6 +8,7 @@ TagManager:
   - DeathBox
   - Enemy
   - Collectable
+  - Tree
   layers:
   - Default
   - TransparentFX

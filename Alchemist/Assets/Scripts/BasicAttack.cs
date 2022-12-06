@@ -79,6 +79,12 @@ public class BasicAttack : MonoBehaviour
                 // ADDED: strength added to received damage
                 enemiesToDamage[i].transform.gameObject.GetComponent<EnemyHealthManager>().TakeDamage(damage + _GameManager.GetComponent<GameManager>().playerStrength);
             }
+            else if (enemiesToDamage[i].transform.tag == "Tree")
+            {
+                Debug.Log("Hitting Tree");
+                // ADDED: strength added to received damage
+                enemiesToDamage[i].transform.gameObject.GetComponent<TreeDrop>().TakeDamage(damage + _GameManager.GetComponent<GameManager>().playerStrength);
+            }
         }
     }
 
