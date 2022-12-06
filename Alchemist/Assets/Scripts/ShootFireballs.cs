@@ -12,6 +12,7 @@ public class ShootFireballs : MonoBehaviour
 
     private Vector2 target;
     private bool collidingWithEnemy;
+    private bool upgraded;
 
 
     void Update()
@@ -36,7 +37,7 @@ public class ShootFireballs : MonoBehaviour
     }
 
     void Upgrade() {
-        bool upgraded = true;
+        upgraded = true;
     }
 
 
