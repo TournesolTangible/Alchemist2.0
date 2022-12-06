@@ -3858,6 +3858,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2003410074957501933}
     m_Modifications:
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5077901
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.87744
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.836
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1983
+      objectReference: {fileID: 0}
     - target: {fileID: 8492718654240190083, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -3928,6 +3944,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2003410074957501933}
     m_Modifications:
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.32964
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1356801
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7099
+      objectReference: {fileID: 0}
+    - target: {fileID: 2766278211775146682, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3894
+      objectReference: {fileID: 0}
     - target: {fileID: 8492718654240190083, guid: 470236df17b12e7479ba3ae0b93c1706, type: 3}
       propertyPath: m_RootOrder
       value: 26
