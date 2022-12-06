@@ -128,6 +128,7 @@ MonoBehaviour:
   lifeTime: 2
   moveSpeed: 5
   damage: 3
+  PSP: {fileID: 2422244156224173994, guid: d21cf816f17576948bcadc0b6bd83b39, type: 3}
 --- !u!50 &7619458145367348356
 Rigidbody2D:
   serializedVersion: 4

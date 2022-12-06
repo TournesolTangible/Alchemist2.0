@@ -25,7 +25,7 @@ public class ShootFireballs : MonoBehaviour
 
         if(Time.time > _FireballTimer) {
 
-            GameObject fireball = Instantiate(_FireballPrefab, transform.position, Quaternion.identity); //Quaternion.Euler(30, 0, 0));
+            GameObject fireball = Instantiate(_FireballPrefab, transform.position, Quaternion.identity);
             fireball.GetComponent<Fireball>().SetSpeed(_FireballForce);
             fireball.GetComponent<Fireball>().SetTarget(target);
             
@@ -44,11 +44,19 @@ public class ShootFireballs : MonoBehaviour
         }
     }
 
-    // void OnTriggerExit2D(Collider2D other) {
-    //     if (other.transform.tag == "Enemy") {
-    //         collidingWithEnemy = false;
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.transform.tag == "Enemy") {
+            collidingWithEnemy = true;
+            target = new Vector2(other.transform.position.x, other.transform.position.y);
+            target = target*2;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.transform.tag == "Enemy") {
+            collidingWithEnemy = false;
+        }
+    }
 
 
 }
