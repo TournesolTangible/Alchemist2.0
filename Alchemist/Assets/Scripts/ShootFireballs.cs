@@ -23,15 +23,20 @@ public class ShootFireballs : MonoBehaviour
 
     void Shoot() {
 
-        if(Time.time > _FireballTimer) {
-
-            GameObject fireball = Instantiate(_FireballPrefab, transform.position, Quaternion.identity);
-            fireball.GetComponent<Fireball>().SetSpeed(_FireballForce);
-            fireball.GetComponent<Fireball>().SetTarget(target);
-            
-            _FireballTimer = Time.time + _FireballRate; // Set your fire rate cooldown
+        // If fireballs have been upgraded ...
+        if (upgraded) {
+            if(Time.time > _FireballTimer) {
+                GameObject fireball = Instantiate(_FireballPrefab, transform.position, Quaternion.identity);
+                fireball.GetComponent<Fireball>().SetSpeed(_FireballForce);
+                fireball.GetComponent<Fireball>().SetTarget(target);
+                
+                _FireballTimer = Time.time + _FireballRate; // Set your fire rate cooldown
+            }
         }
+    }
 
+    void Upgrade() {
+        bool upgraded = true;
     }
 
 
