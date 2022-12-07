@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverSound: {fileID: 2057828132}
-  PS: {fileID: 4985732298899292768, guid: d4181716bfec5c54d81a11b7bbadaee3, type: 3}
+  PS: {fileID: 7174509950033571251, guid: 2e2da622c7ac0304eaa45bb65f84ffdf, type: 3}
   Bilby: {fileID: 0}
   amp: 1
   freq: 1
@@ -1857,7 +1857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HoverSound: {fileID: 2057828132}
-  PS: {fileID: 4985732298899292768, guid: d4181716bfec5c54d81a11b7bbadaee3, type: 3}
+  PS: {fileID: 7174509950033571251, guid: 2e2da622c7ac0304eaa45bb65f84ffdf, type: 3}
   Bilby: {fileID: 0}
   amp: 1
   freq: 1
@@ -2081,7 +2081,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: be4433a6219c34b499b974cb8f795cbb, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.7
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0

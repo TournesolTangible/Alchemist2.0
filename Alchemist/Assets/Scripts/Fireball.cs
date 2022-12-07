@@ -6,7 +6,7 @@ public class Fireball : MonoBehaviour
 {
     [SerializeField] private float lifeTime = 1.0f;
     [SerializeField] private float moveSpeed = .5f;
-    [SerializeField] private float damage = 3.0f;
+    [SerializeField] private float damage = 0f;
     public ParticleSystem PSP;
     private ParticleSystem CPS;
 
@@ -40,6 +40,10 @@ public class Fireball : MonoBehaviour
 
     public void SetSpeed(float spd) {
         moveSpeed = spd;
+    }
+
+    public void SetDamage(float dmg) {
+        damage += dmg;
     }
 
     void OnTriggerEnter2D(Collider2D other) {

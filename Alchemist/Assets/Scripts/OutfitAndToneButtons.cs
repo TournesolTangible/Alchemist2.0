@@ -30,7 +30,7 @@ public class OutfitAndToneButtons : MonoBehaviour
         // print("Mouse Over");
         if (!CPS) {
             CPS = Instantiate(PS, this.transform);
-            CPS.Play();
+            //CPS.Play();
             this.transform.localScale = new Vector2(1.25f, 1.25f);
             HoverSound.Play();
         }

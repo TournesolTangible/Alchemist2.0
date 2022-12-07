@@ -125,6 +125,7 @@ public class GameManager : MonoBehaviour
         if (Player.GetComponent<PlayerStats>().ReturnHealth() == 0) {
 
             if (Player.GetComponent<UnalivePlayer>().isAlive()) {
+                _GameplayMusic.Stop();
                 PlayDeathRinger();
             }
 

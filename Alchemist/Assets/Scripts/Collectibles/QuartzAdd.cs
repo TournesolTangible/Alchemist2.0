@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class QuartzAdd : MonoBehaviour
 {
+    [SerializeField] private AudioSource _CollectSFX;
     private float speed = 7;
     
     public void OnTriggerStay2D(Collider2D collider) {
@@ -12,6 +13,7 @@ public class QuartzAdd : MonoBehaviour
 
             // if hits boxCollider destroy object 
             if (collider is BoxCollider2D) {
+                _CollectSFX.Play();
                 Destroy(this.gameObject);
                 GameManager.Instance.quartzAmt += 1;
             }

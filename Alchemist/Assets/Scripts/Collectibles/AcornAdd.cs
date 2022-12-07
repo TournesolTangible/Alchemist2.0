@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class AcornAdd : MonoBehaviour
 {
+    
+    [SerializeField] private AudioSource _CollectSFX;
     private float speed = 7;
+
     
     public void OnTriggerStay2D(Collider2D collider) {
 
         if (collider.CompareTag("Player")) {
 
             // if hits boxCollider destroy object 
-            if (collider is BoxCollider2D) {
+            if (collider is BoxCollider2D || collider is CapsuleCollider2D) {
+                _CollectSFX.Play();
                 Destroy(this.gameObject);
                 GameManager.Instance.acornAmt += 1;
             }
