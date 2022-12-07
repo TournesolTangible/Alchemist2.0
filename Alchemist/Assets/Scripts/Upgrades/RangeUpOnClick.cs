@@ -19,7 +19,6 @@ public class RangeUpOnClick : MonoBehaviour
 
     public void UpgradeAtkRange() {
 
-        GameManager.Instance.Player.GetComponent<ShootFireballs>()._FireballTimer -= 0.1f;
 
         GameManager.Instance.featherAmt -= GameManager.Instance.featherCost;
         GameManager.Instance.featherCost += 3;
