@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d8f0c801426aa4abb735e89009e042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 200
+  _speed: 300
   NextWaypointDistance: 3
   EnemyGFX: {fileID: 4782084522463395581}
 --- !u!114 &899445196073213960
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damageTime: 0
   _damageRate: 2
+  damageAmt: 1
 --- !u!114 &8574945564557837999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70eaf9a7f280c8f4589f7512453e4694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMaxHealth: 3
   collectable: {fileID: 8711976929859243197, guid: b2bc47f251cff954fbf298cdb31725d1, type: 3}
   heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
 --- !u!50 &4621215029082870521
@@ -199,7 +201,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.7
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
