@@ -7,6 +7,8 @@ public class FireballOnClick : MonoBehaviour
 {
     [SerializeField] private Button fireballUpgrade;
     [SerializeField] private Text vervainText;
+    [SerializeField] private Text fireballTitle;
+    [SerializeField] private Text fireballDesc;
     public GameObject countdownCanvas;
 
     void Start() {
@@ -20,11 +22,15 @@ public class FireballOnClick : MonoBehaviour
 
     public void UpgradeFireball() {
 
-        // TODO: activate fireball, then change to upgrade damage
-
+        if (GameManager.Instance.vervainCost == 1) {
         // ACTIVATES FIREBALL
         GameManager.Instance.GetComponent<Player>().GetComponent<ShootFireballs>().Upgrade();
-        // 
+        fireballTitle.text = "FIREBALL UP";
+        fireballDesc.text = "Increase damage dealt\nby fireball";
+        }
+        else {
+
+        }
 
         GameManager.Instance.vervainAmt -= GameManager.Instance.vervainCost;
         GameManager.Instance.vervainCost += 3;

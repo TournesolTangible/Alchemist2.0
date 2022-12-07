@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3466793664534924831}
   - component: {fileID: 2319287758608198392}
   m_Layer: 5
-  m_Name: AcornTxt
+  m_Name: SageTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,8 +147,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
+    m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -388,8 +388,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
+    m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
+    m_FontSize: 36
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -549,8 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stickUpgrade: {fileID: 3558901908185582056}
-  acornText: {fileID: 2319287758608198392}
-  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
+  sageText: {fileID: 0}
 --- !u!1 &3922221643370538591
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +562,7 @@ GameObject:
   - component: {fileID: 3300697674035094835}
   - component: {fileID: 2066671448538560033}
   m_Layer: 5
-  m_Name: AcornImg
+  m_Name: SageImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a41b6e2d19c0aa84c9684e80e2bd5afa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 196253027821ad6469a21f4332e620bf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

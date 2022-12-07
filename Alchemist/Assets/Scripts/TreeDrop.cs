@@ -29,19 +29,19 @@ public class TreeDrop : MonoBehaviour
     {
         if (enemyCurrentHealth <= 0)
         {
-            int random_number = Random.Range(0, 10); // ganerates a random number between 1 to 10
+            int random_number = Random.Range(0, 15); // ganerates a random number between 1 to 10
             random_number += GameManager.GetComponent<GameManager>().playerLuck; // Add player luck to 'random_number'
-            if (random_number >= 10 && !dropped)
+            if (random_number >= 13 && !dropped)
             { // if roll is >= 10 get 3 collectables
                 Instantiate(collectable, transform.position, new Quaternion(0, 0, 0, 0));
                 dropped = true;
             }
-            if (7 < random_number && !dropped)
+            if (10 < random_number && !dropped)
             { // if roll is greater than 7 get 2 collectables
                 Instantiate(collectable, transform.position, new Quaternion(0, 0, 0, 0));
                 dropped = true;
             }
-            if (4 < random_number && !dropped)
+            if (6 < random_number && !dropped)
             { // if roll is greater than 4 get 1 collectable
                 Instantiate(collectable, transform.position, new Quaternion(0, 0, 0, 0));
                 dropped = true;
@@ -58,7 +58,6 @@ public class TreeDrop : MonoBehaviour
     public void TakeDamage(float damage)
     {
         enemyCurrentHealth -= damage;
-        GameManager.GetComponent<GameManager>().countdownCanvas.GetComponent<CheckpointTimer>().ReduceCountdown();
     }
 
 }

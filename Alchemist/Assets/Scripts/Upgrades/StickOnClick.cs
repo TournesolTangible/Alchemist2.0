@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class StickOnClick : MonoBehaviour
 {
     [SerializeField] private Button stickUpgrade;
-    [SerializeField] private Text acornText;
+    [SerializeField] private Text sageText;
 
     void Start() {
 
-        acornText.text = "x " + GameManager.Instance.acornCost.ToString();
+        sageText.text = "x " + GameManager.Instance.sageCost.ToString();
 
-        if (GameManager.Instance.acornAmt < GameManager.Instance.acornCost) {
+        if (GameManager.Instance.sageAmt < GameManager.Instance.sageCost) {
             stickUpgrade.interactable = false;
         }
     }
@@ -21,9 +21,9 @@ public class StickOnClick : MonoBehaviour
 
         GameManager.Instance.Player.GetComponent<BasicAttack>().damageRate -= 0.05f;
 
-        GameManager.Instance.acornAmt -= GameManager.Instance.acornCost;
-        GameManager.Instance.acornCost += 3;
-        acornText.text = "x " + GameManager.Instance.acornCost.ToString();
+        GameManager.Instance.sageAmt -= GameManager.Instance.sageCost;
+        GameManager.Instance.sageCost += 3;
+        sageText.text = "x " + GameManager.Instance.sageCost.ToString();
         stickUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

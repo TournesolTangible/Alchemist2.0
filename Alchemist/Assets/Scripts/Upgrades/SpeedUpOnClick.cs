@@ -19,8 +19,8 @@ public class SpeedUpOnClick : MonoBehaviour
 
     public void UpgradeSpeed() {
 
-       // TODO: increase speed of fireball attack
-
+       GameManager.Instance.Player.GetComponent<ShootFireballs>()._FireballRate -= 0.1f;
+       
         GameManager.Instance.wolfFootAmt -= GameManager.Instance.wolfFootCost;
         GameManager.Instance.wolfFootCost += 3;
         wolfFootText.text = "x " + GameManager.Instance.wolfFootCost.ToString();

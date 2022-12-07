@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class RestoreHealthOnClick : MonoBehaviour
 {
     [SerializeField] private Button healthRestoreUpgrade;
-    [SerializeField] private Text sageText;
+    [SerializeField] private Text acornText;
 
     void Start() {
 
-        sageText.text = "x " + GameManager.Instance.sageCost.ToString();
+        acornText.text = "x " + GameManager.Instance.acornCost.ToString();
 
-        if (GameManager.Instance.sageAmt < GameManager.Instance.sageCost) {
+        if (GameManager.Instance.acornAmt < GameManager.Instance.acornCost) {
             healthRestoreUpgrade.interactable = false;
         }
     }
@@ -21,9 +21,9 @@ public class RestoreHealthOnClick : MonoBehaviour
 
         int maxHealth = GameManager.Instance.playerHealth;
         GameManager.Instance.currentHealth = maxHealth;
-        GameManager.Instance.sageAmt -= GameManager.Instance.sageCost;
-        GameManager.Instance.sageCost += 2;
-        sageText.text = "x " + GameManager.Instance.sageCost.ToString();
+        GameManager.Instance.acornAmt -= GameManager.Instance.acornCost;
+        GameManager.Instance.acornCost += 2;
+        acornText.text = "x " + GameManager.Instance.acornCost.ToString();
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().Heal((float)maxHealth);
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
         healthRestoreUpgrade.interactable = false;

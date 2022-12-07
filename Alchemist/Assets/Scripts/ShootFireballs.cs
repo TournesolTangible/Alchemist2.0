@@ -8,8 +8,8 @@ public class ShootFireballs : MonoBehaviour
     [SerializeField] private GameObject _FireballPrefab;
     [SerializeField] private AudioSource _FireballSFX;
     [SerializeField] private float _FireballForce = 0.01f;
-    [SerializeField] private float _FireballRate = .5f;
-    [SerializeField] private float _FireballTimer = 2f;
+    [SerializeField] public float _FireballRate = .5f;
+    [SerializeField] public float _FireballTimer = 2f;
 
     private List<Collider2D> _Enemies = new List<Collider2D>();
     private GameObject LastEnemyAdded;
