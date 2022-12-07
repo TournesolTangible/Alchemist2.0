@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HeartAdd : MonoBehaviour
 {
+    [SerializeField] private AudioSource _CollectSFX;
     private float speed = 7;
 
     public void OnTriggerStay2D(Collider2D collider) {
@@ -11,7 +12,7 @@ public class HeartAdd : MonoBehaviour
         if (collider.CompareTag("Player")) {
 
             if (collider is BoxCollider2D) {
-                
+                _CollectSFX.Play();
                 GameManager.Instance.healthBar.GetComponent<HealthBarHud>().Heal(1.0f);
                 GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
                 Destroy(this.gameObject);
