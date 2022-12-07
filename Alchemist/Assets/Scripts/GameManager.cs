@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private AudioSource _GameplayMusic;
     [SerializeField] private AudioSource _DeathRinger;
+    [SerializeField] public AudioSource _CollectibleSFX;
 
     // reference stats for player
     [HideInInspector] public int playerHealth = 3;

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DevilAdd : MonoBehaviour
 {
-    [SerializeField] private AudioSource _CollectSFX;
     private float speed = 7;
     
     public void OnTriggerStay2D(Collider2D collider) {
@@ -13,7 +12,7 @@ public class DevilAdd : MonoBehaviour
 
             // if hits boxCollider destroy object 
             if (collider is BoxCollider2D) {
-                _CollectSFX.Play();
+                GameManager.Instance._CollectibleSFX.Play();
                 Destroy(this.gameObject);
                 GameManager.Instance.devilEyeAmt += 1;
             }
