@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stickUpgrade: {fileID: 3558901908185582056}
-  sageText: {fileID: 0}
+  sageText: {fileID: 2319287758608198392}
 --- !u!1 &3922221643370538591
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,23 +29,23 @@ public class TreeDrop : MonoBehaviour
     {
         if (enemyCurrentHealth <= 0)
         {
-            int random_number = Random.Range(0, 15); // ganerates a random number between 1 to 10
+            int random_number = Random.Range(0,20); // ganerates a random number between 1 to 10
             random_number += GameManager.GetComponent<GameManager>().playerLuck; // Add player luck to 'random_number'
-            if (random_number >= 13 && !dropped)
+            if (random_number >= 19 && !dropped)
             { // if roll is >= 10 get 3 collectables
                 Instantiate(collectable, transform.position, new Quaternion(0, 0, 0, 0));
                 dropped = true;
             }
-            if (10 < random_number && !dropped)
+            if (17 < random_number && !dropped)
             { // if roll is greater than 7 get 2 collectables
                 Instantiate(collectable, transform.position, new Quaternion(0, 0, 0, 0));
                 dropped = true;
             }
-            if (6 < random_number && !dropped)
+            if (15 < random_number && !dropped)
             { // if roll is greater than 4 get 1 collectable
                 Instantiate(collectable, transform.position, new Quaternion(0, 0, 0, 0));
                 dropped = true;
-            } // if roll is 4 or less get nothing
+            } // if roll is 15 or less get nothing
             else
             {
                 dropped = true;

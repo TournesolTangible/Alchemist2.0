@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthRestoreUpgrade: {fileID: 3459775527574093613}
-  acornText: {fileID: 0}
+  acornText: {fileID: 5559294061140513629}
 --- !u!1 &8886694777920951449
 GameObject:
   m_ObjectHideFlags: 0
