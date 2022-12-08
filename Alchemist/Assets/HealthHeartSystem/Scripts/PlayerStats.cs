@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour
     #endregion
 
     [SerializeField]
-    private float health = 3.0f;
+    public float health = 3.0f;
     [SerializeField]
     private float maxHealth = 3.0f;
     [SerializeField]

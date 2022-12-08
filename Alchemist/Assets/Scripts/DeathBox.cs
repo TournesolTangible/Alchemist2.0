@@ -10,7 +10,7 @@ public class DeathBox : MonoBehaviour
         if (other.CompareTag("Player"))
         {
           if (other is BoxCollider2D) {
-            Destroy(other.gameObject);
+            GameManager.Instance.Player.GetComponent<PlayerStats>().health = 0f;
           }
         }
     }
