@@ -984,9 +984,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 780674218}
     - target: {fileID: 7913365712547377564, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: BlessingButton
+      value: 
+      objectReference: {fileID: 4239172745811284267, guid: 5bb75b3f3c6f52f458dd520f24e9f56b, type: 3}
+    - target: {fileID: 7913365712547377564, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
       propertyPath: countdownCanvas
       value: 
       objectReference: {fileID: 1814616090}
+    - target: {fileID: 7913365712547377564, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
+      propertyPath: CornucopiaButton
+      value: 
+      objectReference: {fileID: 1716054639706402565, guid: 164c9f13609265042a5fce6d01cad5e5, type: 3}
     - target: {fileID: 7913365712547377567, guid: 239e2033ec803854ea2a6d10ca055741, type: 3}
       propertyPath: m_Pivot.x
       value: 0
