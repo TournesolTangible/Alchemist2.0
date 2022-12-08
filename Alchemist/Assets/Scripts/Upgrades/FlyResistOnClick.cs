@@ -7,6 +7,7 @@ public class FlyResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button flyResistUpgrade;
     [SerializeField] private Text snakeHeadText;
+    [SerializeField] private AudioSource upgradeSound;
 
     public GameObject owl;
     public GameObject ghost;
@@ -30,6 +31,7 @@ public class FlyResistOnClick : MonoBehaviour
         GameManager.Instance.snakeHeadAmt -= GameManager.Instance.snakeHeadCost;
         GameManager.Instance.snakeHeadCost += 3;
         snakeHeadText.text = "x " + GameManager.Instance.snakeHeadCost.ToString();
+        upgradeSound.Play();
         flyResistUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

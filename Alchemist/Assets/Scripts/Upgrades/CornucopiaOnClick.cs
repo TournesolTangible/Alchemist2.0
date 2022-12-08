@@ -8,6 +8,7 @@ public class CornucopiaOnClick : MonoBehaviour
     [SerializeField] private Button cornucopiaUpgrade;
     [SerializeField] private Text cornucopiaDesc;
     [SerializeField] private Text devilEyeText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -44,6 +45,7 @@ public class CornucopiaOnClick : MonoBehaviour
         GameManager.Instance.devilEyeCost += 2;
         devilEyeText.text = "x " + GameManager.Instance.devilEyeCost.ToString();
         cornucopiaDesc.text = "Instantly receive " + GameManager.Instance.devilEyeCost.ToString() + " of\nevery other collectible";
+        upgradeSound.Play();
         cornucopiaUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

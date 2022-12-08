@@ -7,6 +7,7 @@ public class ProtectionOnClick : MonoBehaviour
 {
     [SerializeField] private Button protectionUpgrade;
     [SerializeField] private Text batWingText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -25,6 +26,7 @@ public class ProtectionOnClick : MonoBehaviour
         GameManager.Instance.batWingAmt -= GameManager.Instance.batWingCost;
         GameManager.Instance.batWingCost += 3;
         batWingText.text = "x " + GameManager.Instance.batWingCost.ToString();
+        upgradeSound.Play();
         protectionUpgrade.interactable = false;
         
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

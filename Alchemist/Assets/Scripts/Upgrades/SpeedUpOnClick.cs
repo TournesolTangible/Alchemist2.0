@@ -7,6 +7,7 @@ public class SpeedUpOnClick : MonoBehaviour
 {
     [SerializeField] private Button speedUpgrade;
     [SerializeField] private Text wolfFootText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -24,6 +25,7 @@ public class SpeedUpOnClick : MonoBehaviour
         GameManager.Instance.wolfFootAmt -= GameManager.Instance.wolfFootCost;
         GameManager.Instance.wolfFootCost += 3;
         wolfFootText.text = "x " + GameManager.Instance.wolfFootCost.ToString();
+        upgradeSound.Play();
         speedUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

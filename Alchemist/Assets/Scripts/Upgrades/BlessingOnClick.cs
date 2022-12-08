@@ -8,6 +8,7 @@ public class BlessingOnClick : MonoBehaviour
     [SerializeField] private Button blessingUpgrade;
     [SerializeField] private Text blessingDesc;
     [SerializeField] private Text featherText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -83,6 +84,7 @@ public class BlessingOnClick : MonoBehaviour
         GameManager.Instance.featherCost += 2;
         featherText.text = "x " + GameManager.Instance.featherCost.ToString();
         blessingDesc.text = "Instantly receive " + GameManager.Instance.featherCost.ToString() + " of\na random collectible";
+        upgradeSound.Play();
         blessingUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

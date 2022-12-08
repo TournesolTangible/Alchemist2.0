@@ -7,6 +7,7 @@ public class PeaceOnClick : MonoBehaviour
 {
     [SerializeField] private Button peaceUpgrade;
     [SerializeField] private Text lavenderText;
+    [SerializeField] private AudioSource upgradeSound;
  
     void Start() {
 
@@ -23,6 +24,7 @@ public class PeaceOnClick : MonoBehaviour
         GameManager.Instance.lavenderAmt -= GameManager.Instance.lavenderCost;
         GameManager.Instance.lavenderCost += 3;
         lavenderText.text = "x " + GameManager.Instance.lavenderCost.ToString();
+        upgradeSound.Play();
         peaceUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

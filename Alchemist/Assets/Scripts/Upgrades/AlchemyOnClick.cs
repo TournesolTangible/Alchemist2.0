@@ -7,6 +7,7 @@ public class AlchemyOnClick : MonoBehaviour
 {
     [SerializeField] private Button alchemyUpgrade;
     [SerializeField] private Text fairyBellsText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -23,6 +24,7 @@ public class AlchemyOnClick : MonoBehaviour
         GameManager.Instance.fairyBellsAmt -= GameManager.Instance.fairyBellsCost;
         GameManager.Instance.fairyBellsCost += 2;
         fairyBellsText.text = "x " + GameManager.Instance.fairyBellsCost.ToString();
+        upgradeSound.Play();
         alchemyUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

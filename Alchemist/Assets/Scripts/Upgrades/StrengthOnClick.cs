@@ -7,6 +7,7 @@ public class StrengthOnClick : MonoBehaviour
 {
     [SerializeField] private Button strengthUpgrade;
     [SerializeField] private Text goatHoofText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -25,6 +26,7 @@ public class StrengthOnClick : MonoBehaviour
         GameManager.Instance.goatHoofAmt -= GameManager.Instance.goatHoofCost;
         GameManager.Instance.goatHoofCost += 3;
         goatHoofText.text = "x " + GameManager.Instance.goatHoofCost.ToString();
+        upgradeSound.Play();
         strengthUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

@@ -7,6 +7,7 @@ public class HealthOnClick : MonoBehaviour
 {
     [SerializeField] private Button healthUpgrade;
     [SerializeField] private Text graveyardDustText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -25,6 +26,7 @@ public class HealthOnClick : MonoBehaviour
         graveyardDustText.text = "x " + GameManager.Instance.graveyardDustCost.ToString();
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().AddHealth();
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
+        upgradeSound.Play();
         healthUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown(); 

@@ -7,6 +7,7 @@ public class BeastResistOnClick : MonoBehaviour
 {
     [SerializeField] private Button beastResistUpgrade;
     [SerializeField] private Text juniperBerryText;
+    [SerializeField] private AudioSource upgradeSound;
 
     public GameObject boar;
     public GameObject fox;
@@ -30,6 +31,7 @@ public class BeastResistOnClick : MonoBehaviour
         GameManager.Instance.juniperBerryAmt -= GameManager.Instance.juniperBerryCost;
         GameManager.Instance.juniperBerryCost += 3;
         juniperBerryText.text = "x " + GameManager.Instance.juniperBerryCost.ToString();
+        upgradeSound.Play();
         beastResistUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

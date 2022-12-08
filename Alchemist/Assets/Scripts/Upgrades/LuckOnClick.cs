@@ -7,6 +7,7 @@ public class LuckOnClick : MonoBehaviour
 {
     [SerializeField] private Button luckUpgrade;
     [SerializeField] private Text foxTailText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -23,6 +24,7 @@ public class LuckOnClick : MonoBehaviour
         GameManager.Instance.foxTailAmt -= GameManager.Instance.foxTailCost;
         GameManager.Instance.foxTailCost += 3;
         foxTailText.text = "x " + GameManager.Instance.foxTailCost.ToString();
+        upgradeSound.Play();
         luckUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

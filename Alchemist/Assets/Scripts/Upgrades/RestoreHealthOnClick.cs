@@ -7,6 +7,7 @@ public class RestoreHealthOnClick : MonoBehaviour
 {
     [SerializeField] private Button healthRestoreUpgrade;
     [SerializeField] private Text acornText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -26,6 +27,7 @@ public class RestoreHealthOnClick : MonoBehaviour
         acornText.text = "x " + GameManager.Instance.acornCost.ToString();
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().Heal((float)maxHealth);
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();
+        upgradeSound.Play();
         healthRestoreUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

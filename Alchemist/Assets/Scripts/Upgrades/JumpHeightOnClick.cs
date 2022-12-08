@@ -7,6 +7,7 @@ public class JumpHeightOnClick : MonoBehaviour
 {
     [SerializeField] private Button jumpHeightUpgrade;
     [SerializeField] private Text spiderSilkText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -24,6 +25,7 @@ public class JumpHeightOnClick : MonoBehaviour
         GameManager.Instance.spiderSilkAmt -= GameManager.Instance.spiderSilkCost;
         GameManager.Instance.spiderSilkCost += 3;
         spiderSilkText.text = "x " + GameManager.Instance.spiderSilkCost.ToString();
+        upgradeSound.Play();
         jumpHeightUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

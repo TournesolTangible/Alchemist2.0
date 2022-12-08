@@ -7,6 +7,7 @@ public class StickOnClick : MonoBehaviour
 {
     [SerializeField] private Button stickUpgrade;
     [SerializeField] private Text sageText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -24,6 +25,7 @@ public class StickOnClick : MonoBehaviour
         GameManager.Instance.sageAmt -= GameManager.Instance.sageCost;
         GameManager.Instance.sageCost += 3;
         sageText.text = "x " + GameManager.Instance.sageCost.ToString();
+        upgradeSound.Play();
         stickUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

@@ -10,6 +10,7 @@ public class FireballOnClick : MonoBehaviour
     [SerializeField] private Text fireballTitle;
     [SerializeField] private Text fireballDesc;
     public GameObject fireball;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -37,6 +38,7 @@ public class FireballOnClick : MonoBehaviour
         GameManager.Instance.vervainAmt -= GameManager.Instance.vervainCost;
         GameManager.Instance.vervainCost += 3;
         vervainText.text = "x " + GameManager.Instance.vervainCost.ToString();
+        upgradeSound.Play();
         fireballUpgrade.interactable = false;
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();
         GameManager.Instance.displayCollectibles.GetComponent<DisplayCollectibles>().ShowCollectibleAmounts();

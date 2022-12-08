@@ -7,6 +7,7 @@ public class DblJumpOnClick : MonoBehaviour
 {
     [SerializeField] private Button dblJumpUpgrade;
     [SerializeField] private Text swineSnoutText;
+    [SerializeField] private AudioSource upgradeSound;
 
     void Start() {
 
@@ -24,6 +25,7 @@ public class DblJumpOnClick : MonoBehaviour
         GameManager.Instance.swineSnoutAmt -= GameManager.Instance.swineSnoutCost;
         GameManager.Instance.swineSnoutCost += 3;
         swineSnoutText.text = "x " + GameManager.Instance.swineSnoutCost.ToString();
+        upgradeSound.Play();
         dblJumpUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

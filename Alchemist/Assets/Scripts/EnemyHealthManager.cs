@@ -23,6 +23,7 @@ public class EnemyHealthManager : MonoBehaviour
 
    void Update() {
     if (enemyCurrentHealth <= 0) {
+        GameManager.GetComponent<GameManager>()._EnemySFX.Play();
         Destroy(this.gameObject);
         int random_number = Random.Range(0,10); // ganerates a random number between 1 to 10
         random_number += GameManager.GetComponent<GameManager>().playerLuck; // Add player luck to 'random_number'
