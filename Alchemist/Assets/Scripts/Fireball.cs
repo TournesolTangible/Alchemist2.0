@@ -6,7 +6,7 @@ public class Fireball : MonoBehaviour
 {
     [SerializeField] private float lifeTime = 1.0f;
     [SerializeField] private float moveSpeed = .5f;
-    [SerializeField] private float damage = 0f;
+    [SerializeField] public float damage = 3f;
     public ParticleSystem PSP;
     private ParticleSystem CPS;
 

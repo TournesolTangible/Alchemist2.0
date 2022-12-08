@@ -18,7 +18,7 @@ public class CheckpointShop : MonoBehaviour
     [SerializeField] private GameObject ProtectionButton;
     [SerializeField] private GameObject HealthRestoreButton;
     [SerializeField] private GameObject FireballButton;
-    [SerializeField] private GameObject AtkRangeButton;
+    [SerializeField] private GameObject CornucopiaButton;
     [SerializeField] private GameObject AtkSpeedButton;
     [SerializeField] private GameObject DblJumpButton;
     [SerializeField] private GameObject JumpHeightButton;
@@ -74,28 +74,27 @@ public class CheckpointShop : MonoBehaviour
         
         options.Add(AlchemyButton); 
         options.Add(HealthButton);
-        options.Add(LuckButton);
         options.Add(HealthRestoreButton);
-        options.Add(BlessingButton);
         options.Add(StickButton);
+        options.Add(FireballButton);
+        options.Add(BlessingButton);
 
         // Options below here only unlocked one at a time 
         // once the Alchemy stat increases
-
+ 
         options.Add(ProtectionButton);
-        options.Add(PeaceButton);
-        options.Add(FireballButton);
+        options.Add(AtkSpeedButton);
+        options.Add(CornucopiaButton);
+        options.Add(LuckButton);
         options.Add(JumpHeightButton); // once unlocked, switch to upgrade
         options.Add(StrengthButton);
-        options.Add(AtkRangeButton);
-        options.Add(AtkSpeedButton);
-        options.Add(DblJumpButton); // once unlocked, destroy
+        options.Add(PeaceButton);
         options.Add(ResistFlyingButton);
         options.Add(ResistFaeButton);
         options.Add(ResistCreepyButton);
         options.Add(ResistBeastButton);
+        options.Add(DblJumpButton); // once unlocked, destroy
         
-
         alchemyValue = GameManager.GetComponent<GameManager>().playerAlchemy;
 
         // once all potions are unlocked, destroy Alchemy button

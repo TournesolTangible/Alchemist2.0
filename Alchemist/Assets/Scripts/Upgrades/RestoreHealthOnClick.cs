@@ -22,7 +22,7 @@ public class RestoreHealthOnClick : MonoBehaviour
         int maxHealth = GameManager.Instance.playerHealth;
         GameManager.Instance.currentHealth = maxHealth;
         GameManager.Instance.acornAmt -= GameManager.Instance.acornCost;
-        GameManager.Instance.acornCost += 2;
+        GameManager.Instance.acornCost += 3;
         acornText.text = "x " + GameManager.Instance.acornCost.ToString();
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().Heal((float)maxHealth);
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();

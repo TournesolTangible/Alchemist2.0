@@ -21,7 +21,7 @@ public class HealthOnClick : MonoBehaviour
 
         GameManager.Instance.playerHealth += 1;
         GameManager.Instance.graveyardDustAmt -= GameManager.Instance.graveyardDustCost;
-        GameManager.Instance.graveyardDustCost += 2;
+        GameManager.Instance.graveyardDustCost += 3;
         graveyardDustText.text = "x " + GameManager.Instance.graveyardDustCost.ToString();
         GameManager.Instance.healthBar.GetComponent<HealthBarHud>().AddHealth();
         GameManager.Instance.healthBarController.GetComponent<HealthBarController>().UpdateHeartsHUD();

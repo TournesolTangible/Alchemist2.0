@@ -19,7 +19,7 @@ public class StickOnClick : MonoBehaviour
 
     public void UpgradeStick() {
 
-        GameManager.Instance.Player.GetComponent<BasicAttack>().damageRate -= 0.05f;
+        GameManager.Instance.Player.GetComponent<BasicAttack>().damageRate -= 0.1f;
 
         GameManager.Instance.sageAmt -= GameManager.Instance.sageCost;
         GameManager.Instance.sageCost += 3;

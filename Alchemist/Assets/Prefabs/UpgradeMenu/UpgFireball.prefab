@@ -115,7 +115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 15}
   m_SizeDelta: {x: 180, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1005899958763484947
@@ -465,7 +465,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballUpgrade: {fileID: 641267231681602345}
   vervainText: {fileID: 2791624212777779809}
-  countdownCanvas: {fileID: 2738398892961063723, guid: 2dcfcc4f30ac0704b849ae9c81245dfe, type: 3}
+  fireballTitle: {fileID: 5791676293976483591}
+  fireballDesc: {fileID: 7926244422294339383}
+  fireball: {fileID: 2547672137107465699, guid: 3643e5a0ab65fb9478d9aedc9bb5a71c, type: 3}
 --- !u!1 &8070944811375922034
 GameObject:
   m_ObjectHideFlags: 0

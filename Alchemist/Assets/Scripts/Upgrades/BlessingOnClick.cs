@@ -7,43 +7,82 @@ public class BlessingOnClick : MonoBehaviour
 {
     [SerializeField] private Button blessingUpgrade;
     [SerializeField] private Text blessingDesc;
-    [SerializeField] private Text devilEyeText;
+    [SerializeField] private Text featherText;
 
     void Start() {
 
-        devilEyeText.text = "x " + GameManager.Instance.devilEyeCost.ToString();
+        featherText.text = "x " + GameManager.Instance.featherCost.ToString();
 
-        if (GameManager.Instance.devilEyeAmt < GameManager.Instance.devilEyeCost) {
+        if (GameManager.Instance.featherAmt < GameManager.Instance.featherCost) {
             blessingUpgrade.interactable = false;
         }
     }
 
     public void UpgradeBlessing() {
 
-        int cost = GameManager.Instance.devilEyeCost;
+        int cost = GameManager.Instance.featherCost;
 
-        GameManager.Instance.acornAmt += cost;
-        GameManager.Instance.batWingAmt += cost;
-        GameManager.Instance.fairyBellsAmt += cost;
-        GameManager.Instance.featherAmt += cost;
-        GameManager.Instance.foxTailAmt += cost;
-        GameManager.Instance.goatHoofAmt += cost;
-        GameManager.Instance.graveyardDustAmt += cost;
-        GameManager.Instance.juniperBerryAmt += cost;
-        GameManager.Instance.lavenderAmt += cost;
-        GameManager.Instance.mushroomAmt += cost;
-        GameManager.Instance.quartzAmt += cost;
-        GameManager.Instance.sageAmt += cost;
-        GameManager.Instance.snakeHeadAmt += cost;
-        GameManager.Instance.spiderSilkAmt += cost;
-        GameManager.Instance.swineSnoutAmt += cost;
-        GameManager.Instance.vervainAmt += cost;
-        GameManager.Instance.wolfFootAmt += cost;
+        var num = Random.Range(1, 17);
 
-        GameManager.Instance.devilEyeAmt -= GameManager.Instance.devilEyeCost;
-        GameManager.Instance.devilEyeCost += 2;
-        devilEyeText.text = "x " + GameManager.Instance.devilEyeCost.ToString();
-        blessingDesc.text = "Instantly receive " + GameManager.Instance.devilEyeCost.ToString() + " of\nevery other collectible";
+        switch (num) 
+        {
+            case 1:
+            GameManager.Instance.acornAmt += cost;
+            break;
+            case 2:
+            GameManager.Instance.batWingAmt += cost;
+            break;
+            case 3:
+            GameManager.Instance.fairyBellsAmt += cost;
+            break;
+            case 4:
+            GameManager.Instance.featherAmt += cost;
+            break;
+            case 5:
+            GameManager.Instance.foxTailAmt += cost;
+            break;
+            case 6:
+            GameManager.Instance.goatHoofAmt += cost;
+            break;
+            case 7:
+            GameManager.Instance.graveyardDustAmt += cost;
+            break;
+            case 8:
+            GameManager.Instance.juniperBerryAmt += cost;
+            break;
+            case 9:
+            GameManager.Instance.lavenderAmt += cost;
+            break;
+            case 10:
+            GameManager.Instance.mushroomAmt += cost;
+            break;
+            case 11:
+            GameManager.Instance.quartzAmt += cost;
+            break;
+            case 12:
+            GameManager.Instance.sageAmt += cost;
+            break;
+            case 13:
+            GameManager.Instance.snakeHeadAmt += cost;
+            break;
+            case 14:
+            GameManager.Instance.spiderSilkAmt += cost;
+            break;
+            case 15:
+            GameManager.Instance.swineSnoutAmt += cost;
+            break;
+            case 16:
+            GameManager.Instance.vervainAmt += cost;
+            break;
+            case 17:
+            GameManager.Instance.wolfFootAmt += cost;
+            break;
+        }
+        
+        GameManager.Instance.featherAmt -= GameManager.Instance.featherCost;
+        GameManager.Instance.featherCost += 2;
+        featherText.text = "x " + GameManager.Instance.featherCost.ToString();
+        blessingDesc.text = "Instantly receive " + GameManager.Instance.featherCost.ToString() + " of\na random collectible";
         blessingUpgrade.interactable = false;
 
         GameManager.Instance.countdownCanvas.GetComponent<CheckpointTimer>().IncreaseCountdown();

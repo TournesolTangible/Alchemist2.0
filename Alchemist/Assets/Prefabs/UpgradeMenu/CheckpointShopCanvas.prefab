@@ -4230,12 +4230,12 @@ MonoBehaviour:
   ProtectionButton: {fileID: 8786199492983779921, guid: 5e521dcc0451b934ea1fc8a4c0ecaec8, type: 3}
   HealthRestoreButton: {fileID: 3459775526612148237, guid: 9ef9e4fbf7e3a0a48b1d6f4185365093, type: 3}
   FireballButton: {fileID: 8070944811375922034, guid: 89de7947d689a754dbbc648fa83b6dde, type: 3}
-  AtkRangeButton: {fileID: 4239172745811284267, guid: 9fab9e91807d7a54ca0d7d388ffea15f, type: 3}
+  CornucopiaButton: {fileID: 1716054639706402565, guid: 5bb75b3f3c6f52f458dd520f24e9f56b, type: 3}
   AtkSpeedButton: {fileID: 8667852687740403694, guid: 13bec6e83dc10f14c8c7356492b5ac09, type: 3}
   DblJumpButton: {fileID: 8151243543668603808, guid: a9ad794c912e4a44bb26199afd569fb4, type: 3}
   JumpHeightButton: {fileID: 731511955385920577, guid: a51843acd149be54892f96d8c906fa1f, type: 3}
   StickButton: {fileID: 3558901907761173177, guid: 3dd30f1bbb1149f49a29e030caf0f632, type: 3}
-  BlessingButton: {fileID: 1716054639706402565, guid: 5bb75b3f3c6f52f458dd520f24e9f56b, type: 3}
+  BlessingButton: {fileID: 4239172745811284267, guid: 9fab9e91807d7a54ca0d7d388ffea15f, type: 3}
   ResistFlyingButton: {fileID: 5408540992315756386, guid: 3e916320360ce9347a70b0a5fc16df0b, type: 3}
   ResistFaeButton: {fileID: 1266135134756567068, guid: 68f2f39d2a5bbe841af85538fcc99dae, type: 3}
   ResistCreepyButton: {fileID: 5803546189647156712, guid: 719eb294cc67e984fa6643d4d612c76c, type: 3}
