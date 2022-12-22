@@ -4,6 +4,7 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class PlayerStats : MonoBehaviour
 
     public delegate void OnHealthChangedDelegate();
     public OnHealthChangedDelegate onHealthChangedCallback;
+
+    // holds the hurt sounds
+    [SerializeField] private List<AudioSource> _HurtSounds;
 
     #region Sigleton
     private static PlayerStats instance;
@@ -49,6 +53,14 @@ public class PlayerStats : MonoBehaviour
 
         if(isInvincible) return; // do nothing if you are invincible
 
+        // play hurt sound
+        if (Health == 1) {
+            _HurtSounds[2].Play();
+        } else {
+            _HurtSounds[Random.Range(0,2)].Play();
+        }
+        
+
         health -= dmg;
         ClampHealth();
 
@@ -84,14 +96,24 @@ public class PlayerStats : MonoBehaviour
     private IEnumerator BecomeInvincible() {
         isInvincible = true;
 
+        // set alpha to half while invincible
+        Color tmp = this.GetComponent<SpriteRenderer>().color;
+        tmp.a = .5f;
+        this.GetComponent<SpriteRenderer>().color = tmp;
+
         yield return new WaitForSeconds(invincibilityDurationInSec);
 
-        isInvincible = false;
+        // set alpha back to full when vulnerable again
+        tmp.a = 1f;
+        this.GetComponent<SpriteRenderer>().color = tmp;
+
+        isInvincible = false; 
     }
 
     void methodToTriggerInvincibility() {
         if (!isInvincible) {
             StartCoroutine(BecomeInvincible());
+
         }
     }
 

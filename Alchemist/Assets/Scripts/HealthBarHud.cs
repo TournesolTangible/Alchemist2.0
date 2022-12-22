@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthBarHud : MonoBehaviour
-{
+{ 
     public void AddHealth()
     {
         PlayerStats.Instance.AddHealth();

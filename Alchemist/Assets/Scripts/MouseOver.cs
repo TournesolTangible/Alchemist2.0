@@ -18,9 +18,9 @@ public class MouseOver : MonoBehaviour
 
   void OnMouseOver() {
     if (!CPS) {
-      CPS = Instantiate(PS, this.transform);
+      CPS = Instantiate(PS, transform);
       CPS.Play();
-      this.transform.localScale = new Vector2(30, 30);
+      this.transform.localScale = new Vector2(40, 40);
       HoverSound.Play();
     }
   }
@@ -28,7 +28,7 @@ public class MouseOver : MonoBehaviour
   void OnMouseExit() {
     if (CPS) {
       Destroy(CPS);
-      this.transform.localScale = new Vector2(25, 25);
+      this.transform.localScale = new Vector2(30, 30);
     }
   }
 }
