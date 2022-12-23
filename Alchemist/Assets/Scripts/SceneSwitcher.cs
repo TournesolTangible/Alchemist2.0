@@ -11,6 +11,7 @@ public class SceneSwitcher : MonoBehaviour
 
   public Button btn1;
   public Button btn2;
+  public Button btn3;
 
   public AudioSource CHIPTUNA;
   public AudioSource Confirm;
@@ -43,6 +44,12 @@ public class SceneSwitcher : MonoBehaviour
     Invoke("CloseGame", 1.0f);
   }
 
+  // Go to Credits
+  public void Fire3() {
+    Confirm.Play();
+    Invoke("GoToCredits", 1.0f);
+  }
+
   // Changes scene to 'next in scene' or - gameplay
   public void ChangeScene() {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1 );
@@ -51,5 +58,10 @@ public class SceneSwitcher : MonoBehaviour
   // Exits the game
   public void CloseGame() {
     Application.Quit();
+  }
+
+  // Goes to credits
+  public void GoToCredits() {
+    SceneManager.LoadScene(3);
   }
 }
