@@ -597,7 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _FireballPrefab: {fileID: 2547672137107465699, guid: 3643e5a0ab65fb9478d9aedc9bb5a71c, type: 3}
   _FireballSFX: {fileID: 2303446973325229440}
-  _FireballForce: 10
+  _FireballForce: 14
   _FireballRate: 2
   _FireballTimer: 4
   upgraded: 0

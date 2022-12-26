@@ -220,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124324494034516552, guid: b1a938d98149a1b45885813fd29d1494, type: 3}
       propertyPath: _FireballForce
-      value: 7
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7903042015539793698, guid: b1a938d98149a1b45885813fd29d1494, type: 3}
       propertyPath: m_RootOrder
@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 971690972}
   - component: {fileID: 971690971}
   - component: {fileID: 971690974}
+  - component: {fileID: 971690975}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Enemy
@@ -564,3 +565,17 @@ MonoBehaviour:
   enemyMaxHealth: 300
   collectable: {fileID: 8491974778035242381, guid: 8ba0dd0a95944e543a8bda111022f430, type: 3}
   heart: {fileID: 1477081431368075825, guid: 0627c56529c05fa448110e41c71d64f7, type: 3}
+--- !u!114 &971690975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 971690970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03621a25d1fc28c41b6050bc17b371e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amp: 5
+  freq: 1

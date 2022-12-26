@@ -11,6 +11,7 @@ public class Fireball : MonoBehaviour
     private ParticleSystem CPS;
 
     private Vector2 _Direction;
+    private GameObject _Target;
 
     void Start()
     {
@@ -29,13 +30,21 @@ public class Fireball : MonoBehaviour
     private void MoveProjectile() {
         float step = moveSpeed * Time.deltaTime;
 
-        transform.position = Vector2.MoveTowards(transform.position, _Direction, step);
+        if( _Target == null ) {
+            this.SelfDestruct();
+        } else {
+            transform.position = Vector2.MoveTowards(transform.position, new Vector2(_Target.transform.position.x, _Target.transform.position.y), step);
+
+        }
+
 
 
     }
 
-    public void SetTarget(Vector2 target) {
-        _Direction = target;
+    public void SetTarget(GameObject target) {
+        if (target) {
+            _Target = target;
+        }
     }
 
     public void SetSpeed(float spd) {
@@ -44,6 +53,10 @@ public class Fireball : MonoBehaviour
 
     public void SetDamage(float dmg) {
         damage += dmg;
+    }
+
+    public void SelfDestruct() {
+        GameObject.Destroy(this);
     }
 
     void OnTriggerEnter2D(Collider2D other) {
