@@ -9,7 +9,7 @@ public class DeathBox : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-          if (other is BoxCollider2D) {
+          if (other is CapsuleCollider2D) {
             GameManager.Instance.Player.GetComponent<PlayerStats>().health = 0f;
           }
         }
