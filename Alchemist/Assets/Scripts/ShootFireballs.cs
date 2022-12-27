@@ -29,14 +29,14 @@ public class ShootFireballs : MonoBehaviour
 
     void Shoot() {
 
-        // If fireballs have been upgraded ...
-        if (upgraded && _Enemies.Count > 0) {
+        // If fireballs have been upgraded, Enemies are nearby, and time is not paused ...
+        if (upgraded && _Enemies.Count > 0 && Time.timeScale == 1) {
             if(Time.time > _FireballTimer) {
                 _FireballSFX.Play();
                 GameObject fireball = Instantiate(_FireballPrefab, transform.position, Quaternion.identity);
                 fireball.GetComponent<Fireball>().SetSpeed(_FireballForce);
 
-                if (!(target) && fireball) {
+                if (target == null && fireball != null) {
                     fireball.GetComponent<Fireball>().SelfDestruct();
                     }
 

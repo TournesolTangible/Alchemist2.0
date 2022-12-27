@@ -34,11 +34,7 @@ public class Fireball : MonoBehaviour
             this.SelfDestruct();
         } else {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(_Target.transform.position.x, _Target.transform.position.y), step);
-
         }
-
-
-
     }
 
     public void SetTarget(GameObject target) {
